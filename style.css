@@ -1,0 +1,151 @@
+#bodytext
+{
+  background-color:#fff;
+  color:#000;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  padding-bottom:30px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:15px;
+  text-align:left;
+}
+
+#container
+{
+  background-color:#fff;
+  color:#000;
+  height:100%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+  width:750px;
+}
+
+#menu
+{
+  background:url('images/menu.gif') bottom left repeat-x;
+  height:30px;
+  width:750px;
+}
+
+#menu li
+{
+  float:left;
+  margin:0;
+}
+
+#menu li a
+{
+  background:url('images/menu.gif') bottom left repeat-x;
+  background-color:#fff;
+  color:#000;
+  display:block;
+  height:2em;
+  line-height:2em;
+  text-align:center;
+  text-decoration:none;
+  width:124px;
+}
+
+#menu li a:hover
+{
+  background-color:#fff;
+  color:#000;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:underline;
+}
+
+#menu ul
+{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+#plug
+{
+  color:#000;
+  font-weight:bold;
+  height:2em;
+  line-height:2em;
+  text-align:center;
+  text-decoration:none;
+}
+
+#upc
+{
+  text-align:center;
+}
+
+.break
+{
+  border:4px;
+  float:right;
+  padding:8px;
+}
+
+.break2
+{
+  border:4px;
+  float:left;
+  padding:8px;
+}
+
+.footer
+{
+  background-color:#000;
+  border-top:2px solid;
+  color:#fff;
+  font-size:9px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom:5px;
+  padding-top:5px;
+  text-align:center;
+  width:750px;
+}
+
+.footer a,.footer a:active
+{
+  background-color:#000;
+  color:#fff;
+  padding-left:2px;
+  padding-right:2px;
+}
+
+.footer a:hover
+{
+  background-color:#fff;
+  border-bottom:5px solid;
+  border-top:5px solid;
+  color:#000;
+}
+
+.footer a:visited
+{
+  background-color:#000;
+  color:#fff;
+}
+
+.mainimage
+{
+  background:url('images/head.png') no-repeat;
+  background-color:#fff;
+  color:#000;
+  height:276px;
+  margin-left:auto;
+  margin-right:auto;
+  width:750px;
+}
+
+body
+{
+  background:url('images/bg.gif') repeat;
+  background-color:#fff;
+  color:#000;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:10pt;
+  margin:0;
+  padding:0;
+}

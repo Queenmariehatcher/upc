@@ -1,0 +1,113 @@
+body {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	background-color : #fff;
+	margin: 0 0 0 0;
+	padding : 0;
+	font-size : 10pt;
+	color : #000;
+	background: url(images/bg.gif) repeat;
+}
+#container {
+	background-color: #fff;
+	width : 750px;
+	height: 100%;
+	color : #000;
+	margin-right : auto;
+	margin-left : auto;
+	text-align : left;
+}
+.mainimage {
+	background: url(images/castlepic.gif) no-repeat;
+	background-color : #fff;
+	width : 750px;
+	height : 276px;
+	margin-left : auto;
+	margin-right : auto;
+	color : #000;
+}
+#menu {
+	background: url(images/menu.gif) bottom left repeat-x;
+	width: 750px;
+	height: 30px;
+}
+#menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 ;
+}
+#menu li {
+	float: left;
+	margin: 0;
+}
+#menu li a {
+	background: url(images/menu.gif) bottom left repeat-x;
+	background-color: #fff;
+	height: 2em;
+	line-height: 2em;
+	width: 124px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+}
+#menu li a:hover {
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+}
+#bodytext {
+	background-color: #fff;
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	padding-left : 15px;
+	padding-right : 15px;
+	text-align : left;
+	color: #000;
+	padding-top : 15px;
+	padding-bottom : 30px;
+}
+.footer {
+	background-color: #000;
+	width : 750px;
+	margin-right : auto;
+	margin-left : auto;
+	border-top: 2px solid;
+	color : #fff;
+	padding-top : 5px;
+	padding-bottom: 5px;
+	font-size: 9px;
+	text-align : center;
+}
+.footer a {
+	background-color: #000;
+	color : #fff;
+	padding-left: 2px;
+	padding-right: 2px;	
+}
+.footer a:active {
+	background-color: #000;
+	color : #fff;
+	padding-left: 2px;
+	padding-right: 2px;		
+}
+.footer a:visited {
+	background-color: #000;
+	color : #fff;
+}
+.footer a:hover {
+	background-color: #fff;
+	color : #000;
+	border-top: 5px solid;
+	border-bottom: 5px solid;	
+}
+.break {
+	float: right;
+	border: 4px;
+	padding: 8px;
+}
+.break2 {
+	float: left;
+	border: 4px;
+	padding: 8px;
+}

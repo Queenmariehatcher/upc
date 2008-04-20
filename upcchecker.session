@@ -1,0 +1,41 @@
+<!DOCTYPE webprojectsession>
+<webprojectsession>
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions/>
+    <uploadprofiles defaultProfile="Local Testing" >
+      <profile remote_host="" remote_port="" remote_path="/var/www/upc/" remote_protocol="file" user="" name="Local Testing" >
+        <uploadeditem upload_time="1208718986" url="form.css" />
+        <uploadeditem upload_time="0" url="images/" />
+        <uploadeditem upload_time="1141534616" url="images/Thumbs.db" />
+        <uploadeditem upload_time="1141534410" url="images/bg.gif" />
+        <uploadeditem upload_time="1208716053" url="images/head.png" />
+        <uploadeditem upload_time="1141506460" url="images/image.png" />
+        <uploadeditem upload_time="1141506418" url="images/image2.png" />
+        <uploadeditem upload_time="1141506846" url="images/menu.gif" />
+        <uploadeditem upload_time="1208717300" url="index.html" />
+        <uploadeditem upload_time="1208727804" url="index.php" />
+        <uploadeditem upload_time="1208724339" url="pear.inc" />
+        <uploadeditem upload_time="1208720233" url="style.css" />
+        <uploadeditem upload_time="1208725735" url="upcimg.php" />
+      </profile>
+      <profile remote_host="dankeenan.org" remote_port="" remote_path="/home/dkeenan/upc.dankeenan.org/" remote_protocol="sftp" user="dkeenan" name="Testing" >
+        <uploadeditem upload_time="1208718986" url="form.css" />
+        <uploadeditem upload_time="0" url="images/" />
+        <uploadeditem upload_time="1141534616" url="images/Thumbs.db" />
+        <uploadeditem upload_time="1141534410" url="images/bg.gif" />
+        <uploadeditem upload_time="1208716053" url="images/head.png" />
+        <uploadeditem upload_time="1141506460" url="images/image.png" />
+        <uploadeditem upload_time="1141506418" url="images/image2.png" />
+        <uploadeditem upload_time="1141506846" url="images/menu.gif" />
+        <uploadeditem upload_time="1208717300" url="index.html" />
+        <uploadeditem upload_time="1208727804" url="index.php" />
+        <uploadeditem upload_time="1208724339" url="pear.inc" />
+        <uploadeditem upload_time="1208720233" url="style.css" />
+        <uploadeditem upload_time="1208725735" url="upcimg.php" />
+      </profile>
+    </uploadprofiles>
+    <treestatus>
+      <openfolder url="images" />
+    </treestatus>
+  </session>
+</webprojectsession>
