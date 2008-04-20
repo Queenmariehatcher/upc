@@ -162,5 +162,6 @@
     <item url=".svn/all-wcprops" />
     <item url=".svn/entries" />
     <item url=".svn/format" />
+    <item url="xmlrpc.inc" />
   </project>
 </webproject>
