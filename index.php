@@ -10,6 +10,8 @@
  * - INT 25
  * - PostNet
  * - UPCA
+ * @todo
+ * Return Manufacturer and Product Info for given UPC
  */
 include('pear.inc');
 ?>

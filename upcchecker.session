@@ -34,8 +34,5 @@
         <uploadeditem upload_time="1208725735" url="upcimg.php" />
       </profile>
     </uploadprofiles>
-    <treestatus>
-      <openfolder url="images" />
-    </treestatus>
   </session>
 </webprojectsession>
