@@ -8,7 +8,7 @@
 <varlistentry><term>page <ref refid="index" kindref="compound">Main Page</ref>  </term></varlistentry>
 <listitem><para>Make this support everyhting Image_Barcode supports:<itemizedlist>
 <listitem><para>Code 39</para></listitem><listitem><para>Code 128</para></listitem><listitem><para>EAN 13</para></listitem><listitem><para>INT 25</para></listitem><listitem><para>PostNet</para></listitem><listitem><para>UPCA </para></listitem></itemizedlist>
-</para><para>Fix errors </para><para>Add possible product images </para><para>Move Info output to seperate function</para><para></para></listitem>
+</para><para>Fix errors </para><para>Add possible product images</para><para></para></listitem>
 </variablelist>
 </para>    </detaileddescription>
   </compounddef>

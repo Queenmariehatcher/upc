@@ -14,13 +14,18 @@
     <member refid="classXML_1ca70dfbd3e8ce956075181701b09b033" kind="function"><name>data</name></member>
     <member refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" kind="function"><name>close</name></member>
   </compound>
-  <compound refid="form_8php" kind="file"><name>form.php</name>
-    <member refid="form_8php_1839e205cae656bea01ea99e2de94ef1e" kind="function"><name>getEntryForm</name></member>
+  <compound refid="barcode_8inc" kind="file"><name>barcode.inc</name>
+    <member refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kind="function"><name>checkBarcode</name></member>
+    <member refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" kind="function"><name>getBarcodeInfo</name></member>
+  </compound>
+  <compound refid="form_8inc" kind="file"><name>form.inc</name>
+    <member refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kind="function"><name>getEntryForm</name></member>
   </compound>
   <compound refid="general_8dox" kind="file"><name>general.dox</name>
   </compound>
   <compound refid="index_8php" kind="file"><name>index.php</name>
     <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
+    <member refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kind="variable"><name>$upc</name></member>
   </compound>
   <compound refid="pear_8inc" kind="file"><name>pear.inc</name>
   </compound>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="form_8inc" kind="file">
+    <compoundname>form.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="form_8inc_1839e205cae656bea01ea99e2de94ef1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getEntryForm</definition>
+        <argsstring>()</argsstring>
+        <name>getEntryForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an entry form for UPCs (and eventually other types of Barcodes <simplesect kind="return"><para>The Barcode entry form </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>String containing the Barcode entry form </para>        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/form.inc" line="10" bodyfile="/home/daniel/Coding/upc/form.inc" bodystart="10" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Functions for outputting the Barcode entry form </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="10" refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" refkind="member"><highlight class="normal">function<sp/><ref refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kindref="member">getEntryForm</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>$form<sp/>=<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;form<sp/>action=</highlight><highlight class="stringliteral">&quot;index.php&quot;</highlight><highlight class="normal"><sp/>method=</highlight><highlight class="stringliteral">&quot;get&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;codeentry&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;fieldset&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;UPC:&lt;/label&gt;&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;text&quot;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&quot;upc&quot;</highlight><highlight class="normal"><sp/>/&gt;&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;submit&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;Submit&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/fieldset&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/form&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">_HTML;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$form;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/daniel/Coding/upc/form.inc"/>
+  </compounddef>
+</doxygen>

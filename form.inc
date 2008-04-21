@@ -5,7 +5,6 @@
  */
 /**
  * Creates an entry form for UPCs (and eventually other types of Barcodes
- *
  * @return The Barcode entry form
  */
 function getEntryForm() {
@@ -13,9 +12,9 @@ function getEntryForm() {
    * String containing the Barcode entry form
    */
   $form = <<<_HTML
-              <form action="index.php" method="get">
+              <form action="index.php" method="get" id="codeentry">
                 <fieldset>
-                  <label>UPC:</label> <input type="text" name="upc" /><br />
+                  <label>UPC:</label><input type="text" name="upc" /><br />
                   <input type="submit" value="Submit" />
                 </fieldset>
               </form>

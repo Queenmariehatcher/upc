@@ -9,7 +9,6 @@
  * - UPCA
  * @todo Fix errors
  * @todo Add possible product images
- * @todo Move Info output to seperate function
  *
  * @mainpage
  * @version 0.1

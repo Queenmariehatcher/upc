@@ -1,0 +1,77 @@
+.TH "barcode.inc" 3 "21 Apr 2008" "UPC Lookup" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+barcode.inc \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcheckBarcode\fP ($barcode)"
+.br
+.ti -1c
+.RI "\fBgetBarcodeInfo\fP ($barcode)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions for the handling of different barcodes 
+.PP
+Definition in file \fBbarcode.inc\fP.
+.SH "Function Documentation"
+.PP 
+.SS "checkBarcode ($ barcode)"
+.PP
+Checks to see if a valid, handalable, barcode was entered. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$barcode\fP The Barcode to be checked 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The type of barcode entered if valid, FALSE if it is not 
+.RE
+.PP
+
+.PP
+Array containinf info on the given UPC 
+.PP
+Definition at line 11 of file barcode.inc.
+.PP
+References XMLRPC_prepare(), and XMLRPC_request().
+.SS "getBarcodeInfo ($ barcode)"
+.PP
+Output Barcode Info 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$barcode\fP The barcode to lookup 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+HTML code to create the info area 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBcheckBarcode\fP 
+.RE
+.PP
+
+.PP
+Hold the HTML code to be outputted
+.PP
+Array containinf info on the given UPC 
+.PP
+Definition at line 38 of file barcode.inc.
+.PP
+References XMLRPC_prepare(), and XMLRPC_request().
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for UPC Lookup from the source code.

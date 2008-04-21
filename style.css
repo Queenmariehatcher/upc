@@ -10,6 +10,12 @@
   text-align:left;
 }
 
+#codeentry
+{
+  color:#000000;
+  font-weight:normal;
+}
+
 #container
 {
   background-color:#fff;
@@ -23,6 +29,8 @@
 
 #info
 {
+  padding-bottom:10px;
+  padding-top:10px;
   text-align:center;
 }
 
@@ -97,6 +105,12 @@
   padding:8px;
 }
 
+.error
+{
+  color:#FF0000;
+  font-weight:bold;
+}
+
 .footer
 {
   background-color:#000;
@@ -159,6 +173,13 @@ body
   font-size:10pt;
   margin:0;
   padding:0;
+}
+
+label
+{
+  font-weight:bold;
+  padding-left:5px;
+  padding-right:5px;
 }
 
 table

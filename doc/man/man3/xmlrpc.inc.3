@@ -1,0 +1,173 @@
+.TH "xmlrpc.inc" 3 "21 Apr 2008" "UPC Lookup" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xmlrpc.inc \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBXML\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "& \fBXML_serialize\fP (&$data, $level=0, $prior_key=NULL)"
+.br
+.ti -1c
+.RI "& \fBXML_unserialize\fP (&$xml)"
+.br
+.ti -1c
+.RI "& \fBXMLRPC_parse\fP (&$request)"
+.br
+.ti -1c
+.RI "& \fBXMLRPC_prepare\fP ($data, $type=NULL)"
+.br
+.ti -1c
+.RI "& \fBXMLRPC_adjustValue\fP (&$current_node)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_getParams\fP ($request)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_getMethodName\fP ($methodCall)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_request\fP ($site, $location, $methodName, $params=NULL, $user_agent=NULL)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_response\fP ($return_value, $server=NULL)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_error\fP ($faultCode, $faultString, $server=NULL)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_convert_timestamp_to_iso8601\fP ($timestamp)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_convert_iso8601_to_timestamp\fP ($iso8601)"
+.br
+.ti -1c
+.RI "\fBcount_numeric_items\fP (&$array)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_debug\fP ($function_name, $debug_message)"
+.br
+.ti -1c
+.RI "\fBXMLRPC_debug_print\fP ()"
+.br
+.ti -1c
+.RI "\fBXMLRPC_show\fP ($data, $func='print_r', $return_str=false)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An XML-RPC implementation by Keith Devens, version 2.5f. http://www.keithdevens.com/software/xmlrpc/
+.PP
+Release history available at: http://www.keithdevens.com/software/xmlrpc/history/
+.PP
+This code is Open Source, released under terms similar to the Artistic License. Read the license at http://www.keithdevens.com/software/license/ Note: this code requires version 4.1.0 or higher of PHP.
+.PP
+\fBSee also:\fP
+.RS 4
+http://keithdevens.com/software/xmlrpc
+.RE
+.PP
+\fBBug\fP
+.RS 4
+Generates the following error on DreamHost servers (and possible others) at different places in the file:
+.br
+ Warning: Call-time pass-by-reference has been deprecated; If you would like to pass it by reference, modify the declaration of xml_set_object(). If you would like to enable call-time pass-by-reference, you can set allow_call_time_pass_reference to true in your INI file. in /home/.zerlina/dkeenan/upc.dankeenan.org/xmlrpc.inc 
+.RE
+.PP
+
+.PP
+Definition in file \fBxmlrpc.inc\fP.
+.SH "Function Documentation"
+.PP 
+.SS "count_numeric_items (&$ array)"
+.PP
+Definition at line 473 of file xmlrpc.inc.
+.PP
+Referenced by XML::open(), and XMLRPC_prepare().
+.SS "& XML_serialize (&$ data, $ level = \fC0\fP, $ prior_key = \fCNULL\fP)"
+.PP
+Definition at line 25 of file xmlrpc.inc.
+.PP
+Referenced by XMLRPC_error(), XMLRPC_request(), and XMLRPC_response().
+.SS "& XML_unserialize (&$ xml)"
+.PP
+Definition at line 167 of file xmlrpc.inc.
+.PP
+Referenced by XMLRPC_parse(), and XMLRPC_request().
+.SS "& XMLRPC_adjustValue (&$ current_node)"
+.PP
+Definition at line 245 of file xmlrpc.inc.
+.PP
+Referenced by XMLRPC_getParams(), and XMLRPC_request().
+.SS "XMLRPC_convert_iso8601_to_timestamp ($ iso8601)"
+.PP
+Definition at line 469 of file xmlrpc.inc.
+.SS "XMLRPC_convert_timestamp_to_iso8601 ($ timestamp)"
+.PP
+Definition at line 463 of file xmlrpc.inc.
+.SS "XMLRPC_debug ($ function_name, $ debug_message)"
+.PP
+Definition at line 477 of file xmlrpc.inc.
+.PP
+Referenced by XMLRPC_error(), XMLRPC_parse(), XMLRPC_request(), and XMLRPC_response().
+.SS "XMLRPC_debug_print ()"
+.PP
+Definition at line 481 of file xmlrpc.inc.
+.PP
+References $debug.
+.SS "XMLRPC_error ($ faultCode, $ faultString, $ server = \fCNULL\fP)"
+.PP
+Definition at line 440 of file xmlrpc.inc.
+.PP
+References XML_serialize(), XMLRPC_debug(), and XMLRPC_show().
+.SS "XMLRPC_getMethodName ($ methodCall)"
+.PP
+Definition at line 339 of file xmlrpc.inc.
+.SS "XMLRPC_getParams ($ request)"
+.PP
+Definition at line 318 of file xmlrpc.inc.
+.PP
+References XMLRPC_adjustValue().
+.SS "& XMLRPC_parse (&$ request)"
+.PP
+Definition at line 174 of file xmlrpc.inc.
+.PP
+References XML_unserialize(), XMLRPC_debug(), and XMLRPC_show().
+.SS "& XMLRPC_prepare ($ data, $ type = \fCNULL\fP)"
+.PP
+Definition at line 185 of file xmlrpc.inc.
+.PP
+References count_numeric_items().
+.PP
+Referenced by checkBarcode(), and getBarcodeInfo().
+.SS "XMLRPC_request ($ site, $ location, $ methodName, $ params = \fCNULL\fP, $ user_agent = \fCNULL\fP)"
+.PP
+Definition at line 344 of file xmlrpc.inc.
+.PP
+References XML_serialize(), XML_unserialize(), XMLRPC_adjustValue(), XMLRPC_debug(), and XMLRPC_show().
+.PP
+Referenced by checkBarcode(), and getBarcodeInfo().
+.SS "XMLRPC_response ($ return_value, $ server = \fCNULL\fP)"
+.PP
+Definition at line 418 of file xmlrpc.inc.
+.PP
+References XML_serialize(), XMLRPC_debug(), and XMLRPC_show().
+.SS "XMLRPC_show ($ data, $ func = \fC'print_r'\fP, $ return_str = \fCfalse\fP)"
+.PP
+Definition at line 494 of file xmlrpc.inc.
+.PP
+Referenced by XMLRPC_error(), XMLRPC_parse(), XMLRPC_request(), and XMLRPC_response().
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for UPC Lookup from the source code.
