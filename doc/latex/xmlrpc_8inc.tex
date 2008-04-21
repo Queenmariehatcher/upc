@@ -1,0 +1,216 @@
+\hypertarget{xmlrpc_8inc}{
+\section{Coding/upc/xmlrpc.inc File Reference}
+\label{xmlrpc_8inc}\index{Coding/upc/xmlrpc.inc@{Coding/upc/xmlrpc.inc}}
+}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classXML}{XML}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\& \hyperlink{xmlrpc_8inc_a1e9b05a06f28fabb86c10129f5890ef}{XML\_\-serialize} (\&\$data, \$level=0, \$prior\_\-key=NULL)
+\item 
+\& \hyperlink{xmlrpc_8inc_ef8f3de498a12b230d049cdee6a25145}{XML\_\-unserialize} (\&\$xml)
+\item 
+\& \hyperlink{xmlrpc_8inc_708b2136ca600664d2207a511b3cf3f8}{XMLRPC\_\-parse} (\&\$request)
+\item 
+\& \hyperlink{xmlrpc_8inc_c13be54b26e0803d8745e4f019dcfd8a}{XMLRPC\_\-prepare} (\$data, \$type=NULL)
+\item 
+\& \hyperlink{xmlrpc_8inc_d936fe41ae9c3e0b90bd72ffe82a2969}{XMLRPC\_\-adjustValue} (\&\$current\_\-node)
+\item 
+\hyperlink{xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3}{XMLRPC\_\-getParams} (\$request)
+\item 
+\hyperlink{xmlrpc_8inc_70efa062e92a380196ed8053850c0906}{XMLRPC\_\-getMethodName} (\$methodCall)
+\item 
+\hyperlink{xmlrpc_8inc_3a98b6984b8ca01752d1aa9a267526a3}{XMLRPC\_\-request} (\$site, \$location, \$methodName, \$params=NULL, \$user\_\-agent=NULL)
+\item 
+\hyperlink{xmlrpc_8inc_c736d378caaccdd0726ea1080d1f526f}{XMLRPC\_\-response} (\$return\_\-value, \$server=NULL)
+\item 
+\hyperlink{xmlrpc_8inc_0cdc54b1376ccbbe412175c9819a95ac}{XMLRPC\_\-error} (\$faultCode, \$faultString, \$server=NULL)
+\item 
+\hyperlink{xmlrpc_8inc_4485d809c5d598949d9cfaca42bddf37}{XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601} (\$timestamp)
+\item 
+\hyperlink{xmlrpc_8inc_1d9c2ef61c9f1fd2723d06d1364ef845}{XMLRPC\_\-convert\_\-iso8601\_\-to\_\-timestamp} (\$iso8601)
+\item 
+\hyperlink{xmlrpc_8inc_88839ba2c5c835c99f55578c65faa401}{count\_\-numeric\_\-items} (\&\$array)
+\item 
+\hyperlink{xmlrpc_8inc_e2d2e97a8c1c560f5e96d58d60a02874}{XMLRPC\_\-debug} (\$function\_\-name, \$debug\_\-message)
+\item 
+\hyperlink{xmlrpc_8inc_8467f85edd385ddf2506b1bd5065a6d7}{XMLRPC\_\-debug\_\-print} ()
+\item 
+\hyperlink{xmlrpc_8inc_1f60d2672bcb35f5ff908f64931f8d48}{XMLRPC\_\-show} (\$data, \$func=\char`\"{}print\_\-r\char`\"{}, \$return\_\-str=false)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{xmlrpc_8inc_88839ba2c5c835c99f55578c65faa401}{
+\index{xmlrpc.inc@{xmlrpc.inc}!count_numeric_items@{count\_\-numeric\_\-items}}
+\index{count_numeric_items@{count\_\-numeric\_\-items}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}count\_\-numeric\_\-items (\&\$ {\em array})}}
+\label{xmlrpc_8inc_88839ba2c5c835c99f55578c65faa401}
+
+
+
+
+Definition at line 463 of file xmlrpc.inc.
+
+Referenced by XML::open(), and XMLRPC\_\-prepare().\hypertarget{xmlrpc_8inc_a1e9b05a06f28fabb86c10129f5890ef}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XML_serialize@{XML\_\-serialize}}
+\index{XML_serialize@{XML\_\-serialize}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\& XML\_\-serialize (\&\$ {\em data}, \$ {\em level} = {\tt 0}, \$ {\em prior\_\-key} = {\tt NULL})}}
+\label{xmlrpc_8inc_a1e9b05a06f28fabb86c10129f5890ef}
+
+
+
+
+Definition at line 15 of file xmlrpc.inc.
+
+Referenced by XMLRPC\_\-error(), XMLRPC\_\-request(), and XMLRPC\_\-response().\hypertarget{xmlrpc_8inc_ef8f3de498a12b230d049cdee6a25145}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XML_unserialize@{XML\_\-unserialize}}
+\index{XML_unserialize@{XML\_\-unserialize}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\& XML\_\-unserialize (\&\$ {\em xml})}}
+\label{xmlrpc_8inc_ef8f3de498a12b230d049cdee6a25145}
+
+
+
+
+Definition at line 157 of file xmlrpc.inc.
+
+Referenced by XMLRPC\_\-parse(), and XMLRPC\_\-request().\hypertarget{xmlrpc_8inc_d936fe41ae9c3e0b90bd72ffe82a2969}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_adjustValue@{XMLRPC\_\-adjustValue}}
+\index{XMLRPC_adjustValue@{XMLRPC\_\-adjustValue}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\& XMLRPC\_\-adjustValue (\&\$ {\em current\_\-node})}}
+\label{xmlrpc_8inc_d936fe41ae9c3e0b90bd72ffe82a2969}
+
+
+
+
+Definition at line 235 of file xmlrpc.inc.
+
+Referenced by XMLRPC\_\-getParams(), and XMLRPC\_\-request().\hypertarget{xmlrpc_8inc_1d9c2ef61c9f1fd2723d06d1364ef845}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_convert_iso8601_to_timestamp@{XMLRPC\_\-convert\_\-iso8601\_\-to\_\-timestamp}}
+\index{XMLRPC_convert_iso8601_to_timestamp@{XMLRPC\_\-convert\_\-iso8601\_\-to\_\-timestamp}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-convert\_\-iso8601\_\-to\_\-timestamp (\$ {\em iso8601})}}
+\label{xmlrpc_8inc_1d9c2ef61c9f1fd2723d06d1364ef845}
+
+
+
+
+Definition at line 459 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_4485d809c5d598949d9cfaca42bddf37}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_convert_timestamp_to_iso8601@{XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601}}
+\index{XMLRPC_convert_timestamp_to_iso8601@{XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601 (\$ {\em timestamp})}}
+\label{xmlrpc_8inc_4485d809c5d598949d9cfaca42bddf37}
+
+
+
+
+Definition at line 453 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_e2d2e97a8c1c560f5e96d58d60a02874}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_debug@{XMLRPC\_\-debug}}
+\index{XMLRPC_debug@{XMLRPC\_\-debug}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-debug (\$ {\em function\_\-name}, \$ {\em debug\_\-message})}}
+\label{xmlrpc_8inc_e2d2e97a8c1c560f5e96d58d60a02874}
+
+
+
+
+Definition at line 467 of file xmlrpc.inc.
+
+Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XMLRPC\_\-response().\hypertarget{xmlrpc_8inc_8467f85edd385ddf2506b1bd5065a6d7}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_debug_print@{XMLRPC\_\-debug\_\-print}}
+\index{XMLRPC_debug_print@{XMLRPC\_\-debug\_\-print}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-debug\_\-print ()}}
+\label{xmlrpc_8inc_8467f85edd385ddf2506b1bd5065a6d7}
+
+
+
+
+Definition at line 471 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_0cdc54b1376ccbbe412175c9819a95ac}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_error@{XMLRPC\_\-error}}
+\index{XMLRPC_error@{XMLRPC\_\-error}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-error (\$ {\em faultCode}, \$ {\em faultString}, \$ {\em server} = {\tt NULL})}}
+\label{xmlrpc_8inc_0cdc54b1376ccbbe412175c9819a95ac}
+
+
+
+
+Definition at line 430 of file xmlrpc.inc.
+
+References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_70efa062e92a380196ed8053850c0906}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_getMethodName@{XMLRPC\_\-getMethodName}}
+\index{XMLRPC_getMethodName@{XMLRPC\_\-getMethodName}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-getMethodName (\$ {\em methodCall})}}
+\label{xmlrpc_8inc_70efa062e92a380196ed8053850c0906}
+
+
+
+
+Definition at line 329 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_getParams@{XMLRPC\_\-getParams}}
+\index{XMLRPC_getParams@{XMLRPC\_\-getParams}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-getParams (\$ {\em request})}}
+\label{xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3}
+
+
+
+
+Definition at line 308 of file xmlrpc.inc.
+
+References XMLRPC\_\-adjustValue().\hypertarget{xmlrpc_8inc_708b2136ca600664d2207a511b3cf3f8}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_parse@{XMLRPC\_\-parse}}
+\index{XMLRPC_parse@{XMLRPC\_\-parse}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\& XMLRPC\_\-parse (\&\$ {\em request})}}
+\label{xmlrpc_8inc_708b2136ca600664d2207a511b3cf3f8}
+
+
+
+
+Definition at line 164 of file xmlrpc.inc.
+
+References XML\_\-unserialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_c13be54b26e0803d8745e4f019dcfd8a}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_prepare@{XMLRPC\_\-prepare}}
+\index{XMLRPC_prepare@{XMLRPC\_\-prepare}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\& XMLRPC\_\-prepare (\$ {\em data}, \$ {\em type} = {\tt NULL})}}
+\label{xmlrpc_8inc_c13be54b26e0803d8745e4f019dcfd8a}
+
+
+
+
+Definition at line 175 of file xmlrpc.inc.
+
+References count\_\-numeric\_\-items().\hypertarget{xmlrpc_8inc_3a98b6984b8ca01752d1aa9a267526a3}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_request@{XMLRPC\_\-request}}
+\index{XMLRPC_request@{XMLRPC\_\-request}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-request (\$ {\em site}, \$ {\em location}, \$ {\em methodName}, \$ {\em params} = {\tt NULL}, \$ {\em user\_\-agent} = {\tt NULL})}}
+\label{xmlrpc_8inc_3a98b6984b8ca01752d1aa9a267526a3}
+
+
+
+
+Definition at line 334 of file xmlrpc.inc.
+
+References XML\_\-serialize(), XML\_\-unserialize(), XMLRPC\_\-adjustValue(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_c736d378caaccdd0726ea1080d1f526f}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_response@{XMLRPC\_\-response}}
+\index{XMLRPC_response@{XMLRPC\_\-response}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-response (\$ {\em return\_\-value}, \$ {\em server} = {\tt NULL})}}
+\label{xmlrpc_8inc_c736d378caaccdd0726ea1080d1f526f}
+
+
+
+
+Definition at line 408 of file xmlrpc.inc.
+
+References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_1f60d2672bcb35f5ff908f64931f8d48}{
+\index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_show@{XMLRPC\_\-show}}
+\index{XMLRPC_show@{XMLRPC\_\-show}!xmlrpc.inc@{xmlrpc.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-show (\$ {\em data}, \$ {\em func} = {\tt \char`\"{}print\_\-r\char`\"{}}, \$ {\em return\_\-str} = {\tt false})}}
+\label{xmlrpc_8inc_1f60d2672bcb35f5ff908f64931f8d48}
+
+
+
+
+Definition at line 484 of file xmlrpc.inc.
+
+Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XMLRPC\_\-response().
