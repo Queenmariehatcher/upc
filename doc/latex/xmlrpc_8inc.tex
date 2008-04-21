@@ -44,6 +44,22 @@ class \hyperlink{classXML}{XML}
 \end{CompactItemize}
 
 
+\subsection{Detailed Description}
+An XML-RPC implementation by Keith Devens, version 2.5f. \href{http://www.keithdevens.com/software/xmlrpc/}{\tt http://www.keithdevens.com/software/xmlrpc/}
+
+Release history available at: \href{http://www.keithdevens.com/software/xmlrpc/history/}{\tt http://www.keithdevens.com/software/xmlrpc/history/}
+
+This code is Open Source, released under terms similar to the Artistic License. Read the license at \href{http://www.keithdevens.com/software/license/}{\tt http://www.keithdevens.com/software/license/} Note: this code requires version 4.1.0 or higher of PHP.
+
+\begin{Desc}
+\item[See also:]\href{http://keithdevens.com/software/xmlrpc}{\tt http://keithdevens.com/software/xmlrpc}\end{Desc}
+\begin{Desc}
+\item[\hyperlink{bug__bug000001}{Bug}]Generates the following error on DreamHost servers (and possible others) at different places in the file:\par
+ Warning: Call-time pass-by-reference has been deprecated; If you would like to pass it by reference, modify the declaration of xml\_\-set\_\-object(). If you would like to enable call-time pass-by-reference, you can set allow\_\-call\_\-time\_\-pass\_\-reference to true in your INI file. in /home/.zerlina/dkeenan/upc.dankeenan.org/xmlrpc.inc \end{Desc}
+
+
+Definition in file \hyperlink{xmlrpc_8inc-source}{xmlrpc.inc}.
+
 \subsection{Function Documentation}
 \hypertarget{xmlrpc_8inc_88839ba2c5c835c99f55578c65faa401}{
 \index{xmlrpc.inc@{xmlrpc.inc}!count_numeric_items@{count\_\-numeric\_\-items}}
@@ -54,7 +70,7 @@ class \hyperlink{classXML}{XML}
 
 
 
-Definition at line 463 of file xmlrpc.inc.
+Definition at line 473 of file xmlrpc.inc.
 
 Referenced by XML::open(), and XMLRPC\_\-prepare().\hypertarget{xmlrpc_8inc_a1e9b05a06f28fabb86c10129f5890ef}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XML_serialize@{XML\_\-serialize}}
@@ -65,7 +81,7 @@ Referenced by XML::open(), and XMLRPC\_\-prepare().\hypertarget{xmlrpc_8inc_a1e9
 
 
 
-Definition at line 15 of file xmlrpc.inc.
+Definition at line 25 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-error(), XMLRPC\_\-request(), and XMLRPC\_\-response().\hypertarget{xmlrpc_8inc_ef8f3de498a12b230d049cdee6a25145}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XML_unserialize@{XML\_\-unserialize}}
@@ -76,7 +92,7 @@ Referenced by XMLRPC\_\-error(), XMLRPC\_\-request(), and XMLRPC\_\-response().\
 
 
 
-Definition at line 157 of file xmlrpc.inc.
+Definition at line 167 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-parse(), and XMLRPC\_\-request().\hypertarget{xmlrpc_8inc_d936fe41ae9c3e0b90bd72ffe82a2969}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_adjustValue@{XMLRPC\_\-adjustValue}}
@@ -87,7 +103,7 @@ Referenced by XMLRPC\_\-parse(), and XMLRPC\_\-request().\hypertarget{xmlrpc_8in
 
 
 
-Definition at line 235 of file xmlrpc.inc.
+Definition at line 245 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-getParams(), and XMLRPC\_\-request().\hypertarget{xmlrpc_8inc_1d9c2ef61c9f1fd2723d06d1364ef845}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_convert_iso8601_to_timestamp@{XMLRPC\_\-convert\_\-iso8601\_\-to\_\-timestamp}}
@@ -98,7 +114,7 @@ Referenced by XMLRPC\_\-getParams(), and XMLRPC\_\-request().\hypertarget{xmlrpc
 
 
 
-Definition at line 459 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_4485d809c5d598949d9cfaca42bddf37}{
+Definition at line 469 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_4485d809c5d598949d9cfaca42bddf37}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_convert_timestamp_to_iso8601@{XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601}}
 \index{XMLRPC_convert_timestamp_to_iso8601@{XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601}!xmlrpc.inc@{xmlrpc.inc}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-convert\_\-timestamp\_\-to\_\-iso8601 (\$ {\em timestamp})}}
@@ -107,7 +123,7 @@ Definition at line 459 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_4485d809c5d59
 
 
 
-Definition at line 453 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_e2d2e97a8c1c560f5e96d58d60a02874}{
+Definition at line 463 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_e2d2e97a8c1c560f5e96d58d60a02874}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_debug@{XMLRPC\_\-debug}}
 \index{XMLRPC_debug@{XMLRPC\_\-debug}!xmlrpc.inc@{xmlrpc.inc}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-debug (\$ {\em function\_\-name}, \$ {\em debug\_\-message})}}
@@ -116,7 +132,7 @@ Definition at line 453 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_e2d2e97a8c1c5
 
 
 
-Definition at line 467 of file xmlrpc.inc.
+Definition at line 477 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XMLRPC\_\-response().\hypertarget{xmlrpc_8inc_8467f85edd385ddf2506b1bd5065a6d7}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_debug_print@{XMLRPC\_\-debug\_\-print}}
@@ -127,7 +143,9 @@ Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XML
 
 
 
-Definition at line 471 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_0cdc54b1376ccbbe412175c9819a95ac}{
+Definition at line 481 of file xmlrpc.inc.
+
+References \$debug.\hypertarget{xmlrpc_8inc_0cdc54b1376ccbbe412175c9819a95ac}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_error@{XMLRPC\_\-error}}
 \index{XMLRPC_error@{XMLRPC\_\-error}!xmlrpc.inc@{xmlrpc.inc}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-error (\$ {\em faultCode}, \$ {\em faultString}, \$ {\em server} = {\tt NULL})}}
@@ -136,7 +154,7 @@ Definition at line 471 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_0cdc54b1376cc
 
 
 
-Definition at line 430 of file xmlrpc.inc.
+Definition at line 440 of file xmlrpc.inc.
 
 References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_70efa062e92a380196ed8053850c0906}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_getMethodName@{XMLRPC\_\-getMethodName}}
@@ -147,7 +165,7 @@ References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertar
 
 
 
-Definition at line 329 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3}{
+Definition at line 339 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_getParams@{XMLRPC\_\-getParams}}
 \index{XMLRPC_getParams@{XMLRPC\_\-getParams}!xmlrpc.inc@{xmlrpc.inc}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XMLRPC\_\-getParams (\$ {\em request})}}
@@ -156,7 +174,7 @@ Definition at line 329 of file xmlrpc.inc.\hypertarget{xmlrpc_8inc_ce4ea8e1274ca
 
 
 
-Definition at line 308 of file xmlrpc.inc.
+Definition at line 318 of file xmlrpc.inc.
 
 References XMLRPC\_\-adjustValue().\hypertarget{xmlrpc_8inc_708b2136ca600664d2207a511b3cf3f8}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_parse@{XMLRPC\_\-parse}}
@@ -167,7 +185,7 @@ References XMLRPC\_\-adjustValue().\hypertarget{xmlrpc_8inc_708b2136ca600664d220
 
 
 
-Definition at line 164 of file xmlrpc.inc.
+Definition at line 174 of file xmlrpc.inc.
 
 References XML\_\-unserialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_c13be54b26e0803d8745e4f019dcfd8a}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_prepare@{XMLRPC\_\-prepare}}
@@ -178,7 +196,7 @@ References XML\_\-unserialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypert
 
 
 
-Definition at line 175 of file xmlrpc.inc.
+Definition at line 185 of file xmlrpc.inc.
 
 References count\_\-numeric\_\-items().\hypertarget{xmlrpc_8inc_3a98b6984b8ca01752d1aa9a267526a3}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_request@{XMLRPC\_\-request}}
@@ -189,7 +207,7 @@ References count\_\-numeric\_\-items().\hypertarget{xmlrpc_8inc_3a98b6984b8ca017
 
 
 
-Definition at line 334 of file xmlrpc.inc.
+Definition at line 344 of file xmlrpc.inc.
 
 References XML\_\-serialize(), XML\_\-unserialize(), XMLRPC\_\-adjustValue(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_c736d378caaccdd0726ea1080d1f526f}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_response@{XMLRPC\_\-response}}
@@ -200,7 +218,7 @@ References XML\_\-serialize(), XML\_\-unserialize(), XMLRPC\_\-adjustValue(), XM
 
 
 
-Definition at line 408 of file xmlrpc.inc.
+Definition at line 418 of file xmlrpc.inc.
 
 References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertarget{xmlrpc_8inc_1f60d2672bcb35f5ff908f64931f8d48}{
 \index{xmlrpc.inc@{xmlrpc.inc}!XMLRPC_show@{XMLRPC\_\-show}}
@@ -211,6 +229,6 @@ References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().\hypertar
 
 
 
-Definition at line 484 of file xmlrpc.inc.
+Definition at line 494 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XMLRPC\_\-response().

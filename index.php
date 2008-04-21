@@ -11,9 +11,13 @@
  * - PostNet
  * - UPCA
  * @todo
- * Return Manufacturer and Product Info for given UPC
+ * Fix errors
  */
 include('pear.inc');
+include('xmlrpc.inc');
+include('form.php');
+
+$debug = TRUE;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -57,19 +61,43 @@ include('pear.inc');
     <div id="bodytext">
       <?php
         if (!$_GET) {
-          echo <<<_HTML
-            <form action="index.php" method="get">
-              <fieldset>
-                <label>UPC:</label> <input type="text" name="upc" /><br />
-                <input type="submit" value="Submit" />
-              </fieldset>
-            </form>
-_HTML;
+          echo getEntryForm();
         }
         else {
           echo '<div id="upc">';
           echo '<img src="upcimg.php?upc=' . $_GET['upc'] . '" />';
           echo '</div>';
+
+          $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($_GET['upc'])));
+          if ($debug) var_dump($result);
+          if ($result[1]['found']) {
+      ?>
+            <div id="info">
+              <table align="center">
+                <tr>
+                  <td class="title">Country</td>
+                  <td><?php echo $result[1]['issuerCountry']; ?></td>
+                </tr>
+                <tr>
+                  <td class="title">Description</td>
+                  <td><?php echo $result[1]['description']; ?></td>
+                </tr>
+                <tr>
+                  <td class="title">Size</td>
+                  <td><?php echo $result[1]['size']; ?></td>
+                </tr>
+              </table>
+              <a href="http://www.upcdatabase.com/editform.asp?upc=<?php echo $_GET['upc']; ?>">Modify this entry</a>
+              <a href="http://www.upcdatabase.com/deleteform.asp?upc=<?php echo $_GET['upc']; ?>">Delete this entry</a>
+            </div>
+            <br />
+            <?php echo getEntryForm(); ?>
+      <?php
+          }
+          else {
+            echo 'Product Not Found!<br />';
+            echo '<a href="http://www.upcdatabase.com/addform.asp?upc=' . $_GET['upc'] . '">Add this item to the database</a>';
+          }
         }
       ?>
     </div>
