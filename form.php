@@ -9,6 +9,9 @@
  * @return The Barcode entry form
  */
 function getEntryForm() {
+  /**
+   * String containing the Barcode entry form
+   */
   $form = <<<_HTML
               <form action="index.php" method="get">
                 <fieldset>

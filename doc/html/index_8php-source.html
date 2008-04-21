@@ -18,105 +18,105 @@
 <a name="l00017"></a>00017 include('xmlrpc.inc');
 <a name="l00018"></a>00018 include('form.php');
 <a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">00020</a> <a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">$debug</a> = TRUE;
-<a name="l00021"></a>00021 ?&gt;
-<a name="l00022"></a>00022 &lt;!DOCTYPE html PUBLIC <span class="stringliteral">"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
-<a name="l00023"></a>00023     <span class="stringliteral">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span>&gt;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 &lt;html xmlns=<span class="stringliteral">"http://www.w3.org/1999/xhtml"</span>&gt;
-<a name="l00026"></a>00026 &lt;head&gt;
-<a name="l00027"></a>00027   &lt;meta name=<span class="stringliteral">"generator"</span> content=
-<a name="l00028"></a>00028   <span class="stringliteral">"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org"</span> /&gt;
-<a name="l00029"></a>00029   &lt;meta http-equiv=<span class="stringliteral">"Content-Type"</span> content=
-<a name="l00030"></a>00030   <span class="stringliteral">"text/html; charset=us-ascii"</span> /&gt;
-<a name="l00031"></a>00031   &lt;meta name=<span class="stringliteral">"Language"</span> content=<span class="stringliteral">"English"</span> /&gt;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033   &lt;!-- Styles --&gt;
-<a name="l00034"></a>00034   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"style.css"</span> /&gt;
-<a name="l00035"></a>00035   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"form.css"</span> /&gt;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037   &lt;title&gt;UPC Lookup&lt;/title&gt;
-<a name="l00038"></a>00038 &lt;/head&gt;
+<a name="l00023"></a><a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">00023</a> <a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">$debug</a> = FALSE;
+<a name="l00024"></a>00024 ?&gt;
+<a name="l00025"></a>00025 &lt;!DOCTYPE html PUBLIC <span class="stringliteral">"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+<a name="l00026"></a>00026     <span class="stringliteral">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span>&gt;
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 &lt;html xmlns=<span class="stringliteral">"http://www.w3.org/1999/xhtml"</span>&gt;
+<a name="l00029"></a>00029 &lt;head&gt;
+<a name="l00030"></a>00030   &lt;meta name=<span class="stringliteral">"generator"</span> content=
+<a name="l00031"></a>00031   <span class="stringliteral">"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org"</span> /&gt;
+<a name="l00032"></a>00032   &lt;meta http-equiv=<span class="stringliteral">"Content-Type"</span> content=
+<a name="l00033"></a>00033   <span class="stringliteral">"text/html; charset=us-ascii"</span> /&gt;
+<a name="l00034"></a>00034   &lt;meta name=<span class="stringliteral">"Language"</span> content=<span class="stringliteral">"English"</span> /&gt;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036   &lt;!-- Styles --&gt;
+<a name="l00037"></a>00037   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"style.css"</span> /&gt;
+<a name="l00038"></a>00038   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"form.css"</span> /&gt;
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 &lt;body&gt;
-<a name="l00041"></a>00041   &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"container"</span>&gt;
-<a name="l00042"></a>00042     &lt;a href=<span class="stringliteral">"index.php"</span>&gt;&lt;div <span class="keyword">class</span>=<span class="stringliteral">"mainimage"</span>&gt;&lt;/div&gt;&lt;/a&gt;
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"menu"</span>&gt;
-<a name="l00045"></a>00045       &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"plug"</span>&gt;Uses the &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/"</span>&gt;UPC Database&lt;/a&gt;&lt;/div&gt;
-<a name="l00046"></a>00046 &lt;!--      &lt;ul&gt;
-<a name="l00047"></a>00047         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Home"</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"News"</span>&gt;News&lt;/a&gt;&lt;/li&gt;
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"About"</span>&gt;About&lt;/a&gt;&lt;/li&gt;
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Gallery"</span>&gt;Gallery&lt;/a&gt;&lt;/li&gt;
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Links"</span>&gt;Links&lt;/a&gt;&lt;/li&gt;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Contact"</span>&gt;Contact&lt;/a&gt;&lt;/li&gt;
-<a name="l00058"></a>00058       &lt;/ul&gt;--&gt;
-<a name="l00059"></a>00059     &lt;/div&gt;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"bodytext"</span>&gt;
-<a name="l00062"></a>00062       &lt;?php
-<a name="l00063"></a>00063         <span class="keywordflow">if</span> (!$_GET) {
-<a name="l00064"></a>00064           echo <a class="code" href="form_8php.html#839e205cae656bea01ea99e2de94ef1e">getEntryForm</a>();
-<a name="l00065"></a>00065         }
-<a name="l00066"></a>00066         <span class="keywordflow">else</span> {
-<a name="l00067"></a>00067           echo '&lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"upc"</span>&gt;';
-<a name="l00068"></a>00068           echo '&lt;img src=<span class="stringliteral">"upcimg.php?upc=' . $_GET['upc'] . '"</span> /&gt;';
-<a name="l00069"></a>00069           echo '&lt;/div&gt;';
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071           $result = <a class="code" href="xmlrpc_8inc.html#3a98b6984b8ca01752d1aa9a267526a3">XMLRPC_request</a>('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(<a class="code" href="xmlrpc_8inc.html#c13be54b26e0803d8745e4f019dcfd8a">XMLRPC_prepare</a>($_GET['upc'])));
-<a name="l00072"></a>00072           <span class="keywordflow">if</span> (<a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">$debug</a>) var_dump($result);
-<a name="l00073"></a>00073           <span class="keywordflow">if</span> ($result[1]['found']) {
-<a name="l00074"></a>00074       ?&gt;
-<a name="l00075"></a>00075             &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"info"</span>&gt;
-<a name="l00076"></a>00076               &lt;table align=<span class="stringliteral">"center"</span>&gt;
-<a name="l00077"></a>00077                 &lt;tr&gt;
-<a name="l00078"></a>00078                   &lt;td <span class="keyword">class</span>=<span class="stringliteral">"title"</span>&gt;Country&lt;/td&gt;
-<a name="l00079"></a>00079                   &lt;td&gt;&lt;?php echo $result[1]['issuerCountry']; ?&gt;&lt;/td&gt;
-<a name="l00080"></a>00080                 &lt;/tr&gt;
-<a name="l00081"></a>00081                 &lt;tr&gt;
-<a name="l00082"></a>00082                   &lt;td <span class="keyword">class</span>=<span class="stringliteral">"title"</span>&gt;Description&lt;/td&gt;
-<a name="l00083"></a>00083                   &lt;td&gt;&lt;?php echo $result[1]['description']; ?&gt;&lt;/td&gt;
-<a name="l00084"></a>00084                 &lt;/tr&gt;
-<a name="l00085"></a>00085                 &lt;tr&gt;
-<a name="l00086"></a>00086                   &lt;td <span class="keyword">class</span>=<span class="stringliteral">"title"</span>&gt;Size&lt;/td&gt;
-<a name="l00087"></a>00087                   &lt;td&gt;&lt;?php echo $result[1]['size']; ?&gt;&lt;/td&gt;
-<a name="l00088"></a>00088                 &lt;/tr&gt;
-<a name="l00089"></a>00089               &lt;/table&gt;
-<a name="l00090"></a>00090               &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/editform.asp?upc=&lt;?php echo $_GET['upc']; ?&gt;"</span>&gt;Modify <span class="keyword">this</span> entry&lt;/a&gt;
-<a name="l00091"></a>00091               &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/deleteform.asp?upc=&lt;?php echo $_GET['upc']; ?&gt;"</span>&gt;Delete <span class="keyword">this</span> entry&lt;/a&gt;
-<a name="l00092"></a>00092             &lt;/div&gt;
-<a name="l00093"></a>00093             &lt;br /&gt;
-<a name="l00094"></a>00094             &lt;?php echo <a class="code" href="form_8php.html#839e205cae656bea01ea99e2de94ef1e">getEntryForm</a>(); ?&gt;
-<a name="l00095"></a>00095       &lt;?php
-<a name="l00096"></a>00096           }
-<a name="l00097"></a>00097           <span class="keywordflow">else</span> {
-<a name="l00098"></a>00098             echo 'Product Not Found!&lt;br /&gt;';
-<a name="l00099"></a>00099             echo '&lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/addform.asp?upc=' . $_GET['upc'] . '"</span>&gt;Add <span class="keyword">this</span> item to the database&lt;/a&gt;';
-<a name="l00100"></a>00100           }
-<a name="l00101"></a>00101         }
-<a name="l00102"></a>00102       ?&gt;
-<a name="l00103"></a>00103     &lt;/div&gt;
-<a name="l00104"></a>00104   &lt;/div&gt;
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106   &lt;div <span class="keyword">class</span>=<span class="stringliteral">"footer"</span>&gt;
-<a name="l00107"></a>00107     &lt;div <span class="keyword">class</span>=<span class="stringliteral">"right"</span>&gt;
-<a name="l00108"></a>00108       Designed By &lt;a href=<span class="stringliteral">"http://www.christinachun.com"</span> title=
-<a name="l00109"></a>00109       <span class="stringliteral">"Christina Chun - Digital Artist &amp;amp; Web Developer"</span>&gt;Christina
-<a name="l00110"></a>00110       Chun&lt;/a&gt; &amp;copy; 2005-2006 | &lt;a href=<span class="stringliteral">"http://www.owsd.org"</span>
-<a name="l00111"></a>00111       title=<span class="stringliteral">"Open Source Web Design"</span>&gt;Open Source Web Design&lt;/a&gt; |
-<a name="l00112"></a>00112       &lt;a href=<span class="stringliteral">"http://validator.w3.org/check?uri=referer"</span>&gt;Valid
-<a name="l00113"></a>00113       XHTML&lt;/a&gt;
-<a name="l00114"></a>00114     &lt;/div&gt;
-<a name="l00115"></a>00115   &lt;/div&gt;
-<a name="l00116"></a>00116 &lt;/body&gt;
-<a name="l00117"></a>00117 &lt;/html&gt;
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Sun Apr 20 21:56:44 2008 for UPC Lookup by&nbsp;
+<a name="l00040"></a>00040   &lt;title&gt;UPC Lookup&lt;/title&gt;
+<a name="l00041"></a>00041 &lt;/head&gt;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 &lt;body&gt;
+<a name="l00044"></a>00044   &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"container"</span>&gt;
+<a name="l00045"></a>00045     &lt;a href=<span class="stringliteral">"index.php"</span>&gt;&lt;div <span class="keyword">class</span>=<span class="stringliteral">"mainimage"</span>&gt;&lt;/div&gt;&lt;/a&gt;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"menu"</span>&gt;
+<a name="l00048"></a>00048       &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"plug"</span>&gt;Uses the &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/"</span>&gt;UPC Database&lt;/a&gt;&lt;/div&gt;
+<a name="l00049"></a>00049 &lt;!--      &lt;ul&gt;
+<a name="l00050"></a>00050         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Home"</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"News"</span>&gt;News&lt;/a&gt;&lt;/li&gt;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"About"</span>&gt;About&lt;/a&gt;&lt;/li&gt;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Gallery"</span>&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Links"</span>&gt;Links&lt;/a&gt;&lt;/li&gt;
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Contact"</span>&gt;Contact&lt;/a&gt;&lt;/li&gt;
+<a name="l00061"></a>00061       &lt;/ul&gt;--&gt;
+<a name="l00062"></a>00062     &lt;/div&gt;
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"bodytext"</span>&gt;
+<a name="l00065"></a>00065       &lt;?php
+<a name="l00066"></a>00066         <span class="keywordflow">if</span> (!$_GET) {
+<a name="l00067"></a>00067           echo <a class="code" href="form_8php.html#839e205cae656bea01ea99e2de94ef1e">getEntryForm</a>();
+<a name="l00068"></a>00068         }
+<a name="l00069"></a>00069         <span class="keywordflow">else</span> {
+<a name="l00070"></a>00070           echo '&lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"upc"</span>&gt;';
+<a name="l00071"></a>00071           echo '&lt;img src=<span class="stringliteral">"upcimg.php?upc=' . $_GET['upc'] . '"</span> /&gt;';
+<a name="l00072"></a>00072           echo '&lt;/div&gt;';
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077           $result = <a class="code" href="xmlrpc_8inc.html#3a98b6984b8ca01752d1aa9a267526a3">XMLRPC_request</a>('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(<a class="code" href="xmlrpc_8inc.html#c13be54b26e0803d8745e4f019dcfd8a">XMLRPC_prepare</a>($_GET['upc'])));
+<a name="l00078"></a>00078           <span class="keywordflow">if</span> (<a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">$debug</a>) var_dump($result);
+<a name="l00079"></a>00079           <span class="keywordflow">if</span> ($result[1]['found']) {
+<a name="l00080"></a>00080       ?&gt;
+<a name="l00081"></a>00081             &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"info"</span>&gt;
+<a name="l00082"></a>00082               &lt;table align=<span class="stringliteral">"center"</span>&gt;
+<a name="l00083"></a>00083                 &lt;tr&gt;
+<a name="l00084"></a>00084                   &lt;td <span class="keyword">class</span>=<span class="stringliteral">"title"</span>&gt;Country&lt;/td&gt;
+<a name="l00085"></a>00085                   &lt;td&gt;&lt;?php echo $result[1]['issuerCountry']; ?&gt;&lt;/td&gt;
+<a name="l00086"></a>00086                 &lt;/tr&gt;
+<a name="l00087"></a>00087                 &lt;tr&gt;
+<a name="l00088"></a>00088                   &lt;td <span class="keyword">class</span>=<span class="stringliteral">"title"</span>&gt;Description&lt;/td&gt;
+<a name="l00089"></a>00089                   &lt;td&gt;&lt;?php echo $result[1]['description']; ?&gt;&lt;/td&gt;
+<a name="l00090"></a>00090                 &lt;/tr&gt;
+<a name="l00091"></a>00091                 &lt;tr&gt;
+<a name="l00092"></a>00092                   &lt;td <span class="keyword">class</span>=<span class="stringliteral">"title"</span>&gt;Size&lt;/td&gt;
+<a name="l00093"></a>00093                   &lt;td&gt;&lt;?php echo $result[1]['size']; ?&gt;&lt;/td&gt;
+<a name="l00094"></a>00094                 &lt;/tr&gt;
+<a name="l00095"></a>00095               &lt;/table&gt;
+<a name="l00096"></a>00096               &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/editform.asp?upc=&lt;?php echo $_GET['upc']; ?&gt;"</span>&gt;Modify <span class="keyword">this</span> entry&lt;/a&gt;
+<a name="l00097"></a>00097               &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/deleteform.asp?upc=&lt;?php echo $_GET['upc']; ?&gt;"</span>&gt;Delete <span class="keyword">this</span> entry&lt;/a&gt;
+<a name="l00098"></a>00098             &lt;/div&gt;
+<a name="l00099"></a>00099             &lt;br /&gt;
+<a name="l00100"></a>00100             &lt;?php echo <a class="code" href="form_8php.html#839e205cae656bea01ea99e2de94ef1e">getEntryForm</a>(); ?&gt;
+<a name="l00101"></a>00101       &lt;?php
+<a name="l00102"></a>00102           }
+<a name="l00103"></a>00103           <span class="keywordflow">else</span> {
+<a name="l00104"></a>00104             echo 'Product Not Found!&lt;br /&gt;';
+<a name="l00105"></a>00105             echo '&lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/addform.asp?upc=' . $_GET['upc'] . '"</span>&gt;Add <span class="keyword">this</span> item to the database&lt;/a&gt;';
+<a name="l00106"></a>00106           }
+<a name="l00107"></a>00107         }
+<a name="l00108"></a>00108       ?&gt;
+<a name="l00109"></a>00109     &lt;/div&gt;
+<a name="l00110"></a>00110   &lt;/div&gt;
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112   &lt;div <span class="keyword">class</span>=<span class="stringliteral">"footer"</span>&gt;
+<a name="l00113"></a>00113     &lt;div <span class="keyword">class</span>=<span class="stringliteral">"right"</span>&gt;
+<a name="l00114"></a>00114       Designed By &lt;a href=<span class="stringliteral">"http://www.christinachun.com"</span> title=
+<a name="l00115"></a>00115       <span class="stringliteral">"Christina Chun - Digital Artist &amp;amp; Web Developer"</span>&gt;Christina
+<a name="l00116"></a>00116       Chun&lt;/a&gt; &amp;copy; 2005-2006 | &lt;a href=<span class="stringliteral">"http://www.owsd.org"</span>
+<a name="l00117"></a>00117       title=<span class="stringliteral">"Open Source Web Design"</span>&gt;Open Source Web Design&lt;/a&gt; |
+<a name="l00118"></a>00118       &lt;a href=<span class="stringliteral">"http://validator.w3.org/check?uri=referer"</span>&gt;Valid
+<a name="l00119"></a>00119       XHTML&lt;/a&gt;
+<a name="l00120"></a>00120     &lt;/div&gt;
+<a name="l00121"></a>00121   &lt;/div&gt;
+<a name="l00122"></a>00122 &lt;/body&gt;
+<a name="l00123"></a>00123 &lt;/html&gt;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Sun Apr 20 22:01:02 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

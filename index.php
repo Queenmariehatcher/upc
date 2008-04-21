@@ -17,7 +17,10 @@ include('pear.inc');
 include('xmlrpc.inc');
 include('form.php');
 
-$debug = TRUE;
+/**
+ * Set to TRUE to output debug info
+ */
+$debug = FALSE;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -68,6 +71,9 @@ $debug = TRUE;
           echo '<img src="upcimg.php?upc=' . $_GET['upc'] . '" />';
           echo '</div>';
 
+          /**
+           * Array containinf info on the given UPC
+           */
           $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($_GET['upc'])));
           if ($debug) var_dump($result);
           if ($result[1]['found']) {
