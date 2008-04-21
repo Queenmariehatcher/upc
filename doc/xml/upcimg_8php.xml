@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="upcimg_8php" kind="file">
+    <compoundname>upcimg.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Creates an image of the barcode using Image_Barcode <simplesect kind="see"><para><ulink url="http://pear.php.net/package/Image_Barcode">http://pear.php.net/package/Image_Barcode</ulink> </para><para><ulink url="http://pear.php.net/manual/en/package.images.image-barcode.php">http://pear.php.net/manual/en/package.images.image-barcode.php</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">include(&apos;pear.inc&apos;);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">require_once<sp/>&apos;Image/Barcode.php&apos;;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">Image_Barcode::draw($_GET[&apos;upc&apos;],<sp/>&apos;upca&apos;,<sp/>&apos;png&apos;);</highlight></codeline>
+    </programlisting>
+    <location file="/home/daniel/Coding/upc/upcimg.php"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="pear_8inc" kind="file">
+    <compoundname>pear.inc</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Makes PEAR work with extentions installed in the home directory. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">set_include_path(get_include_path()<sp/>.<sp/>PATH_SEPARATOR<sp/>.<sp/>&apos;/home/dkeenan/pear/php&apos;);</highlight></codeline>
+    </programlisting>
+    <location file="/home/daniel/Coding/upc/pear.inc"/>
+  </compounddef>
+</doxygen>

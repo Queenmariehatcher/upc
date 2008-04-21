@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classXML" kind="class" prot="public">
+    <compoundname>XML</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classXML_1fa14fbca44236b30ab5f3dcfc4b02890" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>XML::$parser</definition>
+        <argsstring></argsstring>
+        <name>$parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="81" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classXML_101d565098eeda8bf09e4242a2748d570" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>XML::$document</definition>
+        <argsstring></argsstring>
+        <name>$document</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="82" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classXML_17c20d75c1719294f3320a537a32753ca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>XML::$current</definition>
+        <argsstring></argsstring>
+        <name>$current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="83" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classXML_1fa51193c2f0b317f817fa3efa8722227" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>XML::$parent</definition>
+        <argsstring></argsstring>
+        <name>$parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="84" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classXML_1c10be009a77c59e80ce5562d4dd35532" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>XML::$parents</definition>
+        <argsstring></argsstring>
+        <name>$parents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="85" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classXML_160e7e74df6643f50e0c6ea8252554b3d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>XML::$last_opened_tag</definition>
+        <argsstring></argsstring>
+        <name>$last_opened_tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="87" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classXML_11475a1374023931e2227277f4047c9aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>XML::XML</definition>
+        <argsstring>($data=null)</argsstring>
+        <name>XML</name>
+        <param>
+          <type>$</type>
+          <declname>data</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="89" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="89" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classXML_1d1524d80c783b2cd22966462411b9b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>XML::destruct</definition>
+        <argsstring>()</argsstring>
+        <name>destruct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="99" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classXML_161e6258dc3d5750100e1f0dd08d6334a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>XML::parse</definition>
+        <argsstring>($data)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>$</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="103" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="103" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>XML::open</definition>
+        <argsstring>($parser, $tag, $attributes)</argsstring>
+        <name>open</name>
+        <param>
+          <type>$</type>
+          <declname>parser</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="112" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="112" bodyend="147"/>
+        <references refid="xmlrpc_8inc_188839ba2c5c835c99f55578c65faa401" compoundref="xmlrpc_8inc" startline="473" endline="475">count_numeric_items</references>
+        <references refid="classXML_1ca70dfbd3e8ce956075181701b09b033" compoundref="xmlrpc_8inc" startline="149" endline="154">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classXML_1ca70dfbd3e8ce956075181701b09b033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>XML::data</definition>
+        <argsstring>($parser, $data)</argsstring>
+        <name>data</name>
+        <param>
+          <type>$</type>
+          <declname>parser</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="149" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="149" bodyend="154"/>
+        <referencedby refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" compoundref="xmlrpc_8inc" startline="156" endline="164">close</referencedby>
+        <referencedby refid="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" compoundref="xmlrpc_8inc" startline="112" endline="147">open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>XML::close</definition>
+        <argsstring>($parser, $tag)</argsstring>
+        <name>close</name>
+        <param>
+          <type>$</type>
+          <declname>parser</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="156" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="156" bodyend="164"/>
+        <references refid="classXML_1ca70dfbd3e8ce956075181701b09b033" compoundref="xmlrpc_8inc" startline="149" endline="154">data</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="80" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="80" bodyend="165"/>
+    <listofallmembers>
+      <member refid="classXML_17c20d75c1719294f3320a537a32753ca" prot="public" virt="non-virtual"><scope>XML</scope><name>$current</name></member>
+      <member refid="classXML_101d565098eeda8bf09e4242a2748d570" prot="public" virt="non-virtual"><scope>XML</scope><name>$document</name></member>
+      <member refid="classXML_160e7e74df6643f50e0c6ea8252554b3d" prot="public" virt="non-virtual"><scope>XML</scope><name>$last_opened_tag</name></member>
+      <member refid="classXML_1fa51193c2f0b317f817fa3efa8722227" prot="public" virt="non-virtual"><scope>XML</scope><name>$parent</name></member>
+      <member refid="classXML_1c10be009a77c59e80ce5562d4dd35532" prot="public" virt="non-virtual"><scope>XML</scope><name>$parents</name></member>
+      <member refid="classXML_1fa14fbca44236b30ab5f3dcfc4b02890" prot="public" virt="non-virtual"><scope>XML</scope><name>$parser</name></member>
+      <member refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" prot="public" virt="non-virtual"><scope>XML</scope><name>close</name></member>
+      <member refid="classXML_1ca70dfbd3e8ce956075181701b09b033" prot="public" virt="non-virtual"><scope>XML</scope><name>data</name></member>
+      <member refid="classXML_1d1524d80c783b2cd22966462411b9b7d" prot="public" virt="non-virtual"><scope>XML</scope><name>destruct</name></member>
+      <member refid="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" prot="public" virt="non-virtual"><scope>XML</scope><name>open</name></member>
+      <member refid="classXML_161e6258dc3d5750100e1f0dd08d6334a" prot="public" virt="non-virtual"><scope>XML</scope><name>parse</name></member>
+      <member refid="classXML_11475a1374023931e2227277f4047c9aa" prot="public" virt="non-virtual"><scope>XML</scope><name>XML</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.5.3">
+  <compound refid="classXML" kind="class"><name>XML</name>
+    <member refid="classXML_1fa14fbca44236b30ab5f3dcfc4b02890" kind="variable"><name>$parser</name></member>
+    <member refid="classXML_101d565098eeda8bf09e4242a2748d570" kind="variable"><name>$document</name></member>
+    <member refid="classXML_17c20d75c1719294f3320a537a32753ca" kind="variable"><name>$current</name></member>
+    <member refid="classXML_1fa51193c2f0b317f817fa3efa8722227" kind="variable"><name>$parent</name></member>
+    <member refid="classXML_1c10be009a77c59e80ce5562d4dd35532" kind="variable"><name>$parents</name></member>
+    <member refid="classXML_160e7e74df6643f50e0c6ea8252554b3d" kind="variable"><name>$last_opened_tag</name></member>
+    <member refid="classXML_11475a1374023931e2227277f4047c9aa" kind="function"><name>XML</name></member>
+    <member refid="classXML_1d1524d80c783b2cd22966462411b9b7d" kind="function"><name>destruct</name></member>
+    <member refid="classXML_161e6258dc3d5750100e1f0dd08d6334a" kind="function"><name>parse</name></member>
+    <member refid="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" kind="function"><name>open</name></member>
+    <member refid="classXML_1ca70dfbd3e8ce956075181701b09b033" kind="function"><name>data</name></member>
+    <member refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" kind="function"><name>close</name></member>
+  </compound>
+  <compound refid="form_8php" kind="file"><name>form.php</name>
+    <member refid="form_8php_1839e205cae656bea01ea99e2de94ef1e" kind="function"><name>getEntryForm</name></member>
+  </compound>
+  <compound refid="general_8dox" kind="file"><name>general.dox</name>
+  </compound>
+  <compound refid="index_8php" kind="file"><name>index.php</name>
+    <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
+  </compound>
+  <compound refid="pear_8inc" kind="file"><name>pear.inc</name>
+  </compound>
+  <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
+  </compound>
+  <compound refid="xmlrpc_8inc" kind="file"><name>xmlrpc.inc</name>
+    <member refid="xmlrpc_8inc_1a1e9b05a06f28fabb86c10129f5890ef" kind="function"><name>XML_serialize</name></member>
+    <member refid="xmlrpc_8inc_1ef8f3de498a12b230d049cdee6a25145" kind="function"><name>XML_unserialize</name></member>
+    <member refid="xmlrpc_8inc_1708b2136ca600664d2207a511b3cf3f8" kind="function"><name>XMLRPC_parse</name></member>
+    <member refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" kind="function"><name>XMLRPC_prepare</name></member>
+    <member refid="xmlrpc_8inc_1d936fe41ae9c3e0b90bd72ffe82a2969" kind="function"><name>XMLRPC_adjustValue</name></member>
+    <member refid="xmlrpc_8inc_1ce4ea8e1274ca2ee3f51ec5a724f00f3" kind="function"><name>XMLRPC_getParams</name></member>
+    <member refid="xmlrpc_8inc_170efa062e92a380196ed8053850c0906" kind="function"><name>XMLRPC_getMethodName</name></member>
+    <member refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" kind="function"><name>XMLRPC_request</name></member>
+    <member refid="xmlrpc_8inc_1c736d378caaccdd0726ea1080d1f526f" kind="function"><name>XMLRPC_response</name></member>
+    <member refid="xmlrpc_8inc_10cdc54b1376ccbbe412175c9819a95ac" kind="function"><name>XMLRPC_error</name></member>
+    <member refid="xmlrpc_8inc_14485d809c5d598949d9cfaca42bddf37" kind="function"><name>XMLRPC_convert_timestamp_to_iso8601</name></member>
+    <member refid="xmlrpc_8inc_11d9c2ef61c9f1fd2723d06d1364ef845" kind="function"><name>XMLRPC_convert_iso8601_to_timestamp</name></member>
+    <member refid="xmlrpc_8inc_188839ba2c5c835c99f55578c65faa401" kind="function"><name>count_numeric_items</name></member>
+    <member refid="xmlrpc_8inc_1e2d2e97a8c1c560f5e96d58d60a02874" kind="function"><name>XMLRPC_debug</name></member>
+    <member refid="xmlrpc_8inc_18467f85edd385ddf2506b1bd5065a6d7" kind="function"><name>XMLRPC_debug_print</name></member>
+    <member refid="xmlrpc_8inc_11f60d2672bcb35f5ff908f64931f8d48" kind="function"><name>XMLRPC_show</name></member>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="license" kind="page"><name>license</name>
+  </compound>
+  <compound refid="bug" kind="page"><name>bug</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

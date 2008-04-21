@@ -2,16 +2,6 @@
 /**
  * @file
  * Returns info on a given UPC Barcode
- * @todo
- * Make this support everyhting Image_Barcode supports:
- * - Code 39
- * - Code 128
- * - EAN 13
- * - INT 25
- * - PostNet
- * - UPCA
- * @todo
- * Fix errors
  */
 include('pear.inc');
 include('xmlrpc.inc');
