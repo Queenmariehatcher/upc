@@ -27,10 +27,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Holds the barcode entered <simplesect kind="note"><para>Can hold any barcode, but named $upc for ease of entry </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/index.php" line="57" bodyfile="/home/daniel/Coding/upc/index.php" bodystart="57" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/index.php" line="61" bodyfile="/home/daniel/Coding/upc/index.php" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -39,10 +40,10 @@
 <para>Returns info on a given UPC Barcode </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">include(&apos;pear.inc&apos;);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">include(&apos;xmlrpc.inc&apos;);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">include(&apos;form.inc&apos;);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">include(&apos;barcode.inc&apos;);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">require<sp/>&apos;pear.inc&apos;;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">require_once<sp/>&apos;xmlrpc.inc&apos;;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">require_once<sp/>&apos;form.inc&apos;;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">require_once<sp/>&apos;barcode.inc&apos;;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" refkind="member"><highlight class="normal"><ref refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kindref="member">$debug</ref><sp/>=<sp/>TRUE;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">?&gt;</highlight></codeline>
@@ -87,36 +88,36 @@
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;bodytext&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php</highlight></codeline>
-<codeline lineno="57" refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref><sp/>=<sp/>$_GET[&apos;upc&apos;];</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>(<ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref>))<sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" kindref="member">getBarcodeInfo</ref>(<ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref>);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;error&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>barcode<sp/>with<sp/>the<sp/>value<sp/><ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref><sp/>is<sp/>not<sp/>valid.</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">_HTML;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kindref="member">getEntryForm</ref>();</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>?&gt;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;right&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Designed<sp/>By<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.christinachun.com&quot;</highlight><highlight class="normal"><sp/>title=</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Christina<sp/>Chun<sp/>-<sp/>Digital<sp/>Artist<sp/>&amp;amp;<sp/>Web<sp/>Developer&quot;</highlight><highlight class="normal">&gt;Christina</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Chun&lt;/a&gt;<sp/>&amp;copy;<sp/>2005-2006<sp/>|<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.owsd.org&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>title=</highlight><highlight class="stringliteral">&quot;Open<sp/>Source<sp/>Web<sp/>Design&quot;</highlight><highlight class="normal">&gt;Open<sp/>Source<sp/>Web<sp/>Design&lt;/a&gt;<sp/>|</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://validator.w3.org/check?uri=referer&quot;</highlight><highlight class="normal">&gt;Valid</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>XHTML&lt;/a&gt;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
+<codeline lineno="61" refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref><sp/>=<sp/>$_GET[&apos;upc&apos;];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>(<ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" kindref="member">getBarcodeInfo</ref>(<ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;error&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>barcode<sp/>with<sp/>the<sp/>value<sp/><ref refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kindref="member">$upc</ref><sp/>is<sp/>not<sp/>valid.</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">_HTML;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kindref="member">getEntryForm</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>?&gt;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;right&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Designed<sp/>By<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.christinachun.com&quot;</highlight><highlight class="normal"><sp/>title=</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Christina<sp/>Chun<sp/>-<sp/>Digital<sp/>Artist<sp/>&amp;amp;<sp/>Web<sp/>Developer&quot;</highlight><highlight class="normal">&gt;Christina</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Chun&lt;/a&gt;<sp/>&amp;copy;<sp/>2005-2006<sp/>|<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.owsd.org&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>title=</highlight><highlight class="stringliteral">&quot;Open<sp/>Source<sp/>Web<sp/>Design&quot;</highlight><highlight class="normal">&gt;Open<sp/>Source<sp/>Web<sp/>Design&lt;/a&gt;<sp/>|</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://validator.w3.org/check?uri=referer&quot;</highlight><highlight class="normal">&gt;Valid</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>XHTML&lt;/a&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
     </programlisting>
     <location file="/home/daniel/Coding/upc/index.php"/>
   </compounddef>

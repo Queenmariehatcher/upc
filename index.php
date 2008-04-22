@@ -3,10 +3,10 @@
  * @file
  * Returns info on a given UPC Barcode
  */
-include('pear.inc');
-include('xmlrpc.inc');
-include('form.inc');
-include('barcode.inc');
+require 'pear.inc';
+require_once 'xmlrpc.inc';
+require_once 'form.inc';
+require_once 'barcode.inc';
 
 /**
  * Set to TRUE to output debug info
@@ -54,6 +54,10 @@ $debug = TRUE;
 
     <div id="bodytext">
       <?php
+        /**
+         * Holds the barcode entered
+         * @note Can hold any barcode, but named $upc for ease of entry
+         */
         $upc = $_GET['upc'];
         if ($upc) {
           if (checkBarcode($upc)) {

@@ -5,6 +5,10 @@
  * @see http://pear.php.net/package/Image_Barcode
  * @see http://pear.php.net/manual/en/package.images.image-barcode.php
  */
-include('pear.inc');
+require 'pear.inc';
+require_once 'barcode.inc';
 require_once 'Image/Barcode.php';
-Image_Barcode::draw($_GET['upc'], 'upca', 'png');
+
+if (checkBarcode($_GET['upc'])) {
+  Image_Barcode::draw($_GET['upc'], checkBarcode($_GET['upc']), 'png');
+}

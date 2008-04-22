@@ -95,8 +95,8 @@
         </inbodydescription>
         <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="185" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="185" bodyend="243"/>
         <references refid="xmlrpc_8inc_188839ba2c5c835c99f55578c65faa401" compoundref="xmlrpc_8inc" startline="473" endline="475">count_numeric_items</references>
-        <referencedby refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" compoundref="barcode_8inc" startline="11" endline="30">checkBarcode</referencedby>
-        <referencedby refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" compoundref="barcode_8inc" startline="38" endline="81">getBarcodeInfo</referencedby>
+        <referencedby refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" compoundref="barcode_8inc" startline="13" endline="32">checkBarcode</referencedby>
+        <referencedby refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" compoundref="barcode_8inc" startline="40" endline="83">getBarcodeInfo</referencedby>
       </memberdef>
       <memberdef kind="function" id="xmlrpc_8inc_1d936fe41ae9c3e0b90bd72ffe82a2969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>&amp;</type>
@@ -191,8 +191,8 @@
         <references refid="xmlrpc_8inc_1d936fe41ae9c3e0b90bd72ffe82a2969" compoundref="xmlrpc_8inc" startline="245" endline="316">XMLRPC_adjustValue</references>
         <references refid="xmlrpc_8inc_1e2d2e97a8c1c560f5e96d58d60a02874" compoundref="xmlrpc_8inc" startline="477" endline="479">XMLRPC_debug</references>
         <references refid="xmlrpc_8inc_11f60d2672bcb35f5ff908f64931f8d48" compoundref="xmlrpc_8inc" startline="494" endline="504">XMLRPC_show</references>
-        <referencedby refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" compoundref="barcode_8inc" startline="11" endline="30">checkBarcode</referencedby>
-        <referencedby refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" compoundref="barcode_8inc" startline="38" endline="81">getBarcodeInfo</referencedby>
+        <referencedby refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" compoundref="barcode_8inc" startline="13" endline="32">checkBarcode</referencedby>
+        <referencedby refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" compoundref="barcode_8inc" startline="40" endline="83">getBarcodeInfo</referencedby>
       </memberdef>
       <memberdef kind="function" id="xmlrpc_8inc_1c736d378caaccdd0726ea1080d1f526f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

@@ -4,9 +4,15 @@
     <compoundname>index</compoundname>
     <title></title>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Make this support everyhting Image_Barcode supports:<itemizedlist>
-<listitem><para>Code 39</para></listitem><listitem><para>Code 128</para></listitem><listitem><para>EAN 13</para></listitem><listitem><para>INT 25</para></listitem><listitem><para>PostNet</para></listitem><listitem><para>UPCA </para></listitem></itemizedlist>
-</para><para>Fix errors </para><para>Add possible product images</para></xrefdescription></xrefsect><simplesect kind="version"><para>0.1 </para></simplesect>
+<para><simplesect kind="note"><para>The api key for <ulink url="http://upc.dankeenan.org">http://upc.dankeenan.org</ulink> is <bold>ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ</bold> </para></simplesect>
+<simplesect kind="see"><para><ulink url="http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ">http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&amp;key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ</ulink> </para></simplesect>
+<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Make this support everyhting Image_Barcode supports:<itemizedlist>
+<listitem><para>Code 39</para></listitem><listitem><para>Code 128</para></listitem><listitem><para>EAN 13<itemizedlist>
+<listitem><para><bold>Done!</bold> </para></listitem></itemizedlist>
+</para></listitem><listitem><para>INT 25</para></listitem><listitem><para>PostNet</para></listitem><listitem><para>UPCA<itemizedlist>
+<listitem><para><bold>Done!</bold> </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para>Fix errors </para><para>Add possible product images (Using Google Images and the AJAX search API</para></xrefdescription></xrefsect><simplesect kind="version"><para>0.1 </para></simplesect>
 <simplesect kind="author"><para>Dan Keenan - <ulink url="http://dankeenan.org">http://dankeenan.org</ulink> </para></simplesect>
 </para><sect1 id="index_1license">
 <title>License</title>

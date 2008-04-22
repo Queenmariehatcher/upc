@@ -9,9 +9,13 @@
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">include(&apos;pear.inc&apos;);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">require_once<sp/>&apos;Image/Barcode.php&apos;;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">Image_Barcode::draw($_GET[&apos;upc&apos;],<sp/>&apos;upca&apos;,<sp/>&apos;png&apos;);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">require<sp/>&apos;pear.inc&apos;;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">require_once<sp/>&apos;barcode.inc&apos;;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">require_once<sp/>&apos;Image/Barcode.php&apos;;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>($_GET[&apos;upc&apos;]))<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>Image_Barcode::draw($_GET[&apos;upc&apos;],<sp/><ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>($_GET[&apos;upc&apos;]),<sp/>&apos;png&apos;);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/daniel/Coding/upc/upcimg.php"/>
   </compounddef>

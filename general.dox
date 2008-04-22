@@ -1,14 +1,19 @@
 /**
+ * @note
+ * The api key for http://upc.dankeenan.org is @b ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ
+ * @see http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ
  * @todo
  * Make this support everyhting Image_Barcode supports:
  * - Code 39
  * - Code 128
  * - EAN 13
+ *   - @b Done!
  * - INT 25
  * - PostNet
  * - UPCA
+ *   - @b Done!
  * @todo Fix errors
- * @todo Add possible product images
+ * @todo Add possible product images (Using Google Images and the AJAX search API
  *
  * @mainpage
  * @version 0.1

@@ -7,8 +7,12 @@
 <para><anchor id="todo_1_todo000001"/> <variablelist>
 <varlistentry><term>page <ref refid="index" kindref="compound">Main Page</ref>  </term></varlistentry>
 <listitem><para>Make this support everyhting Image_Barcode supports:<itemizedlist>
-<listitem><para>Code 39</para></listitem><listitem><para>Code 128</para></listitem><listitem><para>EAN 13</para></listitem><listitem><para>INT 25</para></listitem><listitem><para>PostNet</para></listitem><listitem><para>UPCA </para></listitem></itemizedlist>
-</para><para>Fix errors </para><para>Add possible product images</para><para></para></listitem>
+<listitem><para>Code 39</para></listitem><listitem><para>Code 128</para></listitem><listitem><para>EAN 13<itemizedlist>
+<listitem><para><bold>Done!</bold> </para></listitem></itemizedlist>
+</para></listitem><listitem><para>INT 25</para></listitem><listitem><para>PostNet</para></listitem><listitem><para>UPCA<itemizedlist>
+<listitem><para><bold>Done!</bold> </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para>Fix errors </para><para>Add possible product images (Using Google Images and the AJAX search API</para><para></para></listitem>
 </variablelist>
 </para>    </detaileddescription>
   </compounddef>

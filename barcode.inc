@@ -3,6 +3,8 @@
  * @file
  * Functions for the handling of different barcodes
  */
+require 'pear.inc';
+require_once 'xmlrpc.inc';
 /**
  * Checks to see if a valid, handalable, barcode was entered.
  * @param $barcode The Barcode to be checked
