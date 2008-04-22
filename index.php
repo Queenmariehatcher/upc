@@ -7,19 +7,23 @@ require 'pear.inc';
 require_once 'xmlrpc.inc';
 require_once 'form.inc';
 require_once 'barcode.inc';
+require_once 'product.inc';
 
 /**
  * Set to TRUE to output debug info
  */
 $debug = TRUE;
+/**
+ * The Google AJAX search API key
+ * @see http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ
+ */
+define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ')
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
   <meta http-equiv="Content-Type" content=
   "text/html; charset=us-ascii" />
   <meta name="Language" content="English" />
