@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="product_8inc" kind="file">
+    <compoundname>product.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="product_8inc_19dbb778854cfe105058d7161ca8f058c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getImages</definition>
+        <argsstring>($product)</argsstring>
+        <name>getImages</name>
+        <param>
+          <type>$</type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets Appropriate Images from google Image Search <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$product</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The product to get images for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HTML code to output product images </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>The code to be outputed </para>        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/product.inc" line="10" bodyfile="/home/daniel/Coding/upc/product.inc" bodystart="10" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="10" refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" refkind="member"><highlight class="normal">function<sp/><ref refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kindref="member">getImages</ref>($product)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/daniel/Coding/upc/product.inc"/>
+  </compounddef>
+</doxygen>

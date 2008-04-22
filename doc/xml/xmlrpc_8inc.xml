@@ -338,7 +338,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/daniel/Coding/upc/xmlrpc.inc" line="481" bodyfile="/home/daniel/Coding/upc/xmlrpc.inc" bodystart="481" bodyend="492"/>
-        <references refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" compoundref="index_8php" startline="14">$debug</references>
+        <references refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" compoundref="index_8php" startline="15">$debug</references>
       </memberdef>
       <memberdef kind="function" id="xmlrpc_8inc_11f60d2672bcb35f5ff908f64931f8d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

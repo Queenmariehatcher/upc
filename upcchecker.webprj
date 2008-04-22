@@ -361,7 +361,6 @@
     <item modified_time="1208743472" url="doc/rtf/xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3_cgraph.md5" uploadstatus="1" />
     <item modified_time="1208743472" url="doc/rtf/xmlrpc_8inc_ce4ea8e1274ca2ee3f51ec5a724f00f3_cgraph.png" uploadstatus="1" />
     <item modified_time="1208735966" url=".svn/text-base/COPYING.svn-base" uploadstatus="1" />
-    <item modified_time="1208743225" url=".svn/text-base/form.php.svn-base" uploadstatus="1" />
     <item modified_time="1208821676" url=".svn/text-base/general.dox.svn-base" uploadstatus="1" />
     <item modified_time="1208814156" url="doc/html/ftv2blank.png" uploadstatus="1" />
     <item modified_time="1208814156" url="doc/html/ftv2doc.png" uploadstatus="1" />
@@ -412,161 +411,182 @@
     <item modified_time="1208826435" url="doc/xml/upcimg_8php.xml" uploadstatus="1" />
     <item modified_time="1208826435" url="doc/xml/xmlrpc_8inc.xml" uploadstatus="1" />
     <item modified_time="1208735966" url="COPYING" uploadstatus="1" />
-    <item url="doc/man/.svn/" />
-    <item url="doc/man/.svn/prop-base/" />
-    <item url="doc/man/.svn/props/" />
-    <item url="doc/man/.svn/text-base/" />
-    <item url="doc/man/.svn/tmp/" />
-    <item url="doc/man/.svn/tmp/prop-base/" />
-    <item url="doc/man/.svn/tmp/props/" />
-    <item url="doc/man/.svn/tmp/text-base/" />
-    <item modified_time="1208814831" url="doc/man/.svn/entries" />
-    <item modified_time="1208813846" url="doc/man/.svn/format" />
-    <item url="doc/xml/.svn/" />
-    <item url="doc/xml/.svn/prop-base/" />
-    <item url="doc/xml/.svn/props/" />
-    <item url="doc/xml/.svn/text-base/" />
-    <item url="doc/xml/.svn/tmp/" />
-    <item url="doc/xml/.svn/tmp/prop-base/" />
-    <item url="doc/xml/.svn/tmp/props/" />
-    <item url="doc/xml/.svn/tmp/text-base/" />
-    <item modified_time="1208821741" url="doc/xml/.svn/entries" />
-    <item modified_time="1208813846" url="doc/xml/.svn/format" />
-    <item modified_time="1208823881" url="form.inc" />
-    <item modified_time="1208825983" url="barcode.inc" />
-    <item modified_time="1208814794" url="doc/html/.svn/prop-base/ftv2blank.png.svn-base" />
-    <item modified_time="1208814794" url="doc/html/.svn/prop-base/ftv2doc.png.svn-base" />
-    <item modified_time="1208814794" url="doc/html/.svn/prop-base/ftv2folderclosed.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2folderopen.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2lastnode.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2link.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2mlastnode.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2mnode.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2node.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2plastnode.png.svn-base" />
-    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2pnode.png.svn-base" />
-    <item modified_time="1208814796" url="doc/html/.svn/prop-base/ftv2vertline.png.svn-base" />
-    <item modified_time="1208814798" url="doc/html/.svn/prop-base/installdox.svn-base" />
-    <item modified_time="1208814799" url="doc/html/.svn/prop-base/search.idx.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2blank.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2doc.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2folderclosed.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2folderopen.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2lastnode.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2link.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2mlastnode.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2mnode.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2node.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2plastnode.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2pnode.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2vertline.png.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/installdox.svn-base" />
-    <item modified_time="1208814155" url="doc/html/.svn/text-base/main.html.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/search.idx.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/search.php.svn-base" />
-    <item modified_time="1208814156" url="doc/html/.svn/text-base/tree.html.svn-base" />
-    <item modified_time="1208814155" url="doc/latex/.svn/text-base/main.tex.svn-base" />
-    <item url="doc/man/man3/.svn/" />
-    <item url="doc/man/man3/.svn/prop-base/" />
-    <item url="doc/man/man3/.svn/props/" />
-    <item url="doc/man/man3/.svn/text-base/" />
-    <item url="doc/man/man3/.svn/tmp/" />
-    <item url="doc/man/man3/.svn/tmp/prop-base/" />
-    <item url="doc/man/man3/.svn/tmp/props/" />
-    <item url="doc/man/man3/.svn/tmp/text-base/" />
-    <item modified_time="1208821741" url="doc/man/man3/.svn/all-wcprops" />
-    <item modified_time="1208821741" url="doc/man/man3/.svn/entries" />
-    <item modified_time="1208814791" url="doc/man/man3/.svn/format" />
-    <item modified_time="1208814831" url="doc/man/.svn/all-wcprops" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/bug.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/classXML.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/combine.xslt.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/compound.xsd.svn-base" />
-    <item modified_time="1208814156" url="doc/xml/.svn/text-base/dir_1c170a7b8ac8d7a203a537e0fbe1c1af.xml.svn-base" />
-    <item modified_time="1208814156" url="doc/xml/.svn/text-base/dir_e4c61d03d9f7ab4bc4eb4f606e5472ac.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/form_8php.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/general_8dox.xml.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/index_8php.xml.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/indexpage.xml.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/index.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/index.xsd.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/license.xml.svn-base" />
-    <item modified_time="1208814156" url="doc/xml/.svn/text-base/main.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/pear_8inc.xml.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/todo.xml.svn-base" />
-    <item modified_time="1208814669" url="doc/xml/.svn/text-base/upcimg_8php.xml.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/xmlrpc_8inc.xml.svn-base" />
-    <item modified_time="1208821741" url="doc/xml/.svn/all-wcprops" />
-    <item modified_time="1208826435" url="doc/xml/indexpage.xml" />
-    <item modified_time="1208826434" url="doc/html/barcode_8inc.html" />
-    <item modified_time="1208826434" url="doc/html/barcode_8inc-source.html" />
-    <item modified_time="1208826434" url="doc/html/form_8inc.html" />
-    <item modified_time="1208826434" url="doc/html/form_8inc-source.html" />
-    <item modified_time="1208826434" url="doc/latex/barcode_8inc.tex" />
-    <item modified_time="1208826434" url="doc/latex/form_8inc.tex" />
-    <item modified_time="1208826434" url="doc/man/man3/barcode.inc.3" />
-    <item modified_time="1208826434" url="doc/man/man3/form.inc.3" />
-    <item modified_time="1208826435" url="doc/xml/barcode_8inc.xml" />
-    <item modified_time="1208826435" url="doc/xml/form_8inc.xml" />
-    <item modified_time="1208820269" url="doc/html/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.map" />
-    <item modified_time="1208820268" url="doc/html/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5" />
-    <item modified_time="1208820269" url="doc/html/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png" />
-    <item modified_time="1208820269" url="doc/latex/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.eps" />
-    <item modified_time="1208820269" url="doc/latex/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5" />
-    <item modified_time="1208820270" url="doc/latex/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.pdf" />
-    <item modified_time="1208820270" url="doc/rtf/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5" />
-    <item modified_time="1208820270" url="doc/rtf/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png" />
-    <item modified_time="1208820798" url="doc/html/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.map" />
-    <item modified_time="1208820797" url="doc/html/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5" />
-    <item modified_time="1208820797" url="doc/html/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png" />
-    <item modified_time="1208820798" url="doc/latex/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.eps" />
-    <item modified_time="1208820798" url="doc/latex/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5" />
-    <item modified_time="1208820798" url="doc/latex/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.pdf" />
-    <item modified_time="1208820798" url="doc/rtf/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5" />
-    <item modified_time="1208820799" url="doc/rtf/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png" />
-    <item modified_time="1208821711" url="doc/html/.svn/prop-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" />
-    <item modified_time="1208821713" url="doc/html/.svn/prop-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" />
-    <item modified_time="1208820798" url="doc/html/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.map.svn-base" />
-    <item modified_time="1208820797" url="doc/html/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5.svn-base" />
-    <item modified_time="1208820797" url="doc/html/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" />
-    <item modified_time="1208820269" url="doc/html/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.map.svn-base" />
-    <item modified_time="1208820268" url="doc/html/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5.svn-base" />
-    <item modified_time="1208820269" url="doc/html/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" />
-    <item modified_time="1208821679" url="doc/html/.svn/text-base/barcode_8inc.html.svn-base" />
-    <item modified_time="1208821679" url="doc/html/.svn/text-base/barcode_8inc-source.html.svn-base" />
-    <item modified_time="1208821679" url="doc/html/.svn/text-base/form_8inc.html.svn-base" />
-    <item modified_time="1208821679" url="doc/html/.svn/text-base/form_8inc-source.html.svn-base" />
-    <item modified_time="1208821717" url="doc/latex/.svn/prop-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.pdf.svn-base" />
-    <item modified_time="1208821717" url="doc/latex/.svn/prop-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.pdf.svn-base" />
-    <item modified_time="1208820798" url="doc/latex/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.eps.svn-base" />
-    <item modified_time="1208820798" url="doc/latex/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5.svn-base" />
-    <item modified_time="1208820798" url="doc/latex/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.pdf.svn-base" />
-    <item modified_time="1208820269" url="doc/latex/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.eps.svn-base" />
-    <item modified_time="1208820269" url="doc/latex/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5.svn-base" />
-    <item modified_time="1208820270" url="doc/latex/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.pdf.svn-base" />
-    <item modified_time="1208821679" url="doc/latex/.svn/text-base/barcode_8inc.tex.svn-base" />
-    <item modified_time="1208821679" url="doc/latex/.svn/text-base/form_8inc.tex.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/barcode.inc.3.svn-base" />
-    <item modified_time="1208821680" url="doc/man/man3/.svn/text-base/bug.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/form.inc.3.svn-base" />
-    <item modified_time="1208815277" url="doc/man/man3/.svn/text-base/form.php.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/general.dox.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/index.php.3.svn-base" />
-    <item modified_time="1208821680" url="doc/man/man3/.svn/text-base/license.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/pear.inc.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/todo.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/upcimg.php.3.svn-base" />
-    <item modified_time="1208821680" url="doc/man/man3/.svn/text-base/XML.3.svn-base" />
-    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/xmlrpc.inc.3.svn-base" />
-    <item modified_time="1208821720" url="doc/rtf/.svn/prop-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" />
-    <item modified_time="1208821720" url="doc/rtf/.svn/prop-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" />
-    <item modified_time="1208820798" url="doc/rtf/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5.svn-base" />
-    <item modified_time="1208820799" url="doc/rtf/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" />
-    <item modified_time="1208820270" url="doc/rtf/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5.svn-base" />
-    <item modified_time="1208820270" url="doc/rtf/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/barcode_8inc.xml.svn-base" />
-    <item modified_time="1208821680" url="doc/xml/.svn/text-base/form_8inc.xml.svn-base" />
-    <item modified_time="1208820786" url=".svn/text-base/barcode.inc.svn-base" />
-    <item modified_time="1208821304" url=".svn/text-base/form.inc.svn-base" />
+    <item url="doc/man/.svn/" uploadstatus="1" />
+    <item url="doc/man/.svn/prop-base/" uploadstatus="1" />
+    <item url="doc/man/.svn/props/" uploadstatus="1" />
+    <item url="doc/man/.svn/text-base/" uploadstatus="1" />
+    <item url="doc/man/.svn/tmp/" uploadstatus="1" />
+    <item url="doc/man/.svn/tmp/prop-base/" uploadstatus="1" />
+    <item url="doc/man/.svn/tmp/props/" uploadstatus="1" />
+    <item url="doc/man/.svn/tmp/text-base/" uploadstatus="1" />
+    <item modified_time="1208814831" url="doc/man/.svn/entries" uploadstatus="1" />
+    <item modified_time="1208813846" url="doc/man/.svn/format" uploadstatus="1" />
+    <item url="doc/xml/.svn/" uploadstatus="1" />
+    <item url="doc/xml/.svn/prop-base/" uploadstatus="1" />
+    <item url="doc/xml/.svn/props/" uploadstatus="1" />
+    <item url="doc/xml/.svn/text-base/" uploadstatus="1" />
+    <item url="doc/xml/.svn/tmp/" uploadstatus="1" />
+    <item url="doc/xml/.svn/tmp/prop-base/" uploadstatus="1" />
+    <item url="doc/xml/.svn/tmp/props/" uploadstatus="1" />
+    <item url="doc/xml/.svn/tmp/text-base/" uploadstatus="1" />
+    <item modified_time="1208821741" url="doc/xml/.svn/entries" uploadstatus="1" />
+    <item modified_time="1208813846" url="doc/xml/.svn/format" uploadstatus="1" />
+    <item modified_time="1208823881" url="form.inc" uploadstatus="1" />
+    <item modified_time="1208825983" url="barcode.inc" uploadstatus="1" />
+    <item modified_time="1208814794" url="doc/html/.svn/prop-base/ftv2blank.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814794" url="doc/html/.svn/prop-base/ftv2doc.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814794" url="doc/html/.svn/prop-base/ftv2folderclosed.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2folderopen.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2lastnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2link.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2mlastnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2mnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2node.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2plastnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814795" url="doc/html/.svn/prop-base/ftv2pnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814796" url="doc/html/.svn/prop-base/ftv2vertline.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814798" url="doc/html/.svn/prop-base/installdox.svn-base" uploadstatus="1" />
+    <item modified_time="1208814799" url="doc/html/.svn/prop-base/search.idx.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2blank.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2doc.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2folderclosed.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2folderopen.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2lastnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2link.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2mlastnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2mnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2node.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2plastnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2pnode.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/ftv2vertline.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/installdox.svn-base" uploadstatus="1" />
+    <item modified_time="1208814155" url="doc/html/.svn/text-base/main.html.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/search.idx.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/search.php.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/html/.svn/text-base/tree.html.svn-base" uploadstatus="1" />
+    <item modified_time="1208814155" url="doc/latex/.svn/text-base/main.tex.svn-base" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/prop-base/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/props/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/text-base/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/tmp/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/tmp/prop-base/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/tmp/props/" uploadstatus="1" />
+    <item url="doc/man/man3/.svn/tmp/text-base/" uploadstatus="1" />
+    <item modified_time="1208821741" url="doc/man/man3/.svn/all-wcprops" uploadstatus="1" />
+    <item modified_time="1208821741" url="doc/man/man3/.svn/entries" uploadstatus="1" />
+    <item modified_time="1208814791" url="doc/man/man3/.svn/format" uploadstatus="1" />
+    <item modified_time="1208814831" url="doc/man/.svn/all-wcprops" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/bug.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/classXML.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/combine.xslt.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/compound.xsd.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/xml/.svn/text-base/dir_1c170a7b8ac8d7a203a537e0fbe1c1af.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/xml/.svn/text-base/dir_e4c61d03d9f7ab4bc4eb4f606e5472ac.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/form_8php.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/general_8dox.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/index_8php.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/indexpage.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/index.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/index.xsd.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/license.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814156" url="doc/xml/.svn/text-base/main.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/pear_8inc.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/todo.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208814669" url="doc/xml/.svn/text-base/upcimg_8php.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/xmlrpc_8inc.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821741" url="doc/xml/.svn/all-wcprops" uploadstatus="1" />
+    <item modified_time="1208826435" url="doc/xml/indexpage.xml" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/html/barcode_8inc.html" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/html/barcode_8inc-source.html" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/html/form_8inc.html" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/html/form_8inc-source.html" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/latex/barcode_8inc.tex" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/latex/form_8inc.tex" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/man/man3/barcode.inc.3" uploadstatus="1" />
+    <item modified_time="1208826434" url="doc/man/man3/form.inc.3" uploadstatus="1" />
+    <item modified_time="1208826435" url="doc/xml/barcode_8inc.xml" uploadstatus="1" />
+    <item modified_time="1208826435" url="doc/xml/form_8inc.xml" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/html/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.map" uploadstatus="1" />
+    <item modified_time="1208820268" url="doc/html/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/html/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/latex/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.eps" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/latex/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5" uploadstatus="1" />
+    <item modified_time="1208820270" url="doc/latex/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.pdf" uploadstatus="1" />
+    <item modified_time="1208820270" url="doc/rtf/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5" uploadstatus="1" />
+    <item modified_time="1208820270" url="doc/rtf/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/html/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.map" uploadstatus="1" />
+    <item modified_time="1208820797" url="doc/html/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5" uploadstatus="1" />
+    <item modified_time="1208820797" url="doc/html/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/latex/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.eps" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/latex/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/latex/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.pdf" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/rtf/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5" uploadstatus="1" />
+    <item modified_time="1208820799" url="doc/rtf/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png" uploadstatus="1" />
+    <item modified_time="1208821711" url="doc/html/.svn/prop-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208821713" url="doc/html/.svn/prop-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/html/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.map.svn-base" uploadstatus="1" />
+    <item modified_time="1208820797" url="doc/html/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5.svn-base" uploadstatus="1" />
+    <item modified_time="1208820797" url="doc/html/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/html/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.map.svn-base" uploadstatus="1" />
+    <item modified_time="1208820268" url="doc/html/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5.svn-base" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/html/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/html/.svn/text-base/barcode_8inc.html.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/html/.svn/text-base/barcode_8inc-source.html.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/html/.svn/text-base/form_8inc.html.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/html/.svn/text-base/form_8inc-source.html.svn-base" uploadstatus="1" />
+    <item modified_time="1208821717" url="doc/latex/.svn/prop-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.pdf.svn-base" uploadstatus="1" />
+    <item modified_time="1208821717" url="doc/latex/.svn/prop-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.pdf.svn-base" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/latex/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.eps.svn-base" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/latex/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5.svn-base" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/latex/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.pdf.svn-base" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/latex/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.eps.svn-base" uploadstatus="1" />
+    <item modified_time="1208820269" url="doc/latex/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5.svn-base" uploadstatus="1" />
+    <item modified_time="1208820270" url="doc/latex/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.pdf.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/latex/.svn/text-base/barcode_8inc.tex.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/latex/.svn/text-base/form_8inc.tex.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/barcode.inc.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/man/man3/.svn/text-base/bug.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/form.inc.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208815277" url="doc/man/man3/.svn/text-base/form.php.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/general.dox.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/index.php.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/man/man3/.svn/text-base/license.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/pear.inc.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/todo.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/upcimg.php.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/man/man3/.svn/text-base/XML.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821679" url="doc/man/man3/.svn/text-base/xmlrpc.inc.3.svn-base" uploadstatus="1" />
+    <item modified_time="1208821720" url="doc/rtf/.svn/prop-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208821720" url="doc/rtf/.svn/prop-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208820798" url="doc/rtf/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.md5.svn-base" uploadstatus="1" />
+    <item modified_time="1208820799" url="doc/rtf/.svn/text-base/barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208820270" url="doc/rtf/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.md5.svn-base" uploadstatus="1" />
+    <item modified_time="1208820270" url="doc/rtf/.svn/text-base/barcode_8inc_e10c37e4f9f9b7c6617a388351a27c99_cgraph.png.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/barcode_8inc.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208821680" url="doc/xml/.svn/text-base/form_8inc.xml.svn-base" uploadstatus="1" />
+    <item modified_time="1208820786" url=".svn/text-base/barcode.inc.svn-base" uploadstatus="1" />
+    <item modified_time="1208821304" url=".svn/text-base/form.inc.svn-base" uploadstatus="1" />
+    <item url="doc/html/globals_enum.html" />
+    <item url="doc/html/product_8inc.html" />
+    <item url="doc/html/product_8inc-source.html" />
+    <item url="doc/html/searchapi_8dox.html" />
+    <item url="doc/html/searchexample_8php.html" />
+    <item url="doc/html/searchexample_8php-source.html" />
+    <item url="doc/latex/product_8inc.tex" />
+    <item url="doc/latex/searchapi_8dox.tex" />
+    <item url="doc/latex/searchexample_8php.tex" />
+    <item url="doc/man/man3/product.inc.3" />
+    <item url="doc/man/man3/searchapi.dox.3" />
+    <item url="doc/man/man3/searchexample.php.3" />
+    <item url="doc/xml/product_8inc.xml" />
+    <item url="doc/xml/searchapi_8dox.xml" />
+    <item url="doc/xml/searchexample_8php.xml" />
+    <item url=".svn/text-base/product.inc.svn-base" />
+    <item url=".svn/text-base/searchapi.dox.svn-base" />
+    <item url=".svn/text-base/searchexample.php.svn-base" />
+    <item url="product.inc" />
+    <item url="searchapi.dox" />
+    <item url="searchexample.php" />
   </project>
 </webproject>

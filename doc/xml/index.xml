@@ -24,10 +24,18 @@
   <compound refid="general_8dox" kind="file"><name>general.dox</name>
   </compound>
   <compound refid="index_8php" kind="file"><name>index.php</name>
+    <member refid="index_8php_1cb68d0635f57ee9137fb7985a2357c5c" kind="enum"><name>APIKEY</name></member>
     <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
-    <member refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kind="variable"><name>$upc</name></member>
+    <member refid="index_8php_18bd4accafd4e712317ed9a471738a971" kind="variable"><name>charset</name></member>
   </compound>
   <compound refid="pear_8inc" kind="file"><name>pear.inc</name>
+  </compound>
+  <compound refid="product_8inc" kind="file"><name>product.inc</name>
+    <member refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kind="function"><name>getImages</name></member>
+  </compound>
+  <compound refid="searchapi_8dox" kind="file"><name>searchapi.dox</name>
+  </compound>
+  <compound refid="searchexample_8php" kind="file"><name>searchexample.php</name>
   </compound>
   <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
   </compound>
