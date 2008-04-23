@@ -17,7 +17,7 @@ $debug = TRUE;
  * The Google AJAX search API key
  * @see http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ
  */
-define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ')
+define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
