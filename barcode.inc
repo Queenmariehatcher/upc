@@ -5,6 +5,7 @@
  */
 require 'pear.inc';
 require_once 'xmlrpc.inc';
+require_once 'product.inc';
 /**
  * Checks to see if a valid, handalable, barcode was entered.
  * @param $barcode The Barcode to be checked
@@ -51,6 +52,7 @@ function getBarcodeInfo($barcode) {
     */
   $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
   /*if ($debug) */var_dump($result);
+  echo getImages($result[1]['description']);
   if ($result[1]['found']) {
     extract($result[1], EXTR_PREFIX_ALL, 'barcode');
     $output .= <<<_HTML
