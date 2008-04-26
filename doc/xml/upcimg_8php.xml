@@ -3,19 +3,19 @@
   <compounddef id="upcimg_8php" kind="file">
     <compoundname>upcimg.php</compoundname>
     <briefdescription>
-    </briefdescription>
+<para>Creates an image of the barcode using Image_Barcode. </para>    </briefdescription>
     <detaileddescription>
-<para>Creates an image of the barcode using Image_Barcode <simplesect kind="see"><para><ulink url="http://pear.php.net/package/Image_Barcode">http://pear.php.net/package/Image_Barcode</ulink> </para><para><ulink url="http://pear.php.net/manual/en/package.images.image-barcode.php">http://pear.php.net/manual/en/package.images.image-barcode.php</ulink> </para></simplesect>
+<para>Uses the PHP Imagage_Barcode Extention to generate barcode images for the entered barcode. This may need to be (it can&apos;t cause any harm) used in compination with <ref refid="pear_8inc" kindref="compound">pear.inc</ref> on shared hosts and other environments. <simplesect kind="see"><para><ulink url="http://pear.php.net/package/Image_Barcode">http://pear.php.net/package/Image_Barcode</ulink> </para><para><ulink url="http://pear.php.net/manual/en/package.images.image-barcode.php">http://pear.php.net/manual/en/package.images.image-barcode.php</ulink> </para></simplesect>
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">require<sp/>&apos;pear.inc&apos;;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">require_once<sp/>&apos;barcode.inc&apos;;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">require_once<sp/>&apos;Image/Barcode.php&apos;;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>($_GET[&apos;upc&apos;]))<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/>Image_Barcode::draw($_GET[&apos;upc&apos;],<sp/><ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>($_GET[&apos;upc&apos;]),<sp/>&apos;png&apos;);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">require<sp/>&apos;include/pear.inc&apos;;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">require_once<sp/>&apos;include/barcode.inc&apos;;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">require_once<sp/>&apos;Image/Barcode.php&apos;;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>($_GET[&apos;upc&apos;]))<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>Image_Barcode::draw($_GET[&apos;upc&apos;],<sp/><ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref>($_GET[&apos;upc&apos;]),<sp/>&apos;png&apos;);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/daniel/Coding/upc/upcimg.php"/>
   </compounddef>

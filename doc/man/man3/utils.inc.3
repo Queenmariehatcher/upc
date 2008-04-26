@@ -1,0 +1,74 @@
+.TH "include/utils.inc" 3 "26 Apr 2008" "UPC Lookup" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/utils.inc \- Helpful Utilities. 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfget\fP ($url)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Helpful Utilities. 
+
+These utilities are suitable to be included in any file by calling the file as follows: 
+.PP
+.nf
+ require_once 'utils.inc'
+
+.fi
+.PP
+ 
+.PP
+Definition in file \fButils.inc\fP.
+.SH "Function Documentation"
+.PP 
+.SS "fget ($ url)"
+.PP
+Download a \fBtext\fP file using cURL 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$url\fP The URL to download 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A string containging the text file 
+.RE
+.PP
+
+.PP
+Holds the cURL resource for use in other cURL related functions
+.PP
+Contains the file that was just downloaded 
+.PP
+Definition at line 16 of file utils.inc.
+.PP
+Referenced by getImages().
+.PP
+.nf
+16                     {
+20   $curl = curl_init($url);
+21   $options = array(
+22     CURLOPT_REFERER => $_ENV['SCRIPT_URI'],
+23     CURLOPT_FAILONERROR => TRUE,
+24     CURLOPT_RETURNTRANSFER => 1,
+25     CURLOPT_CLOSEPOLICY => CURLCLOSEPOLICY_LEAST_RECENTLY_USED,
+26   );
+30   $file = curl_exec($curl);
+31   curl_close($curl);
+32 
+33   return $file;
+34 }
+.fi
+.PP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for UPC Lookup from the source code.

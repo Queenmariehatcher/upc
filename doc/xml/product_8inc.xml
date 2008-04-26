@@ -26,21 +26,26 @@
 <simplesect kind="return"><para>HTML code to output product images </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
-<para>The code to be outputed </para>        </inbodydescription>
-        <location file="/home/daniel/Coding/upc/product.inc" line="10" bodyfile="/home/daniel/Coding/upc/product.inc" bodystart="10" bodyend="16"/>
+<para>Holds an array conatining the results of the search</para><para>The code to be outputed </para>        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/include/product.inc" line="15" bodyfile="/home/daniel/Coding/upc/include/product.inc" bodystart="15" bodyend="26"/>
+        <references refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" compoundref="utils_8inc" startline="16" endline="34">fget</references>
+        <referencedby refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" compoundref="barcode_8inc" startline="43" endline="87">getBarcodeInfo</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Functions to output Product Info. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Various pieces of info gleamed from the web will be handled by functions contained in this file. Currently, it only handles getting product images </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
-<codeline lineno="10" refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" refkind="member"><highlight class="normal">function<sp/><ref refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kindref="member">getImages</ref>($product)<sp/>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">require_once<sp/>&apos;utils.inc&apos;;</highlight></codeline>
+<codeline lineno="15" refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" refkind="member"><highlight class="normal">function<sp/><ref refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kindref="member">getImages</ref>($product)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>$json<sp/>=<sp/>json_decode(<ref refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" kindref="member">fget</ref>(&apos;http:</highlight><highlight class="comment">//ajax.googleapis.com/ajax/services/search/images?v=1.0&amp;q=&apos;<sp/>.<sp/>urlencode($product)));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>var_dump($json);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/daniel/Coding/upc/product.inc"/>
+    <location file="/home/daniel/Coding/upc/include/product.inc"/>
   </compounddef>
 </doxygen>

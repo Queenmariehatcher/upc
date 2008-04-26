@@ -3,5 +3,11 @@
  * @section about About
  * The Google AJAX Search API is used to fetch product images.
  * You can get an API key at http://code.google.com/apis/ajaxsearch/signup.html
+ * @example searchexample.html
+ * This is an example page that uses the Google Search API. The code
+ * (except for this comment block), was copied from the Google Page on the
+ * subject.
+ * @see http://code.google.com/apis/ajaxsearch/documentation/#The_Hello_World_of_Google_Search
  * @see http://code.google.com/apis/ajaxsearch/documentation/
  * @see http://code.google.com/apis/ajaxsearch/documentation/#fonje
+ */

@@ -1,8 +1,8 @@
-.TH "product.inc" 3 "26 Apr 2008" "UPC Lookup" \" -*- nroff -*-
+.TH "include/product.inc" 3 "26 Apr 2008" "UPC Lookup" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-product.inc \- 
+include/product.inc \- Functions to output Product Info. 
 .SH SYNOPSIS
 .br
 .PP
@@ -13,6 +13,13 @@ product.inc \-
 .RI "\fBgetImages\fP ($product)"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+Functions to output Product Info. 
+
+Various pieces of info gleamed from the web will be handled by functions contained in this file. Currently, it only handles getting product images 
+.PP
+Definition in file \fBproduct.inc\fP.
 .SH "Function Documentation"
 .PP 
 .SS "getImages ($ product)"
@@ -31,9 +38,25 @@ HTML code to output product images
 .PP
 
 .PP
+Holds an array conatining the results of the search
+.PP
 The code to be outputed 
 .PP
-Definition at line 10 of file product.inc.
+Definition at line 15 of file product.inc.
+.PP
+References fget().
+.PP
+Referenced by getBarcodeInfo().
+.PP
+.nf
+15                              {
+19   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
+20   var_dump($json);
+24   $output = '';
+25   return $output;
+26 }
+.fi
+.PP
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for UPC Lookup from the source code.

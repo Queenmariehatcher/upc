@@ -1,10 +1,31 @@
 \hypertarget{pear_8inc}{
-\section{pear.inc File Reference}
-\label{pear_8inc}\index{pear.inc@{pear.inc}}
+\section{include/pear.inc File Reference}
+\label{pear_8inc}\index{include/pear.inc@{include/pear.inc}}
 }
+Makes PEAR work with extentions installed in the home directory. 
+
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{pear_8inc_d1f917c6039930c80bb1047ae2715e08}{HOME\_\-PEAR\_\-DIR} 
+\end{CompactItemize}
 
 
 \subsection{Detailed Description}
 Makes PEAR work with extentions installed in the home directory. 
 
+Most shared hosts do not allow user installation of system-wide PEAR extentions, so this file allows it to work with extentions installed in the user's home directory. To make this work, you need to set the HOME\_\-PEAR\_\-DIR constant to the path where your PEAR extentions are installed. See that documentation for more info. 
+
 Definition in file \hyperlink{pear_8inc-source}{pear.inc}.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{pear_8inc_d1f917c6039930c80bb1047ae2715e08}{
+\index{pear.inc@{pear.inc}!HOME_PEAR_DIR@{HOME\_\-PEAR\_\-DIR}}
+\index{HOME_PEAR_DIR@{HOME\_\-PEAR\_\-DIR}!pear.inc@{pear.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum {\bf HOME\_\-PEAR\_\-DIR}}}
+\label{pear_8inc_d1f917c6039930c80bb1047ae2715e08}
+
+
+The location of PEAR extentions in the home directory. This is usually {\bf /home/$<$username$>$/pear/php} 
+
+Definition at line 16 of file pear.inc.

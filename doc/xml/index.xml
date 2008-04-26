@@ -14,6 +14,8 @@
     <member refid="classXML_1ca70dfbd3e8ce956075181701b09b033" kind="function"><name>data</name></member>
     <member refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" kind="function"><name>close</name></member>
   </compound>
+  <compound refid="general_8dox" kind="file"><name>general.dox</name>
+  </compound>
   <compound refid="barcode_8inc" kind="file"><name>barcode.inc</name>
     <member refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kind="function"><name>checkBarcode</name></member>
     <member refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" kind="function"><name>getBarcodeInfo</name></member>
@@ -21,23 +23,14 @@
   <compound refid="form_8inc" kind="file"><name>form.inc</name>
     <member refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kind="function"><name>getEntryForm</name></member>
   </compound>
-  <compound refid="general_8dox" kind="file"><name>general.dox</name>
-  </compound>
-  <compound refid="index_8php" kind="file"><name>index.php</name>
-    <member refid="index_8php_1cb68d0635f57ee9137fb7985a2357c5c" kind="enum"><name>APIKEY</name></member>
-    <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
-    <member refid="index_8php_18bd4accafd4e712317ed9a471738a971" kind="variable"><name>charset</name></member>
-  </compound>
   <compound refid="pear_8inc" kind="file"><name>pear.inc</name>
+    <member refid="pear_8inc_1d1f917c6039930c80bb1047ae2715e08" kind="enum"><name>HOME_PEAR_DIR</name></member>
   </compound>
   <compound refid="product_8inc" kind="file"><name>product.inc</name>
     <member refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kind="function"><name>getImages</name></member>
   </compound>
-  <compound refid="searchapi_8dox" kind="file"><name>searchapi.dox</name>
-  </compound>
-  <compound refid="searchexample_8php" kind="file"><name>searchexample.php</name>
-  </compound>
-  <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
+  <compound refid="utils_8inc" kind="file"><name>utils.inc</name>
+    <member refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" kind="function"><name>fget</name></member>
   </compound>
   <compound refid="xmlrpc_8inc" kind="file"><name>xmlrpc.inc</name>
     <member refid="xmlrpc_8inc_1a1e9b05a06f28fabb86c10129f5890ef" kind="function"><name>XML_serialize</name></member>
@@ -57,11 +50,26 @@
     <member refid="xmlrpc_8inc_18467f85edd385ddf2506b1bd5065a6d7" kind="function"><name>XMLRPC_debug_print</name></member>
     <member refid="xmlrpc_8inc_11f60d2672bcb35f5ff908f64931f8d48" kind="function"><name>XMLRPC_show</name></member>
   </compound>
+  <compound refid="index_8php" kind="file"><name>index.php</name>
+    <member refid="index_8php_1cb68d0635f57ee9137fb7985a2357c5c" kind="enum"><name>APIKEY</name></member>
+    <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
+    <member refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kind="variable"><name>$upc</name></member>
+  </compound>
+  <compound refid="searchapi_8dox" kind="file"><name>searchapi.dox</name>
+  </compound>
+  <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
+  </compound>
   <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="license" kind="page"><name>license</name>
   </compound>
+  <compound refid="searchapi" kind="page"><name>searchapi</name>
+  </compound>
   <compound refid="bug" kind="page"><name>bug</name>
+  </compound>
+  <compound refid="dir_1fc65542bf8a705781ea5a0b4e303822" kind="dir"><name>include/</name>
+  </compound>
+  <compound refid="searchexample_8html-example" kind="example"><name>searchexample.html</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

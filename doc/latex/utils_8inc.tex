@@ -1,0 +1,67 @@
+\hypertarget{utils_8inc}{
+\section{include/utils.inc File Reference}
+\label{utils_8inc}\index{include/utils.inc@{include/utils.inc}}
+}
+Helpful Utilities. 
+
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{utils_8inc_846199262ea0cd07e0531f38d26dd9b3}{fget} (\$url)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Helpful Utilities. 
+
+These utilities are suitable to be included in any file by calling the file as follows: 
+
+\begin{Code}\begin{verbatim} require_once 'utils.inc'
+\end{verbatim}
+\end{Code}
+
+ 
+
+Definition in file \hyperlink{utils_8inc-source}{utils.inc}.
+
+\subsection{Function Documentation}
+\hypertarget{utils_8inc_846199262ea0cd07e0531f38d26dd9b3}{
+\index{utils.inc@{utils.inc}!fget@{fget}}
+\index{fget@{fget}!utils.inc@{utils.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}fget (\$ {\em url})}}
+\label{utils_8inc_846199262ea0cd07e0531f38d26dd9b3}
+
+
+Download a {\bf text} file using cURL \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em \$url}]The URL to download \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A string containging the text file \end{Desc}
+
+
+Holds the cURL resource for use in other cURL related functions
+
+Contains the file that was just downloaded 
+
+Definition at line 16 of file utils.inc.
+
+Referenced by getImages().
+
+\begin{Code}\begin{verbatim}16                     {
+20   $curl = curl_init($url);
+21   $options = array(
+22     CURLOPT_REFERER => $_ENV['SCRIPT_URI'],
+23     CURLOPT_FAILONERROR => TRUE,
+24     CURLOPT_RETURNTRANSFER => 1,
+25     CURLOPT_CLOSEPOLICY => CURLCLOSEPOLICY_LEAST_RECENTLY_USED,
+26   );
+30   $file = curl_exec($curl);
+31   curl_close($curl);
+32 
+33   return $file;
+34 }\end{verbatim}
+\end{Code}
+
+

@@ -1,13 +1,22 @@
 \hypertarget{product_8inc}{
-\section{product.inc File Reference}
-\label{product_8inc}\index{product.inc@{product.inc}}
+\section{include/product.inc File Reference}
+\label{product_8inc}\index{include/product.inc@{include/product.inc}}
 }
+Functions to output Product Info. 
+
 \subsection*{Functions}
 \begin{CompactItemize}
 \item 
 \hyperlink{product_8inc_9dbb778854cfe105058d7161ca8f058c}{getImages} (\$product)
 \end{CompactItemize}
 
+
+\subsection{Detailed Description}
+Functions to output Product Info. 
+
+Various pieces of info gleamed from the web will be handled by functions contained in this file. Currently, it only handles getting product images 
+
+Definition in file \hyperlink{product_8inc-source}{product.inc}.
 
 \subsection{Function Documentation}
 \hypertarget{product_8inc_9dbb778854cfe105058d7161ca8f058c}{
@@ -26,6 +35,31 @@ Gets Appropriate Images from google Image Search \begin{Desc}
 \item[Returns:]HTML code to output product images \end{Desc}
 
 
+Holds an array conatining the results of the search
+
 The code to be outputed 
 
-Definition at line 10 of file product.inc.
+Definition at line 15 of file product.inc.
+
+References fget().
+
+Referenced by getBarcodeInfo().
+
+\begin{Code}\begin{verbatim}15                              {
+19   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
+20   var_dump($json);
+24   $output = '';
+25   return $output;
+26 }\end{verbatim}
+\end{Code}
+
+
+
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=92pt]{product_8inc_9dbb778854cfe105058d7161ca8f058c_cgraph}
+\end{center}
+\end{figure}

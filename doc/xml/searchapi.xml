@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="searchapi" kind="page">
+    <compoundname>searchapi</compoundname>
+    <title>Google AJAX Search API</title>
+    <detaileddescription>
+<sect1 id="searchapi_1about">
+<title>About</title>
+<para>The Google AJAX Search API is used to fetch product images. You can get an API key at <ulink url="http://code.google.com/apis/ajaxsearch/signup.html">http://code.google.com/apis/ajaxsearch/signup.html</ulink> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

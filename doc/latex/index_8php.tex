@@ -2,6 +2,8 @@
 \section{index.php File Reference}
 \label{index_8php}\index{index.php@{index.php}}
 }
+Main handler file, contains all HTML code. 
+
 \subsection*{Enumerations}
 \begin{CompactItemize}
 \item 
@@ -12,12 +14,14 @@ enum \hyperlink{index_8php_cb68d0635f57ee9137fb7985a2357c5c}{APIKEY}
 \item 
 \hyperlink{index_8php_85ae3e64cd40e9564adceb010085e9dd}{\$debug} = TRUE
 \item 
-\hyperlink{index_8php_8bd4accafd4e712317ed9a471738a971}{charset}
+\hyperlink{index_8php_a9aa17ff51d69075d75cfc5bc4e89b34}{\$upc} = \$\_\-GET\mbox{[}'upc'\mbox{]}
 \end{CompactItemize}
 
 
 \subsection{Detailed Description}
-Returns info on a given UPC Barcode 
+Main handler file, contains all HTML code. 
+
+This is the main output file, the file that calls all other functions. This file should not need to be modified very often. 
 
 Definition in file \hyperlink{index_8php-source}{index.php}.
 
@@ -30,10 +34,10 @@ Definition in file \hyperlink{index_8php-source}{index.php}.
 
 
 The Google AJAX search API key \begin{Desc}
-\item[See also:]\href{http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ}{\tt http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/\&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ} \end{Desc}
+\item[See also:]\href{http://code.google.com/apis/ajaxsearch/signup.html}{\tt http://code.google.com/apis/ajaxsearch/signup.html} \end{Desc}
 
 
-Definition at line 20 of file index.php.
+Definition at line 23 of file index.php.
 
 \subsection{Variable Documentation}
 \hypertarget{index_8php_85ae3e64cd40e9564adceb010085e9dd}{
@@ -45,15 +49,17 @@ Definition at line 20 of file index.php.
 
 Set to TRUE to output debug info 
 
-Definition at line 15 of file index.php.
+Definition at line 18 of file index.php.
 
-Referenced by XMLRPC\_\-debug\_\-print().\hypertarget{index_8php_8bd4accafd4e712317ed9a471738a971}{
-\index{index.php@{index.php}!charset@{charset}}
-\index{charset@{charset}!index.php@{index.php}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf charset}}}
-\label{index_8php_8bd4accafd4e712317ed9a471738a971}
-
-
+Referenced by XMLRPC\_\-debug\_\-print().\hypertarget{index_8php_a9aa17ff51d69075d75cfc5bc4e89b34}{
+\index{index.php@{index.php}!$upc@{\$upc}}
+\index{$upc@{\$upc}!index.php@{index.php}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\$upc = \$\_\-GET\mbox{[}'upc'\mbox{]}}}
+\label{index_8php_a9aa17ff51d69075d75cfc5bc4e89b34}
 
 
-Definition at line 28 of file index.php.
+Holds the barcode entered \begin{Desc}
+\item[Note:]Can hold any barcode, but named \$upc for ease of entry \end{Desc}
+
+
+Definition at line 68 of file index.php.

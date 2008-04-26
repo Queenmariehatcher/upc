@@ -1,12 +1,12 @@
 <?php
 /**
+ * @brief
+ * XML-RPC Library
  * @file
  * An XML-RPC implementation by Keith Devens, version 2.5f.
  * http://www.keithdevens.com/software/xmlrpc/
- *
  * Release history available at:
  * http://www.keithdevens.com/software/xmlrpc/history/
- *
  * This code is Open Source, released under terms similar to the Artistic License.
  * Read the license at http://www.keithdevens.com/software/license/
  * Note: this code requires version 4.1.0 or higher of PHP.

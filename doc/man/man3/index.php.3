@@ -2,7 +2,7 @@
 .ad l
 .nh
 .SH NAME
-index.php \- 
+index.php \- Main handler file, contains all HTML code. 
 .SH SYNOPSIS
 .br
 .PP
@@ -20,12 +20,14 @@ index.php \-
 .RI "\fB$debug\fP = TRUE"
 .br
 .ti -1c
-.RI "\fBcharset\fP"
+.RI "\fB$upc\fP = $_GET['upc']"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Returns info on a given UPC Barcode 
+Main handler file, contains all HTML code. 
+
+This is the main output file, the file that calls all other functions. This file should not need to be modified very often. 
 .PP
 Definition in file \fBindex.php\fP.
 .SH "Enumeration Type Documentation"
@@ -36,24 +38,33 @@ The Google AJAX search API key
 .PP
 \fBSee also:\fP
 .RS 4
-http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ 
+http://code.google.com/apis/ajaxsearch/signup.html 
 .RE
 .PP
 
 .PP
-Definition at line 20 of file index.php.
+Definition at line 23 of file index.php.
 .SH "Variable Documentation"
 .PP 
 .SS "$debug = TRUE"
 .PP
 Set to TRUE to output debug info 
 .PP
-Definition at line 15 of file index.php.
+Definition at line 18 of file index.php.
 .PP
 Referenced by XMLRPC_debug_print().
-.SS "\fBcharset\fP"
+.SS "$upc = $_GET['upc']"
 .PP
-Definition at line 28 of file index.php.
+Holds the barcode entered 
+.PP
+\fBNote:\fP
+.RS 4
+Can hold any barcode, but named $upc for ease of entry 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file index.php.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for UPC Lookup from the source code.

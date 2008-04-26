@@ -1,7 +1,11 @@
 <?php
 /**
- * @file
+ * @brief
  * Functions for outputting the Barcode entry form
+ * @file
+ * This file currently contains functions that relate to various forms.
+ * As there is currently only one form, this file may seem redundant.
+ * However, it stays for the sake of forward compatability.
  */
 /**
  * Creates an entry form for UPCs (and eventually other types of Barcodes

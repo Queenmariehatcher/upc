@@ -1,6 +1,10 @@
 <?php
 /**
- * @file Functions to output Product Info
+ * @brief
+ * Functions to output Product Info
+ * @file
+ * Various pieces of info gleamed from the web will be handled by functions
+ * contained in this file. Currently, it only handles getting product images
  */
 require_once 'utils.inc';
 /**

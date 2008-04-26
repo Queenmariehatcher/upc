@@ -12,7 +12,9 @@
 </para></listitem><listitem><para>INT 25</para></listitem><listitem><para>PostNet</para></listitem><listitem><para>UPCA<itemizedlist>
 <listitem><para><bold>Done!</bold> </para></listitem></itemizedlist>
 </para></listitem></itemizedlist>
-</para><para>Fix errors </para><para>Add possible product images (Using Google Images and the AJAX search API</para><para></para></listitem>
+</para><para>Fix errors </para><para>Add possible product images (Using Google Images and the AJAX search API<itemizedlist>
+<listitem><para><bold>In</bold> <bold>Progress!</bold> </para></listitem></itemizedlist>
+</para><para></para></listitem>
 </variablelist>
 </para>    </detaileddescription>
   </compounddef>

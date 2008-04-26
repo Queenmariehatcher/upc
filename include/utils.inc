@@ -1,10 +1,16 @@
 <?php
 /**
- * @file Helpful Utilities
+ * @brief
+ * Helpful Utilities
+ * @file
+ * These utilities are suitable to be included in any file by calling the file as follows:
+ * @code
+ * require_once 'utils.inc'
+ * @endcode
  */
 /**
  * Download a @b text file using cURL
- * @param The URL to download
+ * @param $url The URL to download
  * @return A string containging the text file
  */
 function fget($url) {

@@ -1,7 +1,9 @@
 \hypertarget{form_8inc}{
-\section{form.inc File Reference}
-\label{form_8inc}\index{form.inc@{form.inc}}
+\section{include/form.inc File Reference}
+\label{form_8inc}\index{include/form.inc@{include/form.inc}}
 }
+Functions for outputting the Barcode entry form. 
+
 \subsection*{Functions}
 \begin{CompactItemize}
 \item 
@@ -10,7 +12,9 @@
 
 
 \subsection{Detailed Description}
-Functions for outputting the Barcode entry form 
+Functions for outputting the Barcode entry form. 
+
+This file currently contains functions that relate to various forms. As there is currently only one form, this file may seem redundant. However, it stays for the sake of forward compatability. 
 
 Definition in file \hyperlink{form_8inc-source}{form.inc}.
 
@@ -28,4 +32,20 @@ Creates an entry form for UPCs (and eventually other types of Barcodes \begin{De
 
 String containing the Barcode entry form 
 
-Definition at line 10 of file form.inc.
+Definition at line 14 of file form.inc.
+
+\begin{Code}\begin{verbatim}14                         {
+18   $form = <<<_HTML
+19               <form action="index.php" method="get" id="codeentry">
+20                 <fieldset>
+21                   <label>UPC:</label><input type="text" name="upc" /><br />
+22                   <input type="submit" value="Submit" />
+23                 </fieldset>
+24               </form>
+25 _HTML;
+26 
+27   return $form;
+28 }\end{verbatim}
+\end{Code}
+
+

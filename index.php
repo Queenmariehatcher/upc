@@ -1,13 +1,16 @@
 <?php
 /**
+ * @brief
+ * Main handler file, contains all HTML code
  * @file
- * Returns info on a given UPC Barcode
+ * This is the main output file, the file that calls all other functions.
+ * This file should not need to be modified very often.
  */
-require 'pear.inc';
-require_once 'xmlrpc.inc';
-require_once 'form.inc';
-require_once 'barcode.inc';
-require_once 'product.inc';
+require 'include/pear.inc';
+require_once 'include/xmlrpc.inc';
+require_once 'include/form.inc';
+require_once 'include/barcode.inc';
+require_once 'include/product.inc';
 
 /**
  * Set to TRUE to output debug info
@@ -15,7 +18,7 @@ require_once 'product.inc';
 $debug = TRUE;
 /**
  * The Google AJAX search API key
- * @see http://code.google.com/apis/ajaxsearch/signup.html?url=http://upc.dankeenan.org/&key=ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ
+ * @see http://code.google.com/apis/ajaxsearch/signup.html
  */
 define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ');
 ?>

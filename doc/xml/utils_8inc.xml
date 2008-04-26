@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="utils_8inc" kind="file">
+    <compoundname>utils.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fget</definition>
+        <argsstring>($url)</argsstring>
+        <name>fget</name>
+        <param>
+          <type>$</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Download a <bold>text</bold> file using cURL <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The URL to download </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containging the text file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Holds the cURL resource for use in other cURL related functions</para><para>Contains the file that was just downloaded </para>        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/include/utils.inc" line="16" bodyfile="/home/daniel/Coding/upc/include/utils.inc" bodystart="16" bodyend="34"/>
+        <referencedby refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="15" endline="26">getImages</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helpful Utilities. </para>    </briefdescription>
+    <detaileddescription>
+<para>These utilities are suitable to be included in any file by calling the file as follows: <programlisting><codeline><highlight class="normal"><sp/>require_once<sp/>&apos;utils.inc&apos;</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="16" refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" refkind="member"><highlight class="normal">function<sp/><ref refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" kindref="member">fget</ref>($url)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>$curl<sp/>=<sp/>curl_init($url);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>$options<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>CURLOPT_REFERER<sp/>=&gt;<sp/>$_ENV[&apos;SCRIPT_URI&apos;],</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>CURLOPT_FAILONERROR<sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>CURLOPT_RETURNTRANSFER<sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>CURLOPT_CLOSEPOLICY<sp/>=&gt;<sp/>CURLCLOSEPOLICY_LEAST_RECENTLY_USED,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>$file<sp/>=<sp/>curl_exec($curl);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>curl_close($curl);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$file;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/daniel/Coding/upc/include/utils.inc"/>
+  </compounddef>
+</doxygen>

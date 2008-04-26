@@ -1,7 +1,9 @@
 <?php
 /**
- * @file
+ * @brief
  * Functions for the handling of different barcodes
+ * @file
+ * This file currently deals with the handling of barcodes and getting the information associated with them.
  */
 require 'pear.inc';
 require_once 'xmlrpc.inc';
