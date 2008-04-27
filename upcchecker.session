@@ -1,7 +1,15 @@
 <!DOCTYPE webprojectsession>
 <webprojectsession>
   <session usePreviewPrefix="0" previewPrefix="" usePersistentBookmarks="0" >
-    <itemcursorpositions/>
+    <itemcursorpositions>
+      <item line="16" column="12" url="general.dox" />
+      <item line="28" column="5" url="include/utils.inc" />
+      <item line="35" column="5" url="include/product.inc" />
+      <item line="0" column="0" url="index.php" />
+      <item line="14" column="5" url="include/form.inc" />
+      <item line="16" column="5" url="include/barcode.inc" />
+      <item line="0" column="0" url="upcimg.php" />
+    </itemcursorpositions>
     <uploadprofiles showtreeviews="true" defaultProfile="Local Testing" >
       <profile remote_host="dankeenan.org" remote_port="" remote_path="/home/dkeenan/upc.dankeenan.org/" remote_protocol="sftp" user="dkeenan" name="Testing" >
         <uploadeditem upload_time="1209230159" url=".htaccess" />
@@ -1636,9 +1644,6 @@
         <uploadeditem upload_time="1209232745" url="xmlrpc.inc" />
       </profile>
     </uploadprofiles>
-    <treestatus>
-      <openfolder url="templates" />
-    </treestatus>
   </session>
   <teamdata yourself="" />
 </webprojectsession>
