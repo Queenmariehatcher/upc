@@ -15,7 +15,7 @@ require_once 'include/product.inc';
 /**
  * Set to TRUE to output debug info
  */
-$debug = TRUE;
+$debug = FALSE;
 /**
  * The Google AJAX search API key
  * @see http://code.google.com/apis/ajaxsearch/signup.html
@@ -36,6 +36,14 @@ define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-
   <link type="text/css" rel="stylesheet" href="form.css" />
 
   <title>UPC Lookup</title>
+
+  <script type="text/javascript">
+    function popup(url, h, w)
+    {
+      var newwindow=window.open(url,'name','height=' + h + ',width=' + w);
+      if (window.focus) {newwindow.focus()}
+    }
+  </script>
 </head>
 
 <body>

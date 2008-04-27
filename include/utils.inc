@@ -18,12 +18,14 @@ function fget($url) {
    * Holds the cURL resource for use in other cURL related functions
    */
   $curl = curl_init($url);
-  $options = array(
+
+  curl_setopt_array($curl, array(
     CURLOPT_REFERER => $_ENV['SCRIPT_URI'],
     CURLOPT_FAILONERROR => TRUE,
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_CLOSEPOLICY => CURLCLOSEPOLICY_LEAST_RECENTLY_USED,
-  );
+  ));
+
   /**
    * Contains the file that was just downloaded
    */

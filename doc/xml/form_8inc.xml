@@ -14,7 +14,7 @@
 <para>Creates an entry form for UPCs (and eventually other types of Barcodes <simplesect kind="return"><para>The Barcode entry form </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
-<para>String containing the Barcode entry form </para>        </inbodydescription>
+        </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/form.inc" line="14" bodyfile="/home/daniel/Coding/upc/include/form.inc" bodystart="14" bodyend="28"/>
       </memberdef>
       </sectiondef>

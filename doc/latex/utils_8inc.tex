@@ -41,27 +41,34 @@ Download a {\bf text} file using cURL \begin{Desc}
 \item[Returns:]A string containging the text file \end{Desc}
 
 
-Holds the cURL resource for use in other cURL related functions
-
-Contains the file that was just downloaded 
-
 Definition at line 16 of file utils.inc.
 
 Referenced by getImages().
 
 \begin{Code}\begin{verbatim}16                     {
 20   $curl = curl_init($url);
-21   $options = array(
-22     CURLOPT_REFERER => $_ENV['SCRIPT_URI'],
-23     CURLOPT_FAILONERROR => TRUE,
-24     CURLOPT_RETURNTRANSFER => 1,
-25     CURLOPT_CLOSEPOLICY => CURLCLOSEPOLICY_LEAST_RECENTLY_USED,
-26   );
-30   $file = curl_exec($curl);
-31   curl_close($curl);
-32 
-33   return $file;
-34 }\end{verbatim}
+21 
+22   curl_setopt_array($curl, array(
+23     CURLOPT_REFERER => $_ENV['SCRIPT_URI'],
+24     CURLOPT_FAILONERROR => TRUE,
+25     CURLOPT_RETURNTRANSFER => 1,
+26     CURLOPT_CLOSEPOLICY => CURLCLOSEPOLICY_LEAST_RECENTLY_USED,
+27   ));
+28 
+32   $file = curl_exec($curl);
+33   curl_close($curl);
+34 
+35   return $file;
+36 }\end{verbatim}
 \end{Code}
 
 
+
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{utils_8inc_846199262ea0cd07e0531f38d26dd9b3_icgraph}
+\end{center}
+\end{figure}

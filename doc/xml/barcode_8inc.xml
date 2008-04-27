@@ -26,7 +26,7 @@
 <simplesect kind="return"><para>The type of barcode entered if valid, FALSE if it is not </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
-<para>Array containinf info on the given UPC </para>        </inbodydescription>
+        </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/barcode.inc" line="16" bodyfile="/home/daniel/Coding/upc/include/barcode.inc" bodystart="16" bodyend="35"/>
         <references refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" compoundref="xmlrpc_8inc" startline="185" endline="243">XMLRPC_prepare</references>
         <references refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" compoundref="xmlrpc_8inc" startline="344" endline="416">XMLRPC_request</references>
@@ -55,9 +55,9 @@
 <simplesect kind="see"><para><ref refid="barcode_8inc_16d3645af0ef526e4f64d28dcbdceb74f" kindref="member">checkBarcode</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
-<para>Hold the HTML code to be outputted</para><para>Array containinf info on the given UPC </para>        </inbodydescription>
+        </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/barcode.inc" line="43" bodyfile="/home/daniel/Coding/upc/include/barcode.inc" bodystart="43" bodyend="87"/>
-        <references refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="15" endline="26">getImages</references>
+        <references refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="15" endline="50">getImages</references>
         <references refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" compoundref="xmlrpc_8inc" startline="185" endline="243">XMLRPC_prepare</references>
         <references refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" compoundref="xmlrpc_8inc" startline="344" endline="416">XMLRPC_request</references>
       </memberdef>
@@ -96,7 +96,7 @@
 <codeline lineno="50"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;/div&gt;&apos;;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/>$result<sp/>=<sp/><ref refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" kindref="member">XMLRPC_request</ref>(&apos;dev.upcdatabase.com&apos;,<sp/>&apos;/rpc&apos;,<sp/>&apos;lookupUPC&apos;,<sp/>array(<ref refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" kindref="member">XMLRPC_prepare</ref>($barcode)));</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*if<sp/>($debug)<sp/>*/</highlight><highlight class="normal">var_dump($result);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>if<sp/>($debug)<sp/>var_dump($result);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/>echo<sp/><ref refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kindref="member">getImages</ref>($result[1][&apos;description&apos;]);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($result[1][&apos;found&apos;])<sp/>{</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>extract($result[1],<sp/>EXTR_PREFIX_ALL,<sp/>&apos;barcode&apos;);</highlight></codeline>

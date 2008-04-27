@@ -1,7 +1,6 @@
 /**
  * @note
- * The api key for http://upc.dankeenan.org is @b ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ
- * @see http://code.google.com/apis/ajaxsearch/signup.html
+ * This app requires a Google AJAX Search API Key.  You can get one at http://code.google.com/apis/ajaxsearch/signup.html.
  * @todo
  * Make this support everyhting Image_Barcode supports:
  * - Code 39
@@ -10,15 +9,12 @@
  *   - @b Done!
  * - INT 25
  * - PostNet
+ *   - <b>Will probably not be done, as it can not be read by most barcode scanners and has no practical purpose</b>
  * - UPCA
  *   - @b Done!
  * @todo Fix errors
- * @todo
- * Add possible product images (Using Google Images and the AJAX search API
- * - @b In @b Progress!
  *
  * @mainpage
- * @version 0.1
  * @author Dan Keenan - http://dankeenan.org
  * @section license License
  * Copyright (C) 2008  Dan Keenan

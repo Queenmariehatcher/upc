@@ -50,10 +50,10 @@ function getBarcodeInfo($barcode) {
   $output .= '</div>';
 
   /**
-    * Array containinf info on the given UPC
-    */
+   * Array containinf info on the given UPC
+   */
   $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-  /*if ($debug) */var_dump($result);
+//   if ($debug) var_dump($result);
   echo getImages($result[1]['description']);
   if ($result[1]['found']) {
     extract($result[1], EXTR_PREFIX_ALL, 'barcode');

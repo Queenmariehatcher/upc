@@ -37,8 +37,6 @@ Checks to see if a valid, handalable, barcode was entered. \begin{Desc}
 \item[Returns:]The type of barcode entered if valid, FALSE if it is not \end{Desc}
 
 
-Array containinf info on the given UPC 
-
 Definition at line 16 of file barcode.inc.
 
 References XMLRPC\_\-prepare(), and XMLRPC\_\-request().
@@ -91,10 +89,6 @@ Output Barcode Info \begin{Desc}
 \item[See also:]\hyperlink{barcode_8inc_6d3645af0ef526e4f64d28dcbdceb74f}{checkBarcode} \end{Desc}
 
 
-Hold the HTML code to be outputted
-
-Array containinf info on the given UPC 
-
 Definition at line 43 of file barcode.inc.
 
 References getImages(), XMLRPC\_\-prepare(), and XMLRPC\_\-request().
@@ -106,7 +100,7 @@ References getImages(), XMLRPC\_\-prepare(), and XMLRPC\_\-request().
 50   $output .= '</div>';
 51 
 55   $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-56   /*if ($debug) */var_dump($result);
+56 //   if ($debug) var_dump($result);
 57   echo getImages($result[1]['description']);
 58   if ($result[1]['found']) {
 59     extract($result[1], EXTR_PREFIX_ALL, 'barcode');

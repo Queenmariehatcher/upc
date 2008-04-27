@@ -1,4 +1,4 @@
-.TH "include/product.inc" 3 "26 Apr 2008" "UPC Lookup" \" -*- nroff -*-
+.TH "include/product.inc" 3 "27 Apr 2008" "Version 0.2" "UPC Lookup" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -38,10 +38,6 @@ HTML code to output product images
 .PP
 
 .PP
-Holds an array conatining the results of the search
-.PP
-The code to be outputed 
-.PP
 Definition at line 15 of file product.inc.
 .PP
 References fget().
@@ -51,10 +47,22 @@ Referenced by getBarcodeInfo().
 .nf
 15                              {
 19   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
-20   var_dump($json);
-24   $output = '';
-25   return $output;
-26 }
+23   $imgpath = $json->responseData->results[0]->tbUrl;
+27   $imgsource = $json->responseData->results[0]->visibleUrl;
+31   $imgsourceurl = $json->responseData->results[0]->tbUrl;
+35   $imgcontext = $json->responseData->results[0]->originalContextUrl;
+39   $output = '';
+40   $output = <<<_HTML
+41     <div id='prodimg'>
+42       <a href='$imgcontext' target='_blank'>
+43         <img src='$imgpath' alt='Image of $product From $imgsource' title='Image of $product From $imgsource'>
+44       </a><br />
+45       <a href='aboutimages.html' target='_blank' onclick='popup(this.href, 200, 300); return false;'>About this image</a>
+46     </div>
+47 _HTML;
+48 
+49   return $output;
+50 }
 .fi
 .PP
 .SH "Author"

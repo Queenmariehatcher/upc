@@ -86,6 +86,17 @@
   text-decoration:none;
 }
 
+#prodimg
+{
+  padding-bottom:25px;
+  text-align:center;
+}
+
+#prodimg img
+{
+  border-style:none;
+}
+
 #upc
 {
   text-align:center;
