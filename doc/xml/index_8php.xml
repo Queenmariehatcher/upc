@@ -129,16 +129,11 @@
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;right&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Designed<sp/>By<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.christinachun.com&quot;</highlight><highlight class="normal"><sp/>title=</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Christina<sp/>Chun<sp/>-<sp/>Digital<sp/>Artist<sp/>&amp;amp;<sp/>Web<sp/>Developer&quot;</highlight><highlight class="normal">&gt;Christina</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Chun&lt;/a&gt;<sp/>&amp;copy;<sp/>2005-2006<sp/>|<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.owsd.org&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>title=</highlight><highlight class="stringliteral">&quot;Open<sp/>Source<sp/>Web<sp/>Design&quot;</highlight><highlight class="normal">&gt;Open<sp/>Source<sp/>Web<sp/>Design&lt;/a&gt;<sp/>|</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://validator.w3.org/check?uri=referer&quot;</highlight><highlight class="normal">&gt;Valid</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>XHTML&lt;/a&gt;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>By<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://dankeenan.org&quot;</highlight><highlight class="normal">&gt;Dan<sp/>Keenan&lt;/a&gt;<sp/>|<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&amp;path=%2F&amp;sc=0&quot;</highlight><highlight class="normal">&gt;Source<sp/>Code&lt;/a&gt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
     </programlisting>
     <location file="/home/daniel/Coding/upc/index.php"/>
   </compounddef>

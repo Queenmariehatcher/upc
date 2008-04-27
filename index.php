@@ -93,12 +93,7 @@ _HTML;
 
   <div class="footer">
     <div class="right">
-      Designed By <a href="http://www.christinachun.com" title=
-      "Christina Chun - Digital Artist &amp; Web Developer">Christina
-      Chun</a> &copy; 2005-2006 | <a href="http://www.owsd.org"
-      title="Open Source Web Design">Open Source Web Design</a> |
-      <a href="http://validator.w3.org/check?uri=referer">Valid
-      XHTML</a>
+      By <a href="http://dankeenan.org">Dan Keenan</a> | <a href="http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&path=%2F&sc=0">Source Code</a>
     </div>
   </div>
 </body>
