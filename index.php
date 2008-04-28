@@ -6,6 +6,10 @@
  * This is the main output file, the file that calls all other functions.
  * This file should not need to be modified very often.
  */
+
+// Disable non-fatal errors
+error_reporting(E_ERROR);
+
 require 'include/pear.inc';
 require_once 'include/xmlrpc.inc';
 require_once 'include/form.inc';

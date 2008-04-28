@@ -12,14 +12,6 @@
  * Note: this code requires version 4.1.0 or higher of PHP.
  *
  * @see http://keithdevens.com/software/xmlrpc
- *
- * @bug
- * Generates the following error on DreamHost servers (and possible others) at
- * different places in the file:\n
- * Warning: Call-time pass-by-reference has been deprecated; If you would like
- * to pass it by reference, modify the declaration of xml_set_object(). If you
- * would like to enable call-time pass-by-reference, you can set allow_call_time_pass_reference
- * to true in your INI file. in /home/.zerlina/dkeenan/upc.dankeenan.org/xmlrpc.inc
 */
 
 function & XML_serialize(&$data, $level = 0, $prior_key = NULL){
