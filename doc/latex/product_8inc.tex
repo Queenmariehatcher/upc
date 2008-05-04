@@ -33,32 +33,34 @@ Gets Appropriate Images from google Image Search \begin{Desc}
 \end{Desc}
 \begin{Desc}
 \item[Returns:]HTML code to output product images \end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]Make images more accurate \end{Desc}
 
 
-Definition at line 15 of file product.inc.
+Definition at line 16 of file product.inc.
 
 References fget().
 
 Referenced by getBarcodeInfo().
 
-\begin{Code}\begin{verbatim}15                              {
-19   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
-23   $imgpath = $json->responseData->results[0]->tbUrl;
-27   $imgsource = $json->responseData->results[0]->visibleUrl;
-31   $imgsourceurl = $json->responseData->results[0]->tbUrl;
-35   $imgcontext = $json->responseData->results[0]->originalContextUrl;
-39   $output = '';
-40   $output = <<<_HTML
-41     <div id="prodimg">
-42       <a href="$imgcontext" target="_blank">
-43         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
-44       </a><br />
-45       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
-46     </div>
-47 _HTML;
-48 
-49   return $output;
-50 }\end{verbatim}
+\begin{Code}\begin{verbatim}16                              {
+20   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
+24   $imgpath = $json->responseData->results[0]->tbUrl;
+28   $imgsource = $json->responseData->results[0]->visibleUrl;
+32   $imgsourceurl = $json->responseData->results[0]->tbUrl;
+36   $imgcontext = $json->responseData->results[0]->originalContextUrl;
+40   $output = '';
+41   $output = <<<_HTML
+42     <div id="prodimg">
+43       <a href="$imgcontext" target="_blank">
+44         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
+45       </a><br />
+46       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
+47     </div>
+48 _HTML;
+49 
+50   return $output;
+51 }\end{verbatim}
 \end{Code}
 
 

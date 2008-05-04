@@ -25,6 +25,11 @@ $debug = FALSE;
  * @see http://code.google.com/apis/ajaxsearch/signup.html
  */
 define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ');
+/**
+ * isbndb.com API key
+ * @see https://isbndb.com/account/dev/keys/generate.html
+ */
+define('ISBNKEY', '3PGA9PYK');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

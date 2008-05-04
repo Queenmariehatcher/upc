@@ -55,6 +55,7 @@
   </compound>
   <compound refid="index_8php" kind="file"><name>index.php</name>
     <member refid="index_8php_1cb68d0635f57ee9137fb7985a2357c5c" kind="enum"><name>APIKEY</name></member>
+    <member refid="index_8php_193bb4a6cf53ca9db8d391bc20eee6442" kind="enum"><name>ISBNKEY</name></member>
     <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
     <member refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kind="variable"><name>$upc</name></member>
   </compound>
@@ -64,13 +65,15 @@
   </compound>
   <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
   </compound>
-  <compound refid="todo" kind="page"><name>todo</name>
-  </compound>
   <compound refid="license" kind="page"><name>license</name>
   </compound>
   <compound refid="isbnapi" kind="page"><name>isbnapi</name>
   </compound>
   <compound refid="searchapi" kind="page"><name>searchapi</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="bug" kind="page"><name>bug</name>
   </compound>
   <compound refid="dir_1fc65542bf8a705781ea5a0b4e303822" kind="dir"><name>include/</name>
   </compound>

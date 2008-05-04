@@ -8,10 +8,16 @@
  * used in compination with pear.inc on shared hosts and other environments.
  * @see http://pear.php.net/package/Image_Barcode
  * @see http://pear.php.net/manual/en/package.images.image-barcode.php
+ *
+ * @bug
+ * Doesn't draw images anymore, must figure out why
  */
-require 'include/pear.inc';
+require_once 'include/pear.inc';
 require_once 'include/barcode.inc';
 require_once 'Image/Barcode.php';
+
+// Disable non-fatal errors
+error_reporting(E_ERROR);
 
 if (checkBarcode($_GET['upc'])) {
   Image_Barcode::draw($_GET['upc'], checkBarcode($_GET['upc']), 'png');
