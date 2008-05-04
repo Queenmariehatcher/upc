@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="81" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="81" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="73" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classXML_101d565098eeda8bf09e4242a2748d570" prot="public" static="no" mutable="no">
         <type></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="82" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="82" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="74" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classXML_17c20d75c1719294f3320a537a32753ca" prot="public" static="no" mutable="no">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="83" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="83" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="75" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classXML_1fa51193c2f0b317f817fa3efa8722227" prot="public" static="no" mutable="no">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="84" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="84" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="76" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classXML_1c10be009a77c59e80ce5562d4dd35532" prot="public" static="no" mutable="no">
         <type></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="85" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="85" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="77" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classXML_160e7e74df6643f50e0c6ea8252554b3d" prot="public" static="no" mutable="no">
         <type></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="87" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="87" bodyend="-1"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="79" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="79" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="89" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="89" bodyend="97"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="81" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="81" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classXML_1d1524d80c783b2cd22966462411b9b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="99" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="99" bodyend="101"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="91" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="91" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classXML_161e6258dc3d5750100e1f0dd08d6334a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="103" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="103" bodyend="110"/>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="95" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="95" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -154,9 +154,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="112" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="112" bodyend="147"/>
-        <references refid="xmlrpc_8inc_188839ba2c5c835c99f55578c65faa401" compoundref="xmlrpc_8inc" startline="473" endline="475">count_numeric_items</references>
-        <references refid="classXML_1ca70dfbd3e8ce956075181701b09b033" compoundref="xmlrpc_8inc" startline="149" endline="154">data</references>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="104" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="104" bodyend="139"/>
+        <references refid="xmlrpc_8inc_188839ba2c5c835c99f55578c65faa401" compoundref="xmlrpc_8inc" startline="465" endline="467">count_numeric_items</references>
+        <references refid="classXML_1ca70dfbd3e8ce956075181701b09b033" compoundref="xmlrpc_8inc" startline="141" endline="146">data</references>
       </memberdef>
       <memberdef kind="function" id="classXML_1ca70dfbd3e8ce956075181701b09b033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -177,9 +177,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="149" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="149" bodyend="154"/>
-        <referencedby refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" compoundref="xmlrpc_8inc" startline="156" endline="164">close</referencedby>
-        <referencedby refid="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" compoundref="xmlrpc_8inc" startline="112" endline="147">open</referencedby>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="141" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="141" bodyend="146"/>
+        <referencedby refid="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" compoundref="xmlrpc_8inc" startline="148" endline="156">close</referencedby>
+        <referencedby refid="classXML_1eac7eae74d866d4f5a0cdb9be27ff279" compoundref="xmlrpc_8inc" startline="104" endline="139">open</referencedby>
       </memberdef>
       <memberdef kind="function" id="classXML_160144a2134fc1b7f5b4b1b6a7c56bf04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -200,15 +200,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="156" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="156" bodyend="164"/>
-        <references refid="classXML_1ca70dfbd3e8ce956075181701b09b033" compoundref="xmlrpc_8inc" startline="149" endline="154">data</references>
+        <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="148" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="148" bodyend="156"/>
+        <references refid="classXML_1ca70dfbd3e8ce956075181701b09b033" compoundref="xmlrpc_8inc" startline="141" endline="146">data</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="80" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="80" bodyend="165"/>
+    <location file="/home/daniel/Coding/upc/include/xmlrpc.inc" line="72" bodyfile="/home/daniel/Coding/upc/include/xmlrpc.inc" bodystart="72" bodyend="157"/>
     <listofallmembers>
       <member refid="classXML_17c20d75c1719294f3320a537a32753ca" prot="public" virt="non-virtual"><scope>XML</scope><name>$current</name></member>
       <member refid="classXML_101d565098eeda8bf09e4242a2748d570" prot="public" virt="non-virtual"><scope>XML</scope><name>$document</name></member>

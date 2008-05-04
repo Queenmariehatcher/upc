@@ -16,88 +16,91 @@
   </ul>
 </div>
 <h1>index.php</h1><a href="index_8php.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
-<a name="l00009"></a>00009 require 'include/pear.inc';
-<a name="l00010"></a>00010 require_once 'include/xmlrpc.inc';
-<a name="l00011"></a>00011 require_once 'include/form.inc';
-<a name="l00012"></a>00012 require_once 'include/barcode.inc';
-<a name="l00013"></a>00013 require_once 'include/product.inc';
-<a name="l00014"></a>00014 
-<a name="l00018"></a><a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">00018</a> <a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">$debug</a> = FALSE;
-<a name="l00023"></a><a class="code" href="index_8php.html#cb68d0635f57ee9137fb7985a2357c5c">00023</a> define('<a class="code" href="index_8php.html#cb68d0635f57ee9137fb7985a2357c5c">APIKEY</a>', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ');
-<a name="l00024"></a>00024 ?&gt;
-<a name="l00025"></a>00025 &lt;!DOCTYPE html PUBLIC <span class="stringliteral">"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
-<a name="l00026"></a>00026     <span class="stringliteral">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span>&gt;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 &lt;html xmlns=<span class="stringliteral">"http://www.w3.org/1999/xhtml"</span>&gt;
-<a name="l00029"></a>00029 &lt;head&gt;
-<a name="l00030"></a>00030   &lt;meta http-equiv=<span class="stringliteral">"Content-Type"</span> content=
-<a name="l00031"></a>00031   <span class="stringliteral">"text/html; charset=us-ascii"</span> /&gt;
-<a name="l00032"></a>00032   &lt;meta name=<span class="stringliteral">"Language"</span> content=<span class="stringliteral">"English"</span> /&gt;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034   &lt;!-- Styles --&gt;
-<a name="l00035"></a>00035   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"style.css"</span> /&gt;
-<a name="l00036"></a>00036   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"form.css"</span> /&gt;
+<a name="l00010"></a>00010 <span class="comment">// Disable non-fatal errors</span>
+<a name="l00011"></a>00011 error_reporting(E_ERROR);
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 require 'include/pear.inc';
+<a name="l00014"></a>00014 require_once 'include/xmlrpc.inc';
+<a name="l00015"></a>00015 require_once 'include/form.inc';
+<a name="l00016"></a>00016 require_once 'include/barcode.inc';
+<a name="l00017"></a>00017 require_once 'include/product.inc';
+<a name="l00018"></a>00018 
+<a name="l00022"></a><a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">00022</a> <a class="code" href="index_8php.html#85ae3e64cd40e9564adceb010085e9dd">$debug</a> = FALSE;
+<a name="l00027"></a><a class="code" href="index_8php.html#cb68d0635f57ee9137fb7985a2357c5c">00027</a> define('<a class="code" href="index_8php.html#cb68d0635f57ee9137fb7985a2357c5c">APIKEY</a>', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-jq0HtIRjmBHjux30WT0zQnaQ');
+<a name="l00028"></a>00028 ?&gt;
+<a name="l00029"></a>00029 &lt;!DOCTYPE html PUBLIC <span class="stringliteral">"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+<a name="l00030"></a>00030     <span class="stringliteral">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span>&gt;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 &lt;html xmlns=<span class="stringliteral">"http://www.w3.org/1999/xhtml"</span>&gt;
+<a name="l00033"></a>00033 &lt;head&gt;
+<a name="l00034"></a>00034   &lt;meta http-equiv=<span class="stringliteral">"Content-Type"</span> content=
+<a name="l00035"></a>00035   <span class="stringliteral">"text/html; charset=us-ascii"</span> /&gt;
+<a name="l00036"></a>00036   &lt;meta name=<span class="stringliteral">"Language"</span> content=<span class="stringliteral">"English"</span> /&gt;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038   &lt;title&gt;UPC Lookup&lt;/title&gt;
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040   &lt;script type=<span class="stringliteral">"text/javascript"</span>&gt;
-<a name="l00041"></a>00041     function popup(url, h, w)
-<a name="l00042"></a>00042     {
-<a name="l00043"></a>00043       var newwindow=window.open(url,'name<span class="charliteral">','</span>height=' + h + ',width=' + w);
-<a name="l00044"></a>00044       <span class="keywordflow">if</span> (window.focus) {newwindow.focus()}
-<a name="l00045"></a>00045     }
-<a name="l00046"></a>00046   &lt;/script&gt;
-<a name="l00047"></a>00047 &lt;/head&gt;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 &lt;body&gt;
-<a name="l00050"></a>00050   &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"container"</span>&gt;
-<a name="l00051"></a>00051     &lt;a href=<span class="stringliteral">"index.php"</span>&gt;&lt;div <span class="keyword">class</span>=<span class="stringliteral">"mainimage"</span>&gt;&lt;/div&gt;&lt;/a&gt;
+<a name="l00038"></a>00038   &lt;!-- Styles --&gt;
+<a name="l00039"></a>00039   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"style.css"</span> /&gt;
+<a name="l00040"></a>00040   &lt;link type=<span class="stringliteral">"text/css"</span> rel=<span class="stringliteral">"stylesheet"</span> href=<span class="stringliteral">"form.css"</span> /&gt;
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042   &lt;title&gt;UPC Lookup&lt;/title&gt;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044   &lt;script type=<span class="stringliteral">"text/javascript"</span>&gt;
+<a name="l00045"></a>00045     function popup(url, h, w)
+<a name="l00046"></a>00046     {
+<a name="l00047"></a>00047       var newwindow=window.open(url,'name<span class="charliteral">','</span>height=' + h + ',width=' + w);
+<a name="l00048"></a>00048       <span class="keywordflow">if</span> (window.focus) {newwindow.focus()}
+<a name="l00049"></a>00049     }
+<a name="l00050"></a>00050   &lt;/script&gt;
+<a name="l00051"></a>00051 &lt;/head&gt;
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"menu"</span>&gt;
-<a name="l00054"></a>00054       &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"plug"</span>&gt;Uses the &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/"</span>&gt;UPC Database&lt;/a&gt;&lt;/div&gt;
-<a name="l00055"></a>00055 &lt;!--      &lt;ul&gt;
-<a name="l00056"></a>00056         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Home"</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"News"</span>&gt;News&lt;/a&gt;&lt;/li&gt;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"About"</span>&gt;About&lt;/a&gt;&lt;/li&gt;
+<a name="l00053"></a>00053 &lt;body&gt;
+<a name="l00054"></a>00054   &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"container"</span>&gt;
+<a name="l00055"></a>00055     &lt;a href=<span class="stringliteral">"index.php"</span>&gt;&lt;div <span class="keyword">class</span>=<span class="stringliteral">"mainimage"</span>&gt;&lt;/div&gt;&lt;/a&gt;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"menu"</span>&gt;
+<a name="l00058"></a>00058       &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"plug"</span>&gt;Uses the &lt;a href=<span class="stringliteral">"http://www.upcdatabase.com/"</span>&gt;UPC Database&lt;/a&gt;&lt;/div&gt;
+<a name="l00059"></a>00059 &lt;!--      &lt;ul&gt;
+<a name="l00060"></a>00060         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Home"</span>&gt;Home&lt;/a&gt;&lt;/li&gt;
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Gallery"</span>&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+<a name="l00062"></a>00062         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"News"</span>&gt;News&lt;/a&gt;&lt;/li&gt;
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Links"</span>&gt;Links&lt;/a&gt;&lt;/li&gt;
+<a name="l00064"></a>00064         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"About"</span>&gt;About&lt;/a&gt;&lt;/li&gt;
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Contact"</span>&gt;Contact&lt;/a&gt;&lt;/li&gt;
-<a name="l00067"></a>00067       &lt;/ul&gt;--&gt;
-<a name="l00068"></a>00068     &lt;/div&gt;
+<a name="l00066"></a>00066         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Gallery"</span>&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Links"</span>&gt;Links&lt;/a&gt;&lt;/li&gt;
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"bodytext"</span>&gt;
-<a name="l00071"></a>00071       &lt;?php
-<a name="l00076"></a><a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">00076</a>         <a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a> = $_GET['upc'];
-<a name="l00077"></a>00077         <span class="keywordflow">if</span> (<a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a>) {
-<a name="l00078"></a>00078           <span class="keywordflow">if</span> (<a class="code" href="barcode_8inc.html#6d3645af0ef526e4f64d28dcbdceb74f">checkBarcode</a>(<a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a>)) {
-<a name="l00079"></a>00079             echo <a class="code" href="barcode_8inc.html#e10c37e4f9f9b7c6617a388351a27c99">getBarcodeInfo</a>(<a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a>);
-<a name="l00080"></a>00080           }
-<a name="l00081"></a>00081           <span class="keywordflow">else</span> {
-<a name="l00082"></a>00082             echo &lt;&lt;&lt;_HTML
-<a name="l00083"></a>00083             &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"info"</span> <span class="keyword">class</span>=<span class="stringliteral">"error"</span>&gt;
-<a name="l00084"></a>00084               The barcode with the value <a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a> is not valid.
-<a name="l00085"></a>00085             &lt;/div&gt;
-<a name="l00086"></a>00086 _HTML;
-<a name="l00087"></a>00087           }
-<a name="l00088"></a>00088         }
-<a name="l00089"></a>00089         echo <a class="code" href="form_8inc.html#839e205cae656bea01ea99e2de94ef1e">getEntryForm</a>();
-<a name="l00090"></a>00090       ?&gt;
-<a name="l00091"></a>00091     &lt;/div&gt;
-<a name="l00092"></a>00092   &lt;/div&gt;
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094   &lt;div <span class="keyword">class</span>=<span class="stringliteral">"footer"</span>&gt;
-<a name="l00095"></a>00095     &lt;div <span class="keyword">class</span>=<span class="stringliteral">"right"</span>&gt;
-<a name="l00096"></a>00096       By &lt;a href=<span class="stringliteral">"http://dankeenan.org"</span>&gt;Dan Keenan&lt;/a&gt; | &lt;a href=<span class="stringliteral">"http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&amp;path=%2F&amp;sc=0"</span>&gt;Source Code&lt;/a&gt;
-<a name="l00097"></a>00097     &lt;/div&gt;
-<a name="l00098"></a>00098   &lt;/div&gt;
-<a name="l00099"></a>00099 &lt;/body&gt;
-<a name="l00100"></a>00100 &lt;/html&gt;
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Sun Apr 27 15:40:34 2008 for UPC Lookup by&nbsp;
+<a name="l00070"></a>00070         &lt;li&gt;&lt;a href=<span class="stringliteral">"#"</span> title=<span class="stringliteral">"Contact"</span>&gt;Contact&lt;/a&gt;&lt;/li&gt;
+<a name="l00071"></a>00071       &lt;/ul&gt;--&gt;
+<a name="l00072"></a>00072     &lt;/div&gt;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"bodytext"</span>&gt;
+<a name="l00075"></a>00075       &lt;?php
+<a name="l00080"></a><a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">00080</a>         <a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a> = $_GET['upc'];
+<a name="l00081"></a>00081         <span class="keywordflow">if</span> (<a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a>) {
+<a name="l00082"></a>00082           <span class="keywordflow">if</span> (<a class="code" href="barcode_8inc.html#6d3645af0ef526e4f64d28dcbdceb74f">checkBarcode</a>(<a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a>)) {
+<a name="l00083"></a>00083             echo <a class="code" href="barcode_8inc.html#e10c37e4f9f9b7c6617a388351a27c99">getBarcodeInfo</a>(<a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a>);
+<a name="l00084"></a>00084           }
+<a name="l00085"></a>00085           <span class="keywordflow">else</span> {
+<a name="l00086"></a>00086             echo &lt;&lt;&lt;_HTML
+<a name="l00087"></a>00087             &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"info"</span> <span class="keyword">class</span>=<span class="stringliteral">"error"</span>&gt;
+<a name="l00088"></a>00088               The barcode with the value <a class="code" href="index_8php.html#a9aa17ff51d69075d75cfc5bc4e89b34">$upc</a> is not valid.
+<a name="l00089"></a>00089             &lt;/div&gt;
+<a name="l00090"></a>00090 _HTML;
+<a name="l00091"></a>00091           }
+<a name="l00092"></a>00092         }
+<a name="l00093"></a>00093         echo <a class="code" href="form_8inc.html#839e205cae656bea01ea99e2de94ef1e">getEntryForm</a>();
+<a name="l00094"></a>00094       ?&gt;
+<a name="l00095"></a>00095     &lt;/div&gt;
+<a name="l00096"></a>00096   &lt;/div&gt;
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098   &lt;div <span class="keyword">class</span>=<span class="stringliteral">"footer"</span>&gt;
+<a name="l00099"></a>00099     &lt;div <span class="keyword">class</span>=<span class="stringliteral">"right"</span>&gt;
+<a name="l00100"></a>00100       By &lt;a href=<span class="stringliteral">"http://dankeenan.org"</span>&gt;Dan Keenan&lt;/a&gt; | &lt;a href=<span class="stringliteral">"http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&amp;path=%2F&amp;sc=0"</span>&gt;Source Code&lt;/a&gt;
+<a name="l00101"></a>00101     &lt;/div&gt;
+<a name="l00102"></a>00102   &lt;/div&gt;
+<a name="l00103"></a>00103 &lt;/body&gt;
+<a name="l00104"></a>00104 &lt;/html&gt;
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Sun May 4 15:24:24 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

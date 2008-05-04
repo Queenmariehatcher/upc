@@ -61,7 +61,7 @@ Checks to see if a valid, handalable, barcode was entered. <dl compact><dt><b>Pa
 
 <p>Definition at line <a class="el" href="barcode_8inc-source.html#l00016">16</a> of file <a class="el" href="barcode_8inc-source.html">barcode.inc</a>.</p>
 
-<p>References <a class="el" href="xmlrpc_8inc-source.html#l00185">XMLRPC_prepare()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00344">XMLRPC_request()</a>.</p>
+<p>References <a class="el" href="xmlrpc_8inc-source.html#l00177">XMLRPC_prepare()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00336">XMLRPC_request()</a>.</p>
 <div class="fragment"><pre class="fragment"><a name="l00016"></a>00016                                 {
 <a name="l00020"></a>00020   $result = <a class="code" href="xmlrpc_8inc.html#3a98b6984b8ca01752d1aa9a267526a3">XMLRPC_request</a>('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(<a class="code" href="xmlrpc_8inc.html#c13be54b26e0803d8745e4f019dcfd8a">XMLRPC_prepare</a>($barcode)));
 <a name="l00021"></a>00021   <span class="keywordflow">if</span> ($result[1] != 'Error: Invalid length') {
@@ -120,7 +120,7 @@ Output Barcode Info <dl compact><dt><b>Parameters:</b></dt><dd>
 
 <p>Definition at line <a class="el" href="barcode_8inc-source.html#l00043">43</a> of file <a class="el" href="barcode_8inc-source.html">barcode.inc</a>.</p>
 
-<p>References <a class="el" href="product_8inc-source.html#l00015">getImages()</a>, <a class="el" href="xmlrpc_8inc-source.html#l00185">XMLRPC_prepare()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00344">XMLRPC_request()</a>.</p>
+<p>References <a class="el" href="product_8inc-source.html#l00015">getImages()</a>, <a class="el" href="xmlrpc_8inc-source.html#l00177">XMLRPC_prepare()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00336">XMLRPC_request()</a>.</p>
 <div class="fragment"><pre class="fragment"><a name="l00043"></a>00043                                   {
 <a name="l00047"></a>00047   $output = '';
 <a name="l00048"></a>00048   $output .= '&lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"upc"</span>&gt;';
@@ -173,7 +173,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Sun Apr 27 15:40:34 2008 for UPC Lookup by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Sun May 4 15:24:25 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

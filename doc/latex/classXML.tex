@@ -37,7 +37,7 @@
 \subsection{Detailed Description}
 
 
-Definition at line 80 of file xmlrpc.inc.
+Definition at line 72 of file xmlrpc.inc.
 
 \subsection{Member Function Documentation}
 \hypertarget{classXML_1475a1374023931e2227277f4047c9aa}{
@@ -49,17 +49,17 @@ Definition at line 80 of file xmlrpc.inc.
 
 
 
-Definition at line 89 of file xmlrpc.inc.
+Definition at line 81 of file xmlrpc.inc.
 
-\begin{Code}\begin{verbatim}89                           {
-90     $this->parser = xml_parser_create();
-91 
-92     xml_parser_set_option ($this->parser, XML_OPTION_CASE_FOLDING, 0);
-93     xml_set_object($this->parser, &$this);
-94     xml_set_element_handler($this->parser, "open", "close");
-95     xml_set_character_data_handler($this->parser, "data");
-96 #   register_shutdown_function(array(&$this, 'destruct'));
-97   }
+\begin{Code}\begin{verbatim}81                           {
+82     $this->parser = xml_parser_create();
+83 
+84     xml_parser_set_option ($this->parser, XML_OPTION_CASE_FOLDING, 0);
+85     xml_set_object($this->parser, &$this);
+86     xml_set_element_handler($this->parser, "open", "close");
+87     xml_set_character_data_handler($this->parser, "data");
+88 #   register_shutdown_function(array(&$this, 'destruct'));
+89   }
 \end{verbatim}
 \end{Code}
 
@@ -73,11 +73,11 @@ Definition at line 89 of file xmlrpc.inc.
 
 
 
-Definition at line 99 of file xmlrpc.inc.
+Definition at line 91 of file xmlrpc.inc.
 
-\begin{Code}\begin{verbatim}99                      {
-100     xml_parser_free($this->parser);
-101   }
+\begin{Code}\begin{verbatim}91                      {
+92     xml_parser_free($this->parser);
+93   }
 \end{verbatim}
 \end{Code}
 
@@ -91,16 +91,16 @@ Definition at line 99 of file xmlrpc.inc.
 
 
 
-Definition at line 103 of file xmlrpc.inc.
+Definition at line 95 of file xmlrpc.inc.
 
-\begin{Code}\begin{verbatim}103                        {
-104     $this->document = array();
-105     $this->parent = &$this->document;
-106     $this->parents = array();
-107     $this->last_opened_tag = NULL;
-108     xml_parse($this->parser, $data);
-109     return $this->document;
-110   }
+\begin{Code}\begin{verbatim}95                        {
+96     $this->document = array();
+97     $this->parent = &$this->document;
+98     $this->parents = array();
+99     $this->last_opened_tag = NULL;
+100     xml_parse($this->parser, $data);
+101     return $this->document;
+102   }
 \end{verbatim}
 \end{Code}
 
@@ -114,46 +114,46 @@ Definition at line 103 of file xmlrpc.inc.
 
 
 
-Definition at line 112 of file xmlrpc.inc.
+Definition at line 104 of file xmlrpc.inc.
 
 References count\_\-numeric\_\-items(), and data().
 
-\begin{Code}\begin{verbatim}112                                            {
-113     #echo "Opening tag $tag<br>\n";
-114     $this->data = "";
-115     $this->last_opened_tag = $tag; #tag is a string
-116     if(array_key_exists($tag, $this->parent)){
-117       #echo "There's already an instance of '$tag' at the current level ($level)<br>\n";
-118       if(is_array($this->parent[$tag]) and array_key_exists(0, $this->parent[$tag])){ #if the keys are numeric
-119         #need to make sure they're numeric (account for attributes)
-120         $key = count_numeric_items($this->parent[$tag]);
-121         #echo "There are $key instances: the keys are numeric.<br>\n";
-122       }else{
-123         #echo "There is only one instance. Shifting everything around<br>\n";
-124         $temp = &$this->parent[$tag];
-125         unset($this->parent[$tag]);
-126         $this->parent[$tag][0] = &$temp;
-127 
-128         if(array_key_exists("$tag attr", $this->parent)){
-129           #shift the attributes around too if they exist
-130           $temp = &$this->parent["$tag attr"];
-131           unset($this->parent["$tag attr"]);
-132           $this->parent[$tag]["0 attr"] = &$temp;
-133         }
-134         $key = 1;
-135       }
-136       $this->parent = &$this->parent[$tag];
-137     }else{
-138       $key = $tag;
-139     }
-140     if($attributes){
-141       $this->parent["$key attr"] = $attributes;
-142     }
-143 
-144     $this->parent[$key] = array();
-145     $this->parent = &$this->parent[$key];
-146     array_unshift($this->parents, &$this->parent);
-147   }
+\begin{Code}\begin{verbatim}104                                            {
+105     #echo "Opening tag $tag<br>\n";
+106     $this->data = "";
+107     $this->last_opened_tag = $tag; #tag is a string
+108     if(array_key_exists($tag, $this->parent)){
+109       #echo "There's already an instance of '$tag' at the current level ($level)<br>\n";
+110       if(is_array($this->parent[$tag]) and array_key_exists(0, $this->parent[$tag])){ #if the keys are numeric
+111         #need to make sure they're numeric (account for attributes)
+112         $key = count_numeric_items($this->parent[$tag]);
+113         #echo "There are $key instances: the keys are numeric.<br>\n";
+114       }else{
+115         #echo "There is only one instance. Shifting everything around<br>\n";
+116         $temp = &$this->parent[$tag];
+117         unset($this->parent[$tag]);
+118         $this->parent[$tag][0] = &$temp;
+119 
+120         if(array_key_exists("$tag attr", $this->parent)){
+121           #shift the attributes around too if they exist
+122           $temp = &$this->parent["$tag attr"];
+123           unset($this->parent["$tag attr"]);
+124           $this->parent[$tag]["0 attr"] = &$temp;
+125         }
+126         $key = 1;
+127       }
+128       $this->parent = &$this->parent[$tag];
+129     }else{
+130       $key = $tag;
+131     }
+132     if($attributes){
+133       $this->parent["$key attr"] = $attributes;
+134     }
+135 
+136     $this->parent[$key] = array();
+137     $this->parent = &$this->parent[$key];
+138     array_unshift($this->parents, &$this->parent);
+139   }
 \end{verbatim}
 \end{Code}
 
@@ -176,16 +176,16 @@ Here is the call graph for this function:\nopagebreak
 
 
 
-Definition at line 149 of file xmlrpc.inc.
+Definition at line 141 of file xmlrpc.inc.
 
 Referenced by close(), and open().
 
-\begin{Code}\begin{verbatim}149                                {
-150     #echo "Data is '", htmlspecialchars($data), "'<br>\n";
-151     if($this->last_opened_tag != NULL){
-152       $this->data .= $data;
-153     }
-154   }
+\begin{Code}\begin{verbatim}141                                {
+142     #echo "Data is '", htmlspecialchars($data), "'<br>\n";
+143     if($this->last_opened_tag != NULL){
+144       $this->data .= $data;
+145     }
+146   }
 \end{verbatim}
 \end{Code}
 
@@ -208,19 +208,19 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 156 of file xmlrpc.inc.
+Definition at line 148 of file xmlrpc.inc.
 
 References data().
 
-\begin{Code}\begin{verbatim}156                                {
-157     #echo "Close tag $tag<br>\n";
-158     if($this->last_opened_tag == $tag){
-159       $this->parent = $this->data;
-160       $this->last_opened_tag = NULL;
-161     }
-162     array_shift($this->parents);
-163     $this->parent = &$this->parents[0];
-164   }
+\begin{Code}\begin{verbatim}148                                {
+149     #echo "Close tag $tag<br>\n";
+150     if($this->last_opened_tag == $tag){
+151       $this->parent = $this->data;
+152       $this->last_opened_tag = NULL;
+153     }
+154     array_shift($this->parents);
+155     $this->parent = &$this->parents[0];
+156   }
 \end{verbatim}
 \end{Code}
 
@@ -246,7 +246,7 @@ Here is the call graph for this function:\nopagebreak
 
 
 
-Definition at line 81 of file xmlrpc.inc.\hypertarget{classXML_01d565098eeda8bf09e4242a2748d570}{
+Definition at line 73 of file xmlrpc.inc.\hypertarget{classXML_01d565098eeda8bf09e4242a2748d570}{
 \index{XML@{XML}!$document@{\$document}}
 \index{$document@{\$document}!XML@{XML}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XML::\$document}}
@@ -255,7 +255,7 @@ Definition at line 81 of file xmlrpc.inc.\hypertarget{classXML_01d565098eeda8bf0
 
 
 
-Definition at line 82 of file xmlrpc.inc.\hypertarget{classXML_7c20d75c1719294f3320a537a32753ca}{
+Definition at line 74 of file xmlrpc.inc.\hypertarget{classXML_7c20d75c1719294f3320a537a32753ca}{
 \index{XML@{XML}!$current@{\$current}}
 \index{$current@{\$current}!XML@{XML}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XML::\$current}}
@@ -264,7 +264,7 @@ Definition at line 82 of file xmlrpc.inc.\hypertarget{classXML_7c20d75c1719294f3
 
 
 
-Definition at line 83 of file xmlrpc.inc.\hypertarget{classXML_fa51193c2f0b317f817fa3efa8722227}{
+Definition at line 75 of file xmlrpc.inc.\hypertarget{classXML_fa51193c2f0b317f817fa3efa8722227}{
 \index{XML@{XML}!$parent@{\$parent}}
 \index{$parent@{\$parent}!XML@{XML}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XML::\$parent}}
@@ -273,7 +273,7 @@ Definition at line 83 of file xmlrpc.inc.\hypertarget{classXML_fa51193c2f0b317f8
 
 
 
-Definition at line 84 of file xmlrpc.inc.\hypertarget{classXML_c10be009a77c59e80ce5562d4dd35532}{
+Definition at line 76 of file xmlrpc.inc.\hypertarget{classXML_c10be009a77c59e80ce5562d4dd35532}{
 \index{XML@{XML}!$parents@{\$parents}}
 \index{$parents@{\$parents}!XML@{XML}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XML::\$parents}}
@@ -282,7 +282,7 @@ Definition at line 84 of file xmlrpc.inc.\hypertarget{classXML_c10be009a77c59e80
 
 
 
-Definition at line 85 of file xmlrpc.inc.\hypertarget{classXML_60e7e74df6643f50e0c6ea8252554b3d}{
+Definition at line 77 of file xmlrpc.inc.\hypertarget{classXML_60e7e74df6643f50e0c6ea8252554b3d}{
 \index{XML@{XML}!$last_opened_tag@{\$last\_\-opened\_\-tag}}
 \index{$last_opened_tag@{\$last\_\-opened\_\-tag}!XML@{XML}}
 \subsubsection{\setlength{\rightskip}{0pt plus 5cm}XML::\$last\_\-opened\_\-tag}}
@@ -291,7 +291,7 @@ Definition at line 85 of file xmlrpc.inc.\hypertarget{classXML_60e7e74df6643f50e
 
 
 
-Definition at line 87 of file xmlrpc.inc.
+Definition at line 79 of file xmlrpc.inc.
 
 The documentation for this class was generated from the following file:\begin{CompactItemize}
 \item 

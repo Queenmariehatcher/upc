@@ -65,8 +65,6 @@
   </compound>
   <compound refid="searchapi" kind="page"><name>searchapi</name>
   </compound>
-  <compound refid="bug" kind="page"><name>bug</name>
-  </compound>
   <compound refid="dir_1fc65542bf8a705781ea5a0b4e303822" kind="dir"><name>include/</name>
   </compound>
   <compound refid="searchexample_8html-example" kind="example"><name>searchexample.html</name>

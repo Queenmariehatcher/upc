@@ -1,4 +1,4 @@
-.TH "XML" 3 "27 Apr 2008" "Version 0.2" "UPC Lookup" \" -*- nroff -*-
+.TH "XML" 3 "4 May 2008" "Version 0.2" "UPC Lookup" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -52,148 +52,148 @@ XML \-
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 80 of file xmlrpc.inc.
+Definition at line 72 of file xmlrpc.inc.
 .SH "Member Function Documentation"
 .PP 
 .SS "XML::XML ($ data = \fCnull\fP)"
 .PP
-Definition at line 89 of file xmlrpc.inc.
+Definition at line 81 of file xmlrpc.inc.
 .PP
 .nf
-89                           {
-90     $this->parser = xml_parser_create();
-91 
-92     xml_parser_set_option ($this->parser, XML_OPTION_CASE_FOLDING, 0);
-93     xml_set_object($this->parser, &$this);
-94     xml_set_element_handler($this->parser, 'open', 'close');
-95     xml_set_character_data_handler($this->parser, 'data');
-96 #   register_shutdown_function(array(&$this, 'destruct'));
-97   }
+81                           {
+82     $this->parser = xml_parser_create();
+83 
+84     xml_parser_set_option ($this->parser, XML_OPTION_CASE_FOLDING, 0);
+85     xml_set_object($this->parser, &$this);
+86     xml_set_element_handler($this->parser, 'open', 'close');
+87     xml_set_character_data_handler($this->parser, 'data');
+88 #   register_shutdown_function(array(&$this, 'destruct'));
+89   }
 .fi
 .PP
 .SS "XML::destruct ()"
 .PP
-Definition at line 99 of file xmlrpc.inc.
+Definition at line 91 of file xmlrpc.inc.
 .PP
 .nf
-99                      {
-100     xml_parser_free($this->parser);
-101   }
+91                      {
+92     xml_parser_free($this->parser);
+93   }
 .fi
 .PP
 .SS "XML::parse ($ data)"
 .PP
-Definition at line 103 of file xmlrpc.inc.
+Definition at line 95 of file xmlrpc.inc.
 .PP
 .nf
-103                        {
-104     $this->document = array();
-105     $this->parent = &$this->document;
-106     $this->parents = array();
-107     $this->last_opened_tag = NULL;
-108     xml_parse($this->parser, $data);
-109     return $this->document;
-110   }
+95                        {
+96     $this->document = array();
+97     $this->parent = &$this->document;
+98     $this->parents = array();
+99     $this->last_opened_tag = NULL;
+100     xml_parse($this->parser, $data);
+101     return $this->document;
+102   }
 .fi
 .PP
 .SS "XML::open ($ parser, $ tag, $ attributes)"
 .PP
-Definition at line 112 of file xmlrpc.inc.
+Definition at line 104 of file xmlrpc.inc.
 .PP
 References count_numeric_items(), and data().
 .PP
 .nf
-112                                            {
-113     #echo 'Opening tag $tag<br>\n';
-114     $this->data = '';
-115     $this->last_opened_tag = $tag; #tag is a string
-116     if(array_key_exists($tag, $this->parent)){
-117       #echo 'There's already an instance of '$tag' at the current level ($level)<br>\n';
-118       if(is_array($this->parent[$tag]) and array_key_exists(0, $this->parent[$tag])){ #if the keys are numeric
-119         #need to make sure they're numeric (account for attributes)
-120         $key = count_numeric_items($this->parent[$tag]);
-121         #echo 'There are $key instances: the keys are numeric.<br>\n';
-122       }else{
-123         #echo 'There is only one instance. Shifting everything around<br>\n';
-124         $temp = &$this->parent[$tag];
-125         unset($this->parent[$tag]);
-126         $this->parent[$tag][0] = &$temp;
-127 
-128         if(array_key_exists('$tag attr', $this->parent)){
-129           #shift the attributes around too if they exist
-130           $temp = &$this->parent['$tag attr'];
-131           unset($this->parent['$tag attr']);
-132           $this->parent[$tag]['0 attr'] = &$temp;
-133         }
-134         $key = 1;
-135       }
-136       $this->parent = &$this->parent[$tag];
-137     }else{
-138       $key = $tag;
-139     }
-140     if($attributes){
-141       $this->parent['$key attr'] = $attributes;
-142     }
-143 
-144     $this->parent[$key] = array();
-145     $this->parent = &$this->parent[$key];
-146     array_unshift($this->parents, &$this->parent);
-147   }
+104                                            {
+105     #echo 'Opening tag $tag<br>\n';
+106     $this->data = '';
+107     $this->last_opened_tag = $tag; #tag is a string
+108     if(array_key_exists($tag, $this->parent)){
+109       #echo 'There's already an instance of '$tag' at the current level ($level)<br>\n';
+110       if(is_array($this->parent[$tag]) and array_key_exists(0, $this->parent[$tag])){ #if the keys are numeric
+111         #need to make sure they're numeric (account for attributes)
+112         $key = count_numeric_items($this->parent[$tag]);
+113         #echo 'There are $key instances: the keys are numeric.<br>\n';
+114       }else{
+115         #echo 'There is only one instance. Shifting everything around<br>\n';
+116         $temp = &$this->parent[$tag];
+117         unset($this->parent[$tag]);
+118         $this->parent[$tag][0] = &$temp;
+119 
+120         if(array_key_exists('$tag attr', $this->parent)){
+121           #shift the attributes around too if they exist
+122           $temp = &$this->parent['$tag attr'];
+123           unset($this->parent['$tag attr']);
+124           $this->parent[$tag]['0 attr'] = &$temp;
+125         }
+126         $key = 1;
+127       }
+128       $this->parent = &$this->parent[$tag];
+129     }else{
+130       $key = $tag;
+131     }
+132     if($attributes){
+133       $this->parent['$key attr'] = $attributes;
+134     }
+135 
+136     $this->parent[$key] = array();
+137     $this->parent = &$this->parent[$key];
+138     array_unshift($this->parents, &$this->parent);
+139   }
 .fi
 .PP
 .SS "XML::data ($ parser, $ data)"
 .PP
-Definition at line 149 of file xmlrpc.inc.
+Definition at line 141 of file xmlrpc.inc.
 .PP
 Referenced by close(), and open().
 .PP
 .nf
-149                                {
-150     #echo 'Data is '', htmlspecialchars($data), ''<br>\n';
-151     if($this->last_opened_tag != NULL){
-152       $this->data .= $data;
-153     }
-154   }
+141                                {
+142     #echo 'Data is '', htmlspecialchars($data), ''<br>\n';
+143     if($this->last_opened_tag != NULL){
+144       $this->data .= $data;
+145     }
+146   }
 .fi
 .PP
 .SS "XML::close ($ parser, $ tag)"
 .PP
-Definition at line 156 of file xmlrpc.inc.
+Definition at line 148 of file xmlrpc.inc.
 .PP
 References data().
 .PP
 .nf
-156                                {
-157     #echo 'Close tag $tag<br>\n';
-158     if($this->last_opened_tag == $tag){
-159       $this->parent = $this->data;
-160       $this->last_opened_tag = NULL;
-161     }
-162     array_shift($this->parents);
-163     $this->parent = &$this->parents[0];
-164   }
+148                                {
+149     #echo 'Close tag $tag<br>\n';
+150     if($this->last_opened_tag == $tag){
+151       $this->parent = $this->data;
+152       $this->last_opened_tag = NULL;
+153     }
+154     array_shift($this->parents);
+155     $this->parent = &$this->parents[0];
+156   }
 .fi
 .PP
 .SH "Member Data Documentation"
 .PP 
 .SS "XML::$parser"
 .PP
-Definition at line 81 of file xmlrpc.inc.
+Definition at line 73 of file xmlrpc.inc.
 .SS "XML::$document"
 .PP
-Definition at line 82 of file xmlrpc.inc.
+Definition at line 74 of file xmlrpc.inc.
 .SS "XML::$current"
 .PP
-Definition at line 83 of file xmlrpc.inc.
+Definition at line 75 of file xmlrpc.inc.
 .SS "XML::$parent"
 .PP
-Definition at line 84 of file xmlrpc.inc.
+Definition at line 76 of file xmlrpc.inc.
 .SS "XML::$parents"
 .PP
-Definition at line 85 of file xmlrpc.inc.
+Definition at line 77 of file xmlrpc.inc.
 .SS "XML::$last_opened_tag"
 .PP
-Definition at line 87 of file xmlrpc.inc.
+Definition at line 79 of file xmlrpc.inc.
 
 .SH "Author"
 .PP 

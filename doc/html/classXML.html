@@ -55,7 +55,7 @@
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00080">80</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00072">72</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 <hr><h2>Member Function Documentation</h2>
 <a class="anchor" name="1475a1374023931e2227277f4047c9aa"></a><!-- doxytag: member="XML::XML" ref="1475a1374023931e2227277f4047c9aa" args="($data=null)" -->
 <div class="memitem">
@@ -75,16 +75,16 @@
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00089">89</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00089"></a>00089                           {
-<a name="l00090"></a>00090     $this-&gt;parser = xml_parser_create();
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092     xml_parser_set_option ($this-&gt;parser, XML_OPTION_CASE_FOLDING, 0);
-<a name="l00093"></a>00093     xml_set_object($this-&gt;parser, &amp;$this);
-<a name="l00094"></a>00094     xml_set_element_handler($this-&gt;parser, <span class="stringliteral">"open"</span>, <span class="stringliteral">"close"</span>);
-<a name="l00095"></a>00095     xml_set_character_data_handler($this-&gt;parser, <span class="stringliteral">"data"</span>);
-<a name="l00096"></a>00096 <span class="preprocessor">#   register_shutdown_function(array(&amp;$this, 'destruct'));</span>
-<a name="l00097"></a>00097 <span class="preprocessor"></span>  }
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00081">81</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<div class="fragment"><pre class="fragment"><a name="l00081"></a>00081                           {
+<a name="l00082"></a>00082     $this-&gt;parser = xml_parser_create();
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084     xml_parser_set_option ($this-&gt;parser, XML_OPTION_CASE_FOLDING, 0);
+<a name="l00085"></a>00085     xml_set_object($this-&gt;parser, &amp;$this);
+<a name="l00086"></a>00086     xml_set_element_handler($this-&gt;parser, <span class="stringliteral">"open"</span>, <span class="stringliteral">"close"</span>);
+<a name="l00087"></a>00087     xml_set_character_data_handler($this-&gt;parser, <span class="stringliteral">"data"</span>);
+<a name="l00088"></a>00088 <span class="preprocessor">#   register_shutdown_function(array(&amp;$this, 'destruct'));</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>  }
 </pre></div>
 <p>
 
@@ -107,10 +107,10 @@
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00099">99</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00099"></a>00099                      {
-<a name="l00100"></a>00100     xml_parser_free($this-&gt;parser);
-<a name="l00101"></a>00101   }
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00091">91</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<div class="fragment"><pre class="fragment"><a name="l00091"></a>00091                      {
+<a name="l00092"></a>00092     xml_parser_free($this-&gt;parser);
+<a name="l00093"></a>00093   }
 </pre></div>
 <p>
 
@@ -134,15 +134,15 @@
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00103">103</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00103"></a>00103                        {
-<a name="l00104"></a>00104     $this-&gt;document = array();
-<a name="l00105"></a>00105     $this-&gt;parent = &amp;$this-&gt;document;
-<a name="l00106"></a>00106     $this-&gt;parents = array();
-<a name="l00107"></a>00107     $this-&gt;last_opened_tag = NULL;
-<a name="l00108"></a>00108     xml_parse($this-&gt;parser, $data);
-<a name="l00109"></a>00109     <span class="keywordflow">return</span> $this-&gt;document;
-<a name="l00110"></a>00110   }
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00095">95</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<div class="fragment"><pre class="fragment"><a name="l00095"></a>00095                        {
+<a name="l00096"></a>00096     $this-&gt;document = array();
+<a name="l00097"></a>00097     $this-&gt;parent = &amp;$this-&gt;document;
+<a name="l00098"></a>00098     $this-&gt;parents = array();
+<a name="l00099"></a>00099     $this-&gt;last_opened_tag = NULL;
+<a name="l00100"></a>00100     xml_parse($this-&gt;parser, $data);
+<a name="l00101"></a>00101     <span class="keywordflow">return</span> $this-&gt;document;
+<a name="l00102"></a>00102   }
 </pre></div>
 <p>
 
@@ -181,45 +181,45 @@
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00112">112</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00104">104</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
-<p>References <a class="el" href="xmlrpc_8inc-source.html#l00473">count_numeric_items()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00149">data()</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00112"></a>00112                                            {
-<a name="l00113"></a>00113 <span class="preprocessor">    #echo "Opening tag $tag&lt;br&gt;\n";</span>
-<a name="l00114"></a>00114 <span class="preprocessor"></span>    $this-&gt;<a class="code" href="classXML.html#ca70dfbd3e8ce956075181701b09b033">data</a> = <span class="stringliteral">""</span>;
-<a name="l00115"></a>00115     $this-&gt;last_opened_tag = $tag; #tag is a <span class="keywordtype">string</span>
-<a name="l00116"></a>00116     <span class="keywordflow">if</span>(array_key_exists($tag, $this-&gt;parent)){
-<a name="l00117"></a>00117 <span class="preprocessor">      #echo "There's already an instance of '$tag' at the current level ($level)&lt;br&gt;\n";</span>
-<a name="l00118"></a>00118 <span class="preprocessor"></span>      <span class="keywordflow">if</span>(is_array($this-&gt;parent[$tag]) and array_key_exists(0, $this-&gt;parent[$tag])){ #<span class="keywordflow">if</span> the keys are numeric
-<a name="l00119"></a>00119 <span class="preprocessor">        #need to make sure they're numeric (account for attributes)</span>
-<a name="l00120"></a>00120 <span class="preprocessor"></span>        $key = <a class="code" href="xmlrpc_8inc.html#88839ba2c5c835c99f55578c65faa401">count_numeric_items</a>($this-&gt;parent[$tag]);
-<a name="l00121"></a>00121 <span class="preprocessor">        #echo "There are $key instances: the keys are numeric.&lt;br&gt;\n";</span>
-<a name="l00122"></a>00122 <span class="preprocessor"></span>      }<span class="keywordflow">else</span>{
-<a name="l00123"></a>00123 <span class="preprocessor">        #echo "There is only one instance. Shifting everything around&lt;br&gt;\n";</span>
-<a name="l00124"></a>00124 <span class="preprocessor"></span>        $temp = &amp;$this-&gt;parent[$tag];
-<a name="l00125"></a>00125         unset($this-&gt;parent[$tag]);
-<a name="l00126"></a>00126         $this-&gt;parent[$tag][0] = &amp;$temp;
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128         <span class="keywordflow">if</span>(array_key_exists(<span class="stringliteral">"$tag attr"</span>, $this-&gt;parent)){
-<a name="l00129"></a>00129 <span class="preprocessor">          #shift the attributes around too if they exist</span>
-<a name="l00130"></a>00130 <span class="preprocessor"></span>          $temp = &amp;$this-&gt;parent[<span class="stringliteral">"$tag attr"</span>];
-<a name="l00131"></a>00131           unset($this-&gt;parent[<span class="stringliteral">"$tag attr"</span>]);
-<a name="l00132"></a>00132           $this-&gt;parent[$tag][<span class="stringliteral">"0 attr"</span>] = &amp;$temp;
-<a name="l00133"></a>00133         }
-<a name="l00134"></a>00134         $key = 1;
-<a name="l00135"></a>00135       }
-<a name="l00136"></a>00136       $this-&gt;parent = &amp;$this-&gt;parent[$tag];
-<a name="l00137"></a>00137     }<span class="keywordflow">else</span>{
-<a name="l00138"></a>00138       $key = $tag;
-<a name="l00139"></a>00139     }
-<a name="l00140"></a>00140     <span class="keywordflow">if</span>($attributes){
-<a name="l00141"></a>00141       $this-&gt;parent[<span class="stringliteral">"$key attr"</span>] = $attributes;
-<a name="l00142"></a>00142     }
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144     $this-&gt;parent[$key] = array();
-<a name="l00145"></a>00145     $this-&gt;parent = &amp;$this-&gt;parent[$key];
-<a name="l00146"></a>00146     array_unshift($this-&gt;parents, &amp;$this-&gt;parent);
-<a name="l00147"></a>00147   }
+<p>References <a class="el" href="xmlrpc_8inc-source.html#l00465">count_numeric_items()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00141">data()</a>.</p>
+<div class="fragment"><pre class="fragment"><a name="l00104"></a>00104                                            {
+<a name="l00105"></a>00105 <span class="preprocessor">    #echo "Opening tag $tag&lt;br&gt;\n";</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>    $this-&gt;<a class="code" href="classXML.html#ca70dfbd3e8ce956075181701b09b033">data</a> = <span class="stringliteral">""</span>;
+<a name="l00107"></a>00107     $this-&gt;last_opened_tag = $tag; #tag is a <span class="keywordtype">string</span>
+<a name="l00108"></a>00108     <span class="keywordflow">if</span>(array_key_exists($tag, $this-&gt;parent)){
+<a name="l00109"></a>00109 <span class="preprocessor">      #echo "There's already an instance of '$tag' at the current level ($level)&lt;br&gt;\n";</span>
+<a name="l00110"></a>00110 <span class="preprocessor"></span>      <span class="keywordflow">if</span>(is_array($this-&gt;parent[$tag]) and array_key_exists(0, $this-&gt;parent[$tag])){ #<span class="keywordflow">if</span> the keys are numeric
+<a name="l00111"></a>00111 <span class="preprocessor">        #need to make sure they're numeric (account for attributes)</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>        $key = <a class="code" href="xmlrpc_8inc.html#88839ba2c5c835c99f55578c65faa401">count_numeric_items</a>($this-&gt;parent[$tag]);
+<a name="l00113"></a>00113 <span class="preprocessor">        #echo "There are $key instances: the keys are numeric.&lt;br&gt;\n";</span>
+<a name="l00114"></a>00114 <span class="preprocessor"></span>      }<span class="keywordflow">else</span>{
+<a name="l00115"></a>00115 <span class="preprocessor">        #echo "There is only one instance. Shifting everything around&lt;br&gt;\n";</span>
+<a name="l00116"></a>00116 <span class="preprocessor"></span>        $temp = &amp;$this-&gt;parent[$tag];
+<a name="l00117"></a>00117         unset($this-&gt;parent[$tag]);
+<a name="l00118"></a>00118         $this-&gt;parent[$tag][0] = &amp;$temp;
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120         <span class="keywordflow">if</span>(array_key_exists(<span class="stringliteral">"$tag attr"</span>, $this-&gt;parent)){
+<a name="l00121"></a>00121 <span class="preprocessor">          #shift the attributes around too if they exist</span>
+<a name="l00122"></a>00122 <span class="preprocessor"></span>          $temp = &amp;$this-&gt;parent[<span class="stringliteral">"$tag attr"</span>];
+<a name="l00123"></a>00123           unset($this-&gt;parent[<span class="stringliteral">"$tag attr"</span>]);
+<a name="l00124"></a>00124           $this-&gt;parent[$tag][<span class="stringliteral">"0 attr"</span>] = &amp;$temp;
+<a name="l00125"></a>00125         }
+<a name="l00126"></a>00126         $key = 1;
+<a name="l00127"></a>00127       }
+<a name="l00128"></a>00128       $this-&gt;parent = &amp;$this-&gt;parent[$tag];
+<a name="l00129"></a>00129     }<span class="keywordflow">else</span>{
+<a name="l00130"></a>00130       $key = $tag;
+<a name="l00131"></a>00131     }
+<a name="l00132"></a>00132     <span class="keywordflow">if</span>($attributes){
+<a name="l00133"></a>00133       $this-&gt;parent[<span class="stringliteral">"$key attr"</span>] = $attributes;
+<a name="l00134"></a>00134     }
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136     $this-&gt;parent[$key] = array();
+<a name="l00137"></a>00137     $this-&gt;parent = &amp;$this-&gt;parent[$key];
+<a name="l00138"></a>00138     array_unshift($this-&gt;parents, &amp;$this-&gt;parent);
+<a name="l00139"></a>00139   }
 </pre></div>
 <p>
 
@@ -261,15 +261,15 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00149">149</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00141">141</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
-<p>Referenced by <a class="el" href="xmlrpc_8inc-source.html#l00156">close()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00112">open()</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00149"></a>00149                                {
-<a name="l00150"></a>00150 <span class="preprocessor">    #echo "Data is '", htmlspecialchars($data), "'&lt;br&gt;\n";</span>
-<a name="l00151"></a>00151 <span class="preprocessor"></span>    <span class="keywordflow">if</span>($this-&gt;last_opened_tag != NULL){
-<a name="l00152"></a>00152       $this-&gt;<a class="code" href="classXML.html#ca70dfbd3e8ce956075181701b09b033">data</a> .= $data;
-<a name="l00153"></a>00153     }
-<a name="l00154"></a>00154   }
+<p>Referenced by <a class="el" href="xmlrpc_8inc-source.html#l00148">close()</a>, and <a class="el" href="xmlrpc_8inc-source.html#l00104">open()</a>.</p>
+<div class="fragment"><pre class="fragment"><a name="l00141"></a>00141                                {
+<a name="l00142"></a>00142 <span class="preprocessor">    #echo "Data is '", htmlspecialchars($data), "'&lt;br&gt;\n";</span>
+<a name="l00143"></a>00143 <span class="preprocessor"></span>    <span class="keywordflow">if</span>($this-&gt;last_opened_tag != NULL){
+<a name="l00144"></a>00144       $this-&gt;<a class="code" href="classXML.html#ca70dfbd3e8ce956075181701b09b033">data</a> .= $data;
+<a name="l00145"></a>00145     }
+<a name="l00146"></a>00146   }
 </pre></div>
 <p>
 
@@ -311,18 +311,18 @@ Here is the caller graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00156">156</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00148">148</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
-<p>References <a class="el" href="xmlrpc_8inc-source.html#l00149">data()</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00156"></a>00156                                {
-<a name="l00157"></a>00157 <span class="preprocessor">    #echo "Close tag $tag&lt;br&gt;\n";</span>
-<a name="l00158"></a>00158 <span class="preprocessor"></span>    <span class="keywordflow">if</span>($this-&gt;last_opened_tag == $tag){
-<a name="l00159"></a>00159       $this-&gt;parent = $this-&gt;<a class="code" href="classXML.html#ca70dfbd3e8ce956075181701b09b033">data</a>;
-<a name="l00160"></a>00160       $this-&gt;last_opened_tag = NULL;
-<a name="l00161"></a>00161     }
-<a name="l00162"></a>00162     array_shift($this-&gt;parents);
-<a name="l00163"></a>00163     $this-&gt;parent = &amp;$this-&gt;parents[0];
-<a name="l00164"></a>00164   }
+<p>References <a class="el" href="xmlrpc_8inc-source.html#l00141">data()</a>.</p>
+<div class="fragment"><pre class="fragment"><a name="l00148"></a>00148                                {
+<a name="l00149"></a>00149 <span class="preprocessor">    #echo "Close tag $tag&lt;br&gt;\n";</span>
+<a name="l00150"></a>00150 <span class="preprocessor"></span>    <span class="keywordflow">if</span>($this-&gt;last_opened_tag == $tag){
+<a name="l00151"></a>00151       $this-&gt;parent = $this-&gt;<a class="code" href="classXML.html#ca70dfbd3e8ce956075181701b09b033">data</a>;
+<a name="l00152"></a>00152       $this-&gt;last_opened_tag = NULL;
+<a name="l00153"></a>00153     }
+<a name="l00154"></a>00154     array_shift($this-&gt;parents);
+<a name="l00155"></a>00155     $this-&gt;parent = &amp;$this-&gt;parents[0];
+<a name="l00156"></a>00156   }
 </pre></div>
 <p>
 
@@ -351,7 +351,7 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00081">81</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00073">73</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
 </div>
 </div><p>
@@ -368,7 +368,7 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00082">82</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00074">74</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
 </div>
 </div><p>
@@ -385,7 +385,7 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00083">83</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00075">75</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
 </div>
 </div><p>
@@ -402,7 +402,7 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00084">84</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00076">76</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
 </div>
 </div><p>
@@ -419,7 +419,7 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00085">85</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00077">77</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
 </div>
 </div><p>
@@ -436,13 +436,13 @@ Here is the call graph for this function:</div>
 
 <p>
 
-<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00087">87</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
+<p>Definition at line <a class="el" href="xmlrpc_8inc-source.html#l00079">79</a> of file <a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a>.</p>
 
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="xmlrpc_8inc-source.html">xmlrpc.inc</a></ul>
-<hr size="1"><address style="text-align: right;"><small>Generated on Sun Apr 27 15:40:35 2008 for UPC Lookup by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Sun May 4 15:24:25 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

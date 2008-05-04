@@ -52,10 +52,7 @@ XML-RPC Library.
 An XML-RPC implementation by Keith Devens, version 2.5f. \href{http://www.keithdevens.com/software/xmlrpc/}{\tt http://www.keithdevens.com/software/xmlrpc/} Release history available at: \href{http://www.keithdevens.com/software/xmlrpc/history/}{\tt http://www.keithdevens.com/software/xmlrpc/history/} This code is Open Source, released under terms similar to the Artistic License. Read the license at \href{http://www.keithdevens.com/software/license/}{\tt http://www.keithdevens.com/software/license/} Note: this code requires version 4.1.0 or higher of PHP.
 
 \begin{Desc}
-\item[See also:]\href{http://keithdevens.com/software/xmlrpc}{\tt http://keithdevens.com/software/xmlrpc}\end{Desc}
-\begin{Desc}
-\item[\hyperlink{bug__bug000001}{Bug}]Generates the following error on DreamHost servers (and possible others) at different places in the file:\par
- Warning: Call-time pass-by-reference has been deprecated; If you would like to pass it by reference, modify the declaration of xml\_\-set\_\-object(). If you would like to enable call-time pass-by-reference, you can set allow\_\-call\_\-time\_\-pass\_\-reference to true in your INI file. in /home/.zerlina/dkeenan/upc.dankeenan.org/xmlrpc.inc \end{Desc}
+\item[See also:]\href{http://keithdevens.com/software/xmlrpc}{\tt http://keithdevens.com/software/xmlrpc} \end{Desc}
 
 
 Definition in file \hyperlink{xmlrpc_8inc-source}{xmlrpc.inc}.
@@ -70,13 +67,13 @@ Definition in file \hyperlink{xmlrpc_8inc-source}{xmlrpc.inc}.
 
 
 
-Definition at line 473 of file xmlrpc.inc.
+Definition at line 465 of file xmlrpc.inc.
 
 Referenced by XML::open(), and XMLRPC\_\-prepare().
 
-\begin{Code}\begin{verbatim}473                                      {
-474   return is_array($array) ? count(array_filter(array_keys($array), 'is_numeric')) : 0;
-475 }
+\begin{Code}\begin{verbatim}465                                      {
+466   return is_array($array) ? count(array_filter(array_keys($array), 'is_numeric')) : 0;
+467 }
 \end{verbatim}
 \end{Code}
 
@@ -99,64 +96,64 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 25 of file xmlrpc.inc.
+Definition at line 17 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-error(), XMLRPC\_\-request(), and XMLRPC\_\-response().
 
-\begin{Code}\begin{verbatim}25                                                                {
-26   #assumes a hash, keys are the variable names
-27   $xml_serialized_string = "";
-28   while(list($key, $value) = each($data)){
-29     $inline = false;
-30     $numeric_array = false;
-31     $attributes = "";
-32     #echo "My current key is '$key', called with prior key '$prior_key'<br>";
-33     if(!strstr($key, " attr")){ #if it's not an attribute
-34       if(array_key_exists("$key attr", $data)){
-35         while(list($attr_name, $attr_value) = each($data["$key attr"])){
-36           #echo "Found attribute $attribute_name with value $attribute_value<br>";
-37           $attr_value = &htmlspecialchars($attr_value, ENT_QUOTES);
-38           $attributes .= " $attr_name=\"$attr_value\"";
-39         }
-40       }
-41 
-42       if(is_numeric($key)){
-43         #echo "My current key ($key) is numeric. My parent key is '$prior_key'<br>";
-44         $key = $prior_key;
-45       }else{
-46         #you can't have numeric keys at two levels in a row, so this is ok
-47         #echo "Checking to see if a numeric key exists in data.";
-48         if(is_array($value) and array_key_exists(0, $value)){
-49         # echo " It does! Calling myself as a result of a numeric array.<br>";
-50           $numeric_array = true;
-51           $xml_serialized_string .= XML_serialize($value, $level, $key);
-52         }
-53         #echo "<br>";
-54       }
-55 
-56       if(!$numeric_array){
-57         $xml_serialized_string .= str_repeat("\t", $level) . "<$key$attributes>";
-58 
-59         if(is_array($value)){
-60           $xml_serialized_string .= "\r\n" . XML_serialize($value, $level+1);
-61         }else{
-62           $inline = true;
-63           $xml_serialized_string .= htmlspecialchars($value);
-64         }
-65 
-66         $xml_serialized_string .= (!$inline ? str_repeat("\t", $level) : "") . "</$key>\r\n";
-67       }
-68     }else{
-69       #echo "Skipping attribute record for key $key<bR>";
-70     }
-71   }
-72   if($level == 0){
-73     $xml_serialized_string = "<?xml version=\"1.0\" ?>\r\n" . $xml_serialized_string;
-74     return $xml_serialized_string;
-75   }else{
-76     return $xml_serialized_string;
-77   }
-78 }
+\begin{Code}\begin{verbatim}17                                                                {
+18   #assumes a hash, keys are the variable names
+19   $xml_serialized_string = "";
+20   while(list($key, $value) = each($data)){
+21     $inline = false;
+22     $numeric_array = false;
+23     $attributes = "";
+24     #echo "My current key is '$key', called with prior key '$prior_key'<br>";
+25     if(!strstr($key, " attr")){ #if it's not an attribute
+26       if(array_key_exists("$key attr", $data)){
+27         while(list($attr_name, $attr_value) = each($data["$key attr"])){
+28           #echo "Found attribute $attribute_name with value $attribute_value<br>";
+29           $attr_value = &htmlspecialchars($attr_value, ENT_QUOTES);
+30           $attributes .= " $attr_name=\"$attr_value\"";
+31         }
+32       }
+33 
+34       if(is_numeric($key)){
+35         #echo "My current key ($key) is numeric. My parent key is '$prior_key'<br>";
+36         $key = $prior_key;
+37       }else{
+38         #you can't have numeric keys at two levels in a row, so this is ok
+39         #echo "Checking to see if a numeric key exists in data.";
+40         if(is_array($value) and array_key_exists(0, $value)){
+41         # echo " It does! Calling myself as a result of a numeric array.<br>";
+42           $numeric_array = true;
+43           $xml_serialized_string .= XML_serialize($value, $level, $key);
+44         }
+45         #echo "<br>";
+46       }
+47 
+48       if(!$numeric_array){
+49         $xml_serialized_string .= str_repeat("\t", $level) . "<$key$attributes>";
+50 
+51         if(is_array($value)){
+52           $xml_serialized_string .= "\r\n" . XML_serialize($value, $level+1);
+53         }else{
+54           $inline = true;
+55           $xml_serialized_string .= htmlspecialchars($value);
+56         }
+57 
+58         $xml_serialized_string .= (!$inline ? str_repeat("\t", $level) : "") . "</$key>\r\n";
+59       }
+60     }else{
+61       #echo "Skipping attribute record for key $key<bR>";
+62     }
+63   }
+64   if($level == 0){
+65     $xml_serialized_string = "<?xml version=\"1.0\" ?>\r\n" . $xml_serialized_string;
+66     return $xml_serialized_string;
+67   }else{
+68     return $xml_serialized_string;
+69   }
+70 }
 \end{verbatim}
 \end{Code}
 
@@ -179,16 +176,16 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 167 of file xmlrpc.inc.
+Definition at line 159 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-parse(), and XMLRPC\_\-request().
 
-\begin{Code}\begin{verbatim}167                                  {
-168   $xml_parser = new XML();
-169   $data = &$xml_parser->parse(&$xml);
-170   $xml_parser->destruct();
-171   return $data;
-172 }
+\begin{Code}\begin{verbatim}159                                  {
+160   $xml_parser = new XML();
+161   $data = &$xml_parser->parse(&$xml);
+162   $xml_parser->destruct();
+163   return $data;
+164 }
 \end{verbatim}
 \end{Code}
 
@@ -211,82 +208,82 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 245 of file xmlrpc.inc.
+Definition at line 237 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-getParams(), and XMLRPC\_\-request().
 
-\begin{Code}\begin{verbatim}245                                              {
-246   if(is_array($current_node)){
-247     if(isset($current_node['array'])){
-248       if(!is_array($current_node['array']['data'])){
-249         #If there are no elements, return an empty array
-250         return array();
-251       }else{
-252         #echo "Getting rid of array -> data -> value<br>\n";
-253         $temp = &$current_node['array']['data']['value'];
-254         if(is_array($temp) and array_key_exists(0, $temp)){
-255           $count = count($temp);
-256           for($n=0;$n<$count;$n++){
-257             $temp2[$n] = &XMLRPC_adjustValue(&$temp[$n]);
-258           }
-259           $temp = &$temp2;
-260         }else{
-261           $temp2 = &XMLRPC_adjustValue(&$temp);
-262           $temp = array(&$temp2);
-263           #I do the temp assignment because it avoids copying,
-264           # since I can put a reference in the array
-265           #PHP's reference model is a bit silly, and I can't just say:
-266           # $temp = array(&XMLRPC_adjustValue(&$temp));
-267         }
-268       }
-269     }elseif(isset($current_node['struct'])){
-270       if(!is_array($current_node['struct'])){
-271         #If there are no members, return an empty array
-272         return array();
-273       }else{
-274         #echo "Getting rid of struct -> member<br>\n";
-275         $temp = &$current_node['struct']['member'];
-276         if(is_array($temp) and array_key_exists(0, $temp)){
-277           $count = count($temp);
-278           for($n=0;$n<$count;$n++){
-279             #echo "Passing name {$temp[$n][name]}. Value is: " . show($temp[$n][value], var_dump, true) . "<br>\n";
-280             $temp2[$temp[$n]['name']] = &XMLRPC_adjustValue(&$temp[$n]['value']);
-281             #echo "adjustValue(): After assigning, the value is " . show($temp2[$temp[$n]['name']], var_dump, true) . "<br>\n";
-282           }
-283         }else{
-284           #echo "Passing name $temp[name]<br>\n";
-285           $temp2[$temp['name']] = &XMLRPC_adjustValue(&$temp['value']);
-286         }
-287         $temp = &$temp2;
-288       }
-289     }else{
-290       $types = array('string', 'int', 'i4', 'double', 'dateTime.iso8601', 'base64', 'boolean');
-291       $fell_through = true;
-292       foreach($types as $type){
-293         if(array_key_exists($type, $current_node)){
-294           #echo "Getting rid of '$type'<br>\n";
-295           $temp = &$current_node[$type];
-296           #echo "adjustValue(): The current node is set with a type of $type<br>\n";
-297           $fell_through = false;
-298           break;
-299         }
-300       }
-301       if($fell_through){
-302         $type = 'string';
-303         #echo "Fell through! Type is $type<br>\n";
-304       }
-305       switch ($type){
-306         case 'int': case 'i4': $temp = (int)$temp;    break;
-307         case 'string':         $temp = (string)$temp; break;
-308         case 'double':         $temp = (double)$temp; break;
-309         case 'boolean':        $temp = (bool)$temp;   break;
-310       }
-311     }
-312   }else{
-313     $temp = (string)$current_node;
-314   }
-315   return $temp;
-316 }
+\begin{Code}\begin{verbatim}237                                              {
+238   if(is_array($current_node)){
+239     if(isset($current_node['array'])){
+240       if(!is_array($current_node['array']['data'])){
+241         #If there are no elements, return an empty array
+242         return array();
+243       }else{
+244         #echo "Getting rid of array -> data -> value<br>\n";
+245         $temp = &$current_node['array']['data']['value'];
+246         if(is_array($temp) and array_key_exists(0, $temp)){
+247           $count = count($temp);
+248           for($n=0;$n<$count;$n++){
+249             $temp2[$n] = &XMLRPC_adjustValue(&$temp[$n]);
+250           }
+251           $temp = &$temp2;
+252         }else{
+253           $temp2 = &XMLRPC_adjustValue(&$temp);
+254           $temp = array(&$temp2);
+255           #I do the temp assignment because it avoids copying,
+256           # since I can put a reference in the array
+257           #PHP's reference model is a bit silly, and I can't just say:
+258           # $temp = array(&XMLRPC_adjustValue(&$temp));
+259         }
+260       }
+261     }elseif(isset($current_node['struct'])){
+262       if(!is_array($current_node['struct'])){
+263         #If there are no members, return an empty array
+264         return array();
+265       }else{
+266         #echo "Getting rid of struct -> member<br>\n";
+267         $temp = &$current_node['struct']['member'];
+268         if(is_array($temp) and array_key_exists(0, $temp)){
+269           $count = count($temp);
+270           for($n=0;$n<$count;$n++){
+271             #echo "Passing name {$temp[$n][name]}. Value is: " . show($temp[$n][value], var_dump, true) . "<br>\n";
+272             $temp2[$temp[$n]['name']] = &XMLRPC_adjustValue(&$temp[$n]['value']);
+273             #echo "adjustValue(): After assigning, the value is " . show($temp2[$temp[$n]['name']], var_dump, true) . "<br>\n";
+274           }
+275         }else{
+276           #echo "Passing name $temp[name]<br>\n";
+277           $temp2[$temp['name']] = &XMLRPC_adjustValue(&$temp['value']);
+278         }
+279         $temp = &$temp2;
+280       }
+281     }else{
+282       $types = array('string', 'int', 'i4', 'double', 'dateTime.iso8601', 'base64', 'boolean');
+283       $fell_through = true;
+284       foreach($types as $type){
+285         if(array_key_exists($type, $current_node)){
+286           #echo "Getting rid of '$type'<br>\n";
+287           $temp = &$current_node[$type];
+288           #echo "adjustValue(): The current node is set with a type of $type<br>\n";
+289           $fell_through = false;
+290           break;
+291         }
+292       }
+293       if($fell_through){
+294         $type = 'string';
+295         #echo "Fell through! Type is $type<br>\n";
+296       }
+297       switch ($type){
+298         case 'int': case 'i4': $temp = (int)$temp;    break;
+299         case 'string':         $temp = (string)$temp; break;
+300         case 'double':         $temp = (double)$temp; break;
+301         case 'boolean':        $temp = (bool)$temp;   break;
+302       }
+303     }
+304   }else{
+305     $temp = (string)$current_node;
+306   }
+307   return $temp;
+308 }
 \end{verbatim}
 \end{Code}
 
@@ -309,11 +306,11 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 469 of file xmlrpc.inc.
+Definition at line 461 of file xmlrpc.inc.
 
-\begin{Code}\begin{verbatim}469                                                       {
-470   return strtotime($iso8601);
-471 }
+\begin{Code}\begin{verbatim}461                                                       {
+462   return strtotime($iso8601);
+463 }
 \end{verbatim}
 \end{Code}
 
@@ -327,13 +324,13 @@ Definition at line 469 of file xmlrpc.inc.
 
 
 
-Definition at line 463 of file xmlrpc.inc.
+Definition at line 455 of file xmlrpc.inc.
 
-\begin{Code}\begin{verbatim}463                                                         {
-464   #takes a unix timestamp and converts it to iso8601 required by XMLRPC
-465   #an example iso8601 datetime is "20010822T03:14:33"
-466   return date("Ymd\TH:i:s", $timestamp);
-467 }
+\begin{Code}\begin{verbatim}455                                                         {
+456   #takes a unix timestamp and converts it to iso8601 required by XMLRPC
+457   #an example iso8601 datetime is "20010822T03:14:33"
+458   return date("Ymd\TH:i:s", $timestamp);
+459 }
 \end{verbatim}
 \end{Code}
 
@@ -347,13 +344,13 @@ Definition at line 463 of file xmlrpc.inc.
 
 
 
-Definition at line 477 of file xmlrpc.inc.
+Definition at line 469 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XMLRPC\_\-response().
 
-\begin{Code}\begin{verbatim}477                                                      {
-478   $GLOBALS['XMLRPC_DEBUG_INFO'][] = array($function_name, $debug_message);
-479 }
+\begin{Code}\begin{verbatim}469                                                      {
+470   $GLOBALS['XMLRPC_DEBUG_INFO'][] = array($function_name, $debug_message);
+471 }
 \end{verbatim}
 \end{Code}
 
@@ -376,22 +373,22 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 481 of file xmlrpc.inc.
+Definition at line 473 of file xmlrpc.inc.
 
 References \$debug.
 
-\begin{Code}\begin{verbatim}481                              {
-482   if($GLOBALS['XMLRPC_DEBUG_INFO']){
-483     echo "<table border=\"1\" width=\"100%\">\n";
-484     foreach($GLOBALS['XMLRPC_DEBUG_INFO'] as $debug){
-485       echo "<tr><th style=\"vertical-align: top\">$debug[0]</th><td>$debug[1]</td></tr>\n";
-486     }
-487     echo "</table>\n";
-488     unset($GLOBALS['XMLRPC_DEBUG_INFO']);
-489   }else{
-490     echo "<p>No debugging information available yet.</p>";
-491   }
-492 }
+\begin{Code}\begin{verbatim}473                              {
+474   if($GLOBALS['XMLRPC_DEBUG_INFO']){
+475     echo "<table border=\"1\" width=\"100%\">\n";
+476     foreach($GLOBALS['XMLRPC_DEBUG_INFO'] as $debug){
+477       echo "<tr><th style=\"vertical-align: top\">$debug[0]</th><td>$debug[1]</td></tr>\n";
+478     }
+479     echo "</table>\n";
+480     unset($GLOBALS['XMLRPC_DEBUG_INFO']);
+481   }else{
+482     echo "<p>No debugging information available yet.</p>";
+483   }
+484 }
 \end{verbatim}
 \end{Code}
 
@@ -405,32 +402,32 @@ References \$debug.
 
 
 
-Definition at line 440 of file xmlrpc.inc.
+Definition at line 432 of file xmlrpc.inc.
 
 References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().
 
-\begin{Code}\begin{verbatim}440                                                                {
-441   $array["methodResponse"]["fault"]["value"]["struct"]["member"] = array();
-442   $temp = &$array["methodResponse"]["fault"]["value"]["struct"]["member"];
-443   $temp[0]["name"] = "faultCode";
-444   $temp[0]["value"]["int"] = $faultCode;
-445   $temp[1]["name"] = "faultString";
-446   $temp[1]["value"]["string"] = $faultString;
-447 
-448   $return = XML_serialize($array);
-449 
-450   header("Connection: close");
-451   header("Content-Length: " . strlen($return));
-452   header("Content-Type: text/xml");
-453   header("Date: " . date("r"));
-454   if($server){
-455     header("Server: $server");
-456   }
-457   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-458     XMLRPC_debug('XMLRPC_error', "<p>Sent the following error response:</p>\n\n" . XMLRPC_show($return, 'print_r', true));
-459   }
-460   echo $return;
-461 }
+\begin{Code}\begin{verbatim}432                                                                {
+433   $array["methodResponse"]["fault"]["value"]["struct"]["member"] = array();
+434   $temp = &$array["methodResponse"]["fault"]["value"]["struct"]["member"];
+435   $temp[0]["name"] = "faultCode";
+436   $temp[0]["value"]["int"] = $faultCode;
+437   $temp[1]["name"] = "faultString";
+438   $temp[1]["value"]["string"] = $faultString;
+439 
+440   $return = XML_serialize($array);
+441 
+442   header("Connection: close");
+443   header("Content-Length: " . strlen($return));
+444   header("Content-Type: text/xml");
+445   header("Date: " . date("r"));
+446   if($server){
+447     header("Server: $server");
+448   }
+449   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+450     XMLRPC_debug('XMLRPC_error', "<p>Sent the following error response:</p>\n\n" . XMLRPC_show($return, 'print_r', true));
+451   }
+452   echo $return;
+453 }
 \end{verbatim}
 \end{Code}
 
@@ -453,12 +450,12 @@ Here is the call graph for this function:\nopagebreak
 
 
 
-Definition at line 339 of file xmlrpc.inc.
+Definition at line 331 of file xmlrpc.inc.
 
-\begin{Code}\begin{verbatim}339                                           {
-340   #returns the method name
-341   return $methodCall['methodCall']['methodName'];
-342 }
+\begin{Code}\begin{verbatim}331                                           {
+332   #returns the method name
+333   return $methodCall['methodCall']['methodName'];
+334 }
 \end{verbatim}
 \end{Code}
 
@@ -472,30 +469,30 @@ Definition at line 339 of file xmlrpc.inc.
 
 
 
-Definition at line 318 of file xmlrpc.inc.
+Definition at line 310 of file xmlrpc.inc.
 
 References XMLRPC\_\-adjustValue().
 
-\begin{Code}\begin{verbatim}318                                    {
-319   if(!is_array($request['methodCall']['params'])){
-320     #If there are no parameters, return an empty array
-321     return array();
-322   }else{
-323     #echo "Getting rid of methodCall -> params -> param<br>\n";
-324     $temp = &$request['methodCall']['params']['param'];
-325     if(is_array($temp) and array_key_exists(0, $temp)){
-326       $count = count($temp);
-327       for($n = 0; $n < $count; $n++){
-328         #echo "Serializing parameter $n<br>";
-329         $temp2[$n] = &XMLRPC_adjustValue(&$temp[$n]['value']);
-330       }
-331     }else{
-332       $temp2[0] = &XMLRPC_adjustValue($temp['value']);
-333     }
-334     $temp = &$temp2;
-335     return $temp;
-336   }
-337 }
+\begin{Code}\begin{verbatim}310                                    {
+311   if(!is_array($request['methodCall']['params'])){
+312     #If there are no parameters, return an empty array
+313     return array();
+314   }else{
+315     #echo "Getting rid of methodCall -> params -> param<br>\n";
+316     $temp = &$request['methodCall']['params']['param'];
+317     if(is_array($temp) and array_key_exists(0, $temp)){
+318       $count = count($temp);
+319       for($n = 0; $n < $count; $n++){
+320         #echo "Serializing parameter $n<br>";
+321         $temp2[$n] = &XMLRPC_adjustValue(&$temp[$n]['value']);
+322       }
+323     }else{
+324       $temp2[0] = &XMLRPC_adjustValue($temp['value']);
+325     }
+326     $temp = &$temp2;
+327     return $temp;
+328   }
+329 }
 \end{verbatim}
 \end{Code}
 
@@ -518,20 +515,20 @@ Here is the call graph for this function:\nopagebreak
 
 
 
-Definition at line 174 of file xmlrpc.inc.
+Definition at line 166 of file xmlrpc.inc.
 
 References XML\_\-unserialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().
 
-\begin{Code}\begin{verbatim}174                                   {
-175   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-176     XMLRPC_debug('XMLRPC_parse', "<p>Received the following raw request:</p>" . XMLRPC_show($request, 'print_r', true));
-177   }
-178   $data = &XML_unserialize(&$request);
-179   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-180     XMLRPC_debug('XMLRPC_parse', "<p>Returning the following parsed request:</p>" . XMLRPC_show($data, 'print_r', true));
-181   }
-182   return $data;
-183 }
+\begin{Code}\begin{verbatim}166                                   {
+167   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+168     XMLRPC_debug('XMLRPC_parse', "<p>Received the following raw request:</p>" . XMLRPC_show($request, 'print_r', true));
+169   }
+170   $data = &XML_unserialize(&$request);
+171   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+172     XMLRPC_debug('XMLRPC_parse', "<p>Returning the following parsed request:</p>" . XMLRPC_show($data, 'print_r', true));
+173   }
+174   return $data;
+175 }
 \end{verbatim}
 \end{Code}
 
@@ -554,71 +551,71 @@ Here is the call graph for this function:\nopagebreak
 
 
 
-Definition at line 185 of file xmlrpc.inc.
+Definition at line 177 of file xmlrpc.inc.
 
 References count\_\-numeric\_\-items().
 
 Referenced by checkBarcode(), and getBarcodeInfo().
 
-\begin{Code}\begin{verbatim}185                                               {
-186   if(is_array($data)){
-187     $num_elements = count($data);
-188     if((array_key_exists(0, $data) or !$num_elements) and $type != 'struct'){ #it's an array
-189       if(!$num_elements){ #if the array is empty
-190         $returnvalue =  array('array' => array('data' => NULL));
-191       }else{
-192         $returnvalue['array']['data']['value'] = array();
-193         $temp = &$returnvalue['array']['data']['value'];
-194         $count = count_numeric_items($data);
-195         for($n=0; $n<$count; $n++){
-196           $type = NULL;
-197           if(array_key_exists("$n type", $data)){
-198             $type = $data["$n type"];
-199           }
-200           $temp[$n] = XMLRPC_prepare(&$data[$n], $type);
-201         }
-202       }
-203     }else{ #it's a struct
-204       if(!$num_elements){ #if the struct is empty
-205         $returnvalue = array('struct' => NULL);
-206       }else{
-207         $returnvalue['struct']['member'] = array();
-208         $temp = &$returnvalue['struct']['member'];
-209         while(list($key, $value) = each($data)){
-210           if(substr($key, -5) != ' type'){ #if it's not a type specifier
-211             $type = NULL;
-212             if(array_key_exists("$key type", $data)){
-213               $type = $data["$key type"];
-214             }
-215             $temp[] = array('name' => $key, 'value' => XMLRPC_prepare(&$value, $type));
-216           }
-217         }
-218       }
-219     }
-220   }else{ #it's a scalar
-221     if(!$type){
-222       if(is_int($data)){
-223         $returnvalue['int'] = $data;
-224         return $returnvalue;
-225       }elseif(is_float($data)){
-226         $returnvalue['double'] = $data;
-227         return $returnvalue;
-228       }elseif(is_bool($data)){
-229         $returnvalue['boolean'] = ($data ? 1 : 0);
-230         return $returnvalue;
-231       }elseif(preg_match('/^\d{8}T\d{2}:\d{2}:\d{2}$/', $data, $matches)){ #it's a date
-232         $returnvalue['dateTime.iso8601'] = $data;
-233         return $returnvalue;
-234       }elseif(is_string($data)){
-235         $returnvalue['string'] = htmlspecialchars($data);
-236         return $returnvalue;
-237       }
-238     }else{
-239       $returnvalue[$type] = htmlspecialchars($data);
-240     }
-241   }
-242   return $returnvalue;
-243 }
+\begin{Code}\begin{verbatim}177                                               {
+178   if(is_array($data)){
+179     $num_elements = count($data);
+180     if((array_key_exists(0, $data) or !$num_elements) and $type != 'struct'){ #it's an array
+181       if(!$num_elements){ #if the array is empty
+182         $returnvalue =  array('array' => array('data' => NULL));
+183       }else{
+184         $returnvalue['array']['data']['value'] = array();
+185         $temp = &$returnvalue['array']['data']['value'];
+186         $count = count_numeric_items($data);
+187         for($n=0; $n<$count; $n++){
+188           $type = NULL;
+189           if(array_key_exists("$n type", $data)){
+190             $type = $data["$n type"];
+191           }
+192           $temp[$n] = XMLRPC_prepare(&$data[$n], $type);
+193         }
+194       }
+195     }else{ #it's a struct
+196       if(!$num_elements){ #if the struct is empty
+197         $returnvalue = array('struct' => NULL);
+198       }else{
+199         $returnvalue['struct']['member'] = array();
+200         $temp = &$returnvalue['struct']['member'];
+201         while(list($key, $value) = each($data)){
+202           if(substr($key, -5) != ' type'){ #if it's not a type specifier
+203             $type = NULL;
+204             if(array_key_exists("$key type", $data)){
+205               $type = $data["$key type"];
+206             }
+207             $temp[] = array('name' => $key, 'value' => XMLRPC_prepare(&$value, $type));
+208           }
+209         }
+210       }
+211     }
+212   }else{ #it's a scalar
+213     if(!$type){
+214       if(is_int($data)){
+215         $returnvalue['int'] = $data;
+216         return $returnvalue;
+217       }elseif(is_float($data)){
+218         $returnvalue['double'] = $data;
+219         return $returnvalue;
+220       }elseif(is_bool($data)){
+221         $returnvalue['boolean'] = ($data ? 1 : 0);
+222         return $returnvalue;
+223       }elseif(preg_match('/^\d{8}T\d{2}:\d{2}:\d{2}$/', $data, $matches)){ #it's a date
+224         $returnvalue['dateTime.iso8601'] = $data;
+225         return $returnvalue;
+226       }elseif(is_string($data)){
+227         $returnvalue['string'] = htmlspecialchars($data);
+228         return $returnvalue;
+229       }
+230     }else{
+231       $returnvalue[$type] = htmlspecialchars($data);
+232     }
+233   }
+234   return $returnvalue;
+235 }
 \end{verbatim}
 \end{Code}
 
@@ -650,85 +647,85 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 344 of file xmlrpc.inc.
+Definition at line 336 of file xmlrpc.inc.
 
 References XML\_\-serialize(), XML\_\-unserialize(), XMLRPC\_\-adjustValue(), XMLRPC\_\-debug(), and XMLRPC\_\-show().
 
 Referenced by checkBarcode(), and getBarcodeInfo().
 
-\begin{Code}\begin{verbatim}344                                                                                           {
-345   $site = explode(':', $site);
-346   if(isset($site[1]) and is_numeric($site[1])){
-347     $port = $site[1];
-348   }else{
-349     $port = 80;
-350   }
-351   $site = $site[0];
-352 
-353   $data["methodCall"]["methodName"] = $methodName;
-354   $param_count = count($params);
-355   if(!$param_count){
-356     $data["methodCall"]["params"] = NULL;
-357   }else{
-358     for($n = 0; $n<$param_count; $n++){
-359       $data["methodCall"]["params"]["param"][$n]["value"] = $params[$n];
-360     }
-361   }
-362   $data = XML_serialize($data);
-363 
-364   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-365     XMLRPC_debug('XMLRPC_request', "<p>Received the following parameter list to send:</p>" . XMLRPC_show($params, 'print_r', true));
-366   }
-367   $conn = fsockopen ($site, $port); #open the connection
-368   if(!$conn){ #if the connection was not opened successfully
-369     if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-370       XMLRPC_debug('XMLRPC_request', "<p>Connection failed: Couldn't make the connection to $site.</p>");
-371     }
-372     return array(false, array('faultCode'=>10532, 'faultString'=>"Connection failed: Couldn't make the connection to $site."));
-373   }else{
-374     $headers =
-375       "POST $location HTTP/1.0\r\n" .
-376       "Host: $site\r\n" .
-377       "Connection: close\r\n" .
-378       ($user_agent ? "User-Agent: $user_agent\r\n" : '') .
-379       "Content-Type: text/xml\r\n" .
-380       "Content-Length: " . strlen($data) . "\r\n\r\n";
-381 
-382     fputs($conn, "$headers");
-383     fputs($conn, $data);
-384 
-385     if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-386       XMLRPC_debug('XMLRPC_request', "<p>Sent the following request:</p>\n\n" . XMLRPC_show($headers . $data, 'print_r', true));
-387     }
-388 
-389     #socket_set_blocking ($conn, false);
-390     $response = "";
-391     while(!feof($conn)){
-392       $response .= fgets($conn, 1024);
+\begin{Code}\begin{verbatim}336                                                                                           {
+337   $site = explode(':', $site);
+338   if(isset($site[1]) and is_numeric($site[1])){
+339     $port = $site[1];
+340   }else{
+341     $port = 80;
+342   }
+343   $site = $site[0];
+344 
+345   $data["methodCall"]["methodName"] = $methodName;
+346   $param_count = count($params);
+347   if(!$param_count){
+348     $data["methodCall"]["params"] = NULL;
+349   }else{
+350     for($n = 0; $n<$param_count; $n++){
+351       $data["methodCall"]["params"]["param"][$n]["value"] = $params[$n];
+352     }
+353   }
+354   $data = XML_serialize($data);
+355 
+356   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+357     XMLRPC_debug('XMLRPC_request', "<p>Received the following parameter list to send:</p>" . XMLRPC_show($params, 'print_r', true));
+358   }
+359   $conn = fsockopen ($site, $port); #open the connection
+360   if(!$conn){ #if the connection was not opened successfully
+361     if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+362       XMLRPC_debug('XMLRPC_request', "<p>Connection failed: Couldn't make the connection to $site.</p>");
+363     }
+364     return array(false, array('faultCode'=>10532, 'faultString'=>"Connection failed: Couldn't make the connection to $site."));
+365   }else{
+366     $headers =
+367       "POST $location HTTP/1.0\r\n" .
+368       "Host: $site\r\n" .
+369       "Connection: close\r\n" .
+370       ($user_agent ? "User-Agent: $user_agent\r\n" : '') .
+371       "Content-Type: text/xml\r\n" .
+372       "Content-Length: " . strlen($data) . "\r\n\r\n";
+373 
+374     fputs($conn, "$headers");
+375     fputs($conn, $data);
+376 
+377     if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+378       XMLRPC_debug('XMLRPC_request', "<p>Sent the following request:</p>\n\n" . XMLRPC_show($headers . $data, 'print_r', true));
+379     }
+380 
+381     #socket_set_blocking ($conn, false);
+382     $response = "";
+383     while(!feof($conn)){
+384       $response .= fgets($conn, 1024);
+385     }
+386     fclose($conn);
+387 
+388     #strip headers off of response
+389     $data = XML_unserialize(substr($response, strpos($response, "\r\n\r\n")+4));
+390 
+391     if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+392       XMLRPC_debug('XMLRPC_request', "<p>Received the following response:</p>\n\n" . XMLRPC_show($response, 'print_r', true) . "<p>Which was serialized into the following data:</p>\n\n" . XMLRPC_show($data, 'print_r', true));
 393     }
-394     fclose($conn);
-395 
-396     #strip headers off of response
-397     $data = XML_unserialize(substr($response, strpos($response, "\r\n\r\n")+4));
-398 
-399     if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-400       XMLRPC_debug('XMLRPC_request', "<p>Received the following response:</p>\n\n" . XMLRPC_show($response, 'print_r', true) . "<p>Which was serialized into the following data:</p>\n\n" . XMLRPC_show($data, 'print_r', true));
-401     }
-402     if(isset($data['methodResponse']['fault'])){
-403       $return =  array(false, XMLRPC_adjustValue(&$data['methodResponse']['fault']['value']));
-404       if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-405         XMLRPC_debug('XMLRPC_request', "<p>Returning:</p>\n\n" . XMLRPC_show($return, 'var_dump', true));
-406       }
-407       return $return;
-408     }else{
-409       $return = array(true, XMLRPC_adjustValue(&$data['methodResponse']['params']['param']['value']));
-410       if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-411         XMLRPC_debug('XMLRPC_request', "<p>Returning:</p>\n\n" . XMLRPC_show($return, 'var_dump', true));
-412       }
-413       return $return;
-414     }
-415   }
-416 }
+394     if(isset($data['methodResponse']['fault'])){
+395       $return =  array(false, XMLRPC_adjustValue(&$data['methodResponse']['fault']['value']));
+396       if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+397         XMLRPC_debug('XMLRPC_request', "<p>Returning:</p>\n\n" . XMLRPC_show($return, 'var_dump', true));
+398       }
+399       return $return;
+400     }else{
+401       $return = array(true, XMLRPC_adjustValue(&$data['methodResponse']['params']['param']['value']));
+402       if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+403         XMLRPC_debug('XMLRPC_request', "<p>Returning:</p>\n\n" . XMLRPC_show($return, 'var_dump', true));
+404       }
+405       return $return;
+406     }
+407   }
+408 }
 \end{verbatim}
 \end{Code}
 
@@ -760,31 +757,31 @@ Here is the caller graph for this function:\nopagebreak
 
 
 
-Definition at line 418 of file xmlrpc.inc.
+Definition at line 410 of file xmlrpc.inc.
 
 References XML\_\-serialize(), XMLRPC\_\-debug(), and XMLRPC\_\-show().
 
-\begin{Code}\begin{verbatim}418                                                        {
-419   $data["methodResponse"]["params"]["param"]["value"] = &$return_value;
-420   $return = XML_serialize(&$data);
-421 
-422   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-423     XMLRPC_debug('XMLRPC_response', "<p>Received the following data to return:</p>\n\n" . XMLRPC_show($return_value, 'print_r', true));
+\begin{Code}\begin{verbatim}410                                                        {
+411   $data["methodResponse"]["params"]["param"]["value"] = &$return_value;
+412   $return = XML_serialize(&$data);
+413 
+414   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+415     XMLRPC_debug('XMLRPC_response', "<p>Received the following data to return:</p>\n\n" . XMLRPC_show($return_value, 'print_r', true));
+416   }
+417 
+418   header("Connection: close");
+419   header("Content-Length: " . strlen($return));
+420   header("Content-Type: text/xml");
+421   header("Date: " . date("r"));
+422   if($server){
+423     header("Server: $server");
 424   }
 425 
-426   header("Connection: close");
-427   header("Content-Length: " . strlen($return));
-428   header("Content-Type: text/xml");
-429   header("Date: " . date("r"));
-430   if($server){
-431     header("Server: $server");
-432   }
-433 
-434   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
-435     XMLRPC_debug('XMLRPC_response', "<p>Sent the following response:</p>\n\n" . XMLRPC_show($return, 'print_r', true));
-436   }
-437   echo $return;
-438 }
+426   if(defined('XMLRPC_DEBUG') and XMLRPC_DEBUG){
+427     XMLRPC_debug('XMLRPC_response', "<p>Sent the following response:</p>\n\n" . XMLRPC_show($return, 'print_r', true));
+428   }
+429   echo $return;
+430 }
 \end{verbatim}
 \end{Code}
 
@@ -807,21 +804,21 @@ Here is the call graph for this function:\nopagebreak
 
 
 
-Definition at line 494 of file xmlrpc.inc.
+Definition at line 486 of file xmlrpc.inc.
 
 Referenced by XMLRPC\_\-error(), XMLRPC\_\-parse(), XMLRPC\_\-request(), and XMLRPC\_\-response().
 
-\begin{Code}\begin{verbatim}494                                                                    {
-495   ob_start();
-496   $func($data);
-497   $output = ob_get_contents();
-498   ob_end_clean();
-499   if($return_str){
-500     return "<pre>" . htmlspecialchars($output) . "</pre>\n";
-501   }else{
-502     echo "<pre>", htmlspecialchars($output), "</pre>\n";
-503   }
-504 }
+\begin{Code}\begin{verbatim}486                                                                    {
+487   ob_start();
+488   $func($data);
+489   $output = ob_get_contents();
+490   ob_end_clean();
+491   if($return_str){
+492     return "<pre>" . htmlspecialchars($output) . "</pre>\n";
+493   }else{
+494     echo "<pre>", htmlspecialchars($output), "</pre>\n";
+495   }
+496 }
 \end{verbatim}
 \end{Code}
 
