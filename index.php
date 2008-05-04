@@ -60,7 +60,7 @@ define('ISBNKEY', '3PGA9PYK');
     <a href="index.php"><div class="mainimage"></div></a>
 
     <div id="menu">
-      <div id="plug">Uses the <a href="http://www.upcdatabase.com/">UPC Database</a></div>
+      <div id="plug"><a href="credits.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">Credits</a></div>
     </div>
 
     <div id="bodytext">
