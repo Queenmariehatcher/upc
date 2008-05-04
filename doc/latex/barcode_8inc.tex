@@ -147,60 +147,64 @@ References getImages(), parseXML(), XMLRPC\_\-prepare(), and XMLRPC\_\-request()
 101         $output .= '<a href="http://www.upcdatabase.com/addform.asp?upc=' . $barcode . '">Add this item to the database</a>';
 102       }
 103       break;
-104     case 'isbn':
-108       $xml = parseXML('http://isbndb.com/api/books.xml?access_key=' . ISBNKEY . '&index1=isbn&results=texts&value1=' . $barcode);
-109 //       var_dump($xml);
-110 
-111       // Sometimes, the long title is non-existant, so fall back onto the short title
-112       if (strlen($xml->BookList->BookData->TitleLong) != 0) {
-116         $title = $xml->BookList->BookData->TitleLong;
-117       }
-118       else {
-122         $title = $xml->BookList->BookData->Title;
-123       }
-127       $author = $xml->BookList->BookData->AuthorsText;
-131       $publisher = $xml->BookList->BookData->PublisherText;
-135       $summary = $xml->BookList->BookData->Summary;
-136 
-140       $output = '';
-141       $output .= '<div id="upc">';
-142       $output .= '<img src="upcimg.php?upc=' . $barcode . '" />';
-143       $output .= '</div>';
-144       $output .= <<<_HTML
-145       <div id="info">
-146         <table align="center">
-147           <tr>
-148             <td class="title">Title</td>
-149             <td>$title</td>
-150           </tr>
-151           <tr>
-152             <td class="title">Author</td>
-153             <td>$author</td>
-154           </tr>
-155           <tr>
-156             <td class="title">Publisher</td>
-157             <td>$publisher</td>
-158           </tr>
-159           <tr>
-160             <td colspan="2">$summary</td>
-161           </tr>
-162           <tr>
-163             <td class="title">Buy</td>
-164             <td>
-165               <a href="http://www.amazon.com/exec/obidos/ASIN/$barcode/">Amazon.com</a><br />
-166               <a href="http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ean=$barcode">Barnes & Noble</a><br />
-167               <a href="http://www.booksamillion.com/ncom/books?type=isbn&find=$barcode">Books-A-Million</a><br />
-168               <a href="http://www.google.com/products?q=$barcode">Google Product Search</a>
-169             </td>
-170           </tr>
-171         </table>
-172       </div>
-173 _HTML;
-174       break;
-175   }
-176 
-177   return $output;
-178 }\end{verbatim}
+104 
+105     case 'isbn':
+109       $xml = parseXML('http://isbndb.com/api/books.xml?access_key=' . ISBNKEY . '&index1=isbn&results=texts&value1=' . $barcode);
+110 //       var_dump($xml);
+111 
+112       // Sometimes, the long title is non-existant, so fall back onto the short title
+113       if (strlen($xml->BookList->BookData->TitleLong) != 0) {
+117         $title = $xml->BookList->BookData->TitleLong;
+118       }
+119       else {
+123         $title = $xml->BookList->BookData->Title;
+124       }
+128       $author = $xml->BookList->BookData->AuthorsText;
+132       $publisher = $xml->BookList->BookData->PublisherText;
+136       $summary = $xml->BookList->BookData->Summary;
+140       $isbn = $xml->BookList->BookData['isbn'];
+141 
+145       $output = '';
+146       $output .= '<div id="upc">';
+147       $output .= '<img src="upcimg.php?upc=' . $barcode . '" />';
+148       $output .= '</div>';
+149       $output .= <<<_HTML
+150       <div id="info">
+151         <table align="center">
+152           <tr>
+153             <td class="title">Title</td>
+154             <td>$title</td>
+155           </tr>
+156           <tr>
+157             <td class="title">Author</td>
+158             <td>$author</td>
+159           </tr>
+160           <tr>
+161             <td class="title">Publisher</td>
+162             <td>$publisher</td>
+163           </tr>
+164           <tr>
+165             <td colspan="2">$summary</td>
+166           </tr>
+167           <tr>
+168             <td class="title">Buy</td>
+169             <td>
+170               <!-- Amazon.com uses the ISBN-10 code, so send it that -->
+171               <a href="http://www.amazon.com/exec/obidos/ASIN/$isbn/">Amazon.com</a><br />
+172               <!-- Everyone else uses the ISBN-13 code, so send them that -->
+173               <a href="http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ean=$barcode">Barnes & Noble</a><br />
+174               <a href="http://www.booksamillion.com/ncom/books?type=isbn&find=$barcode">Books-A-Million</a><br />
+175               <a href="http://www.google.com/products?q=$barcode">Google Product Search</a>
+176             </td>
+177           </tr>
+178         </table>
+179       </div>
+180 _HTML;
+181       break;
+182   }
+183 
+184   return $output;
+185 }\end{verbatim}
 \end{Code}
 
 

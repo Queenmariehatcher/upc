@@ -101,6 +101,7 @@ _HTML;
         $output .= '<a href="http://www.upcdatabase.com/addform.asp?upc=' . $barcode . '">Add this item to the database</a>';
       }
       break;
+
     case 'isbn':
       /**
        * Object containing parsed XML data
@@ -133,6 +134,10 @@ _HTML;
        * Book Summary
        */
       $summary = $xml->BookList->BookData->Summary;
+      /**
+       * ISBN-10 Code
+       */
+      $isbn = $xml->BookList->BookData['isbn'];
 
       /**
       * Hold the HTML code to be outputted
@@ -162,7 +167,9 @@ _HTML;
           <tr>
             <td class="title">Buy</td>
             <td>
-              <a href="http://www.amazon.com/exec/obidos/ASIN/$barcode/">Amazon.com</a><br />
+              <!-- Amazon.com uses the ISBN-10 code, so send it that -->
+              <a href="http://www.amazon.com/exec/obidos/ASIN/$isbn/">Amazon.com</a><br />
+              <!-- Everyone else uses the ISBN-13 code, so send them that -->
               <a href="http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ean=$barcode">Barnes & Noble</a><br />
               <a href="http://www.booksamillion.com/ncom/books?type=isbn&find=$barcode">Books-A-Million</a><br />
               <a href="http://www.google.com/products?q=$barcode">Google Product Search</a>
