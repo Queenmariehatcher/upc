@@ -19,6 +19,8 @@ function getEntryForm() {
               <form action="index.php" method="get" id="codeentry">
                 <fieldset>
                   <label>UPC:</label><input type="text" name="upc" /><br />
+                  <label class="radiolabel">UPC</label><input type="radio" checked="true" name="type" value="upc" />
+                  <label class="radiolabel">ISBN</label><input type="radio" name="type" value="isbn" /><br />
                   <input type="submit" value="Submit" />
                 </fieldset>
               </form>

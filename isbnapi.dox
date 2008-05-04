@@ -1,0 +1,26 @@
+/**
+ * @page isbnapi ISBNdb API
+ * @note 
+ * You @b must create an API Key at https://isbndb.com/account/dev/keys/generate.html before you can use this function.
+ *
+ * All calls to the API return data in an XML format. A request of
+ * @code
+ * http://isbndb.com/api/books.xml?access_key=12345678&index1=isbn&value1=0596002068
+ * @endcode
+ * would return the following:
+ * @code
+ * <?xml version="1.0" encoding="UTF-8"?>
+ * <ISBNdb server_time="2005-02-25T23:03:41">
+ *  <BookList total_results="1" page_size="10" page_number="1" shown_results="1">
+ *   <BookData book_id="somebook" isbn="0123456789">
+ *    <Title>Interesting Book</Title>
+ *    <TitleLong>Interesting Book: Read it or else..</TitleLong>
+ *    <AuthorsText>John Doe</AuthorsText>
+ *    <PublisherText>Acme Publishing</PublisherText>
+ *   </BookData>
+ *  </BookList>
+ * </ISBNdb>
+ * @endcode
+ * @see https://isbndb.com/docs/api/
+ * @see https://isbndb.com/
+ */

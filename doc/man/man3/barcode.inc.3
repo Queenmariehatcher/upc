@@ -47,22 +47,26 @@ References XMLRPC_prepare(), and XMLRPC_request().
 .PP
 .nf
 16                                 {
-20   $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-21   if ($result[1] != 'Error: Invalid length') {
-22     if (strlen($barcode) == 12) {
-23       return 'upca';
-24     }
-25     else if (strlen($barcode) == 13) {
-26       return 'ean13';
-27     }
-28     else {
-29       return FALSE;
-30     }
-31   }
-32   else {
-33     return FALSE;
-34   }
-35 }
+17   switch ($_GET['type']) {
+18     case 'upc':
+22       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
+23       if ($result[1] != 'Error: Invalid length') {
+24         if (strlen($barcode) == 12) {
+25           return 'upca';
+26         }
+27         else if (strlen($barcode) == 13) {
+28           return 'ean13';
+29         }
+30         else {
+31           return FALSE;
+32         }
+33       }
+34       else {
+35         return FALSE;
+36       }
+37       break;
+38   }
+39 }
 .fi
 .PP
 .SS "getBarcodeInfo ($ barcode)"
@@ -86,50 +90,54 @@ HTML code to create the info area
 .PP
 
 .PP
-Definition at line 43 of file barcode.inc.
+Definition at line 47 of file barcode.inc.
 .PP
 References getImages(), XMLRPC_prepare(), and XMLRPC_request().
 .PP
 .nf
-43                                   {
-47   $output = '';
-48   $output .= '<div id='upc'>';
-49   $output .= '<img src='upcimg.php?upc=' . $barcode . '' />';
-50   $output .= '</div>';
-51 
-55   $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-56 //   if ($debug) var_dump($result);
-57   echo getImages($result[1]['description']);
-58   if ($result[1]['found']) {
-59     extract($result[1], EXTR_PREFIX_ALL, 'barcode');
-60     $output .= <<<_HTML
-61     <div id='info'>
-62       <table align='center'>
-63         <tr>
-64           <td class='title'>Country</td>
-65           <td>$barcode_issuerCountry</td>
-66         </tr>
-67         <tr>
-68           <td class='title'>Description</td>
-69           <td>$barcode_description</td>
-70         </tr>
-71         <tr>
-72           <td class='title'>Size</td>
-73           <td>$barcode_size</td>
-74         </tr>
-75       </table>
-76       <a href='http://www.upcdatabase.com/editform.asp?upc=$barcode'>Modify this entry</a>
-77       <a href='http://www.upcdatabase.com/deleteform.asp?upc=$barcode'>Delete this entry</a>
-78     </div>
-79 _HTML;
-80   }
-81   else {
-82     $output .= 'Product Not Found!<br />';
-83     $output .= '<a href='http://www.upcdatabase.com/addform.asp?upc=' . $barcode . ''>Add this item to the database</a>';
-84   }
-85 
-86   return $output;
-87 }
+47                                   {
+48   switch ($_GET['type']) {
+49     case 'upc':
+53       $output = '';
+54       $output .= '<div id='upc'>';
+55       $output .= '<img src='upcimg.php?upc=' . $barcode . '' />';
+56       $output .= '</div>';
+57 
+61       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
+62 //    if ($debug) var_dump($result);
+63       echo getImages($result[1]['description']);
+64       if ($result[1]['found']) {
+65         extract($result[1], EXTR_PREFIX_ALL, 'barcode');
+66         $output .= <<<_HTML
+67         <div id='info'>
+68           <table align='center'>
+69             <tr>
+70               <td class='title'>Country</td>
+71               <td>$barcode_issuerCountry</td>
+72             </tr>
+73             <tr>
+74               <td class='title'>Description</td>
+75               <td>$barcode_description</td>
+76             </tr>
+77             <tr>
+78               <td class='title'>Size</td>
+79               <td>$barcode_size</td>
+80             </tr>
+81           </table>
+82           <a href='http://www.upcdatabase.com/editform.asp?upc=$barcode'>Modify this entry</a>
+83           <a href='http://www.upcdatabase.com/deleteform.asp?upc=$barcode'>Delete this entry</a>
+84         </div>
+85 _HTML;
+86       }
+87       else {
+88         $output .= 'Product Not Found!<br />';
+89         $output .= '<a href='http://www.upcdatabase.com/addform.asp?upc=' . $barcode . ''>Add this item to the database</a>';
+90       }
+91 
+92       return $output;
+93       break;
+94   }
+95 }
 .fi
 .PP
 .SH "Author"

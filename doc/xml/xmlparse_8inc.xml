@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="xmlparse_8inc" kind="file">
+    <compoundname>xmlparse.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parseXML</definition>
+        <argsstring>($url)</argsstring>
+        <name>parseXML</name>
+        <param>
+          <type>$</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse <ref refid="classXML" kindref="compound">XML</ref> Data from the given URL <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location of <ref refid="classXML" kindref="compound">XML</ref> data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Object containing parsed <ref refid="classXML" kindref="compound">XML</ref> data </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/daniel/Coding/upc/include/xmlparse.inc" line="15" bodyfile="/home/daniel/Coding/upc/include/xmlparse.inc" bodystart="15" bodyend="26"/>
+        <references refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" compoundref="utils_8inc" startline="16" endline="36">fget</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Functions to parse <ref refid="classXML" kindref="compound">XML</ref> data. </para>    </briefdescription>
+    <detaileddescription>
+<para>Functions to parse <ref refid="classXML" kindref="compound">XML</ref> data. Specifaclly created for use with isbndb.com </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">require_once<sp/>&apos;utils.inc&apos;;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" refkind="member"><highlight class="normal">function<sp/><ref refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" kindref="member">parseXML</ref>($url)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>$xmlstr<sp/>=<sp/><ref refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" kindref="member">fget</ref>($url);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>$xml<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SimpleXMLElement($xmlstr);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$xml;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/daniel/Coding/upc/include/xmlparse.inc"/>
+  </compounddef>
+</doxygen>

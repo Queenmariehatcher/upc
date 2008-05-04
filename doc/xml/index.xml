@@ -32,6 +32,9 @@
   <compound refid="utils_8inc" kind="file"><name>utils.inc</name>
     <member refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" kind="function"><name>fget</name></member>
   </compound>
+  <compound refid="xmlparse_8inc" kind="file"><name>xmlparse.inc</name>
+    <member refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" kind="function"><name>parseXML</name></member>
+  </compound>
   <compound refid="xmlrpc_8inc" kind="file"><name>xmlrpc.inc</name>
     <member refid="xmlrpc_8inc_1a1e9b05a06f28fabb86c10129f5890ef" kind="function"><name>XML_serialize</name></member>
     <member refid="xmlrpc_8inc_1ef8f3de498a12b230d049cdee6a25145" kind="function"><name>XML_unserialize</name></member>
@@ -55,6 +58,8 @@
     <member refid="index_8php_185ae3e64cd40e9564adceb010085e9dd" kind="variable"><name>$debug</name></member>
     <member refid="index_8php_1a9aa17ff51d69075d75cfc5bc4e89b34" kind="variable"><name>$upc</name></member>
   </compound>
+  <compound refid="isbnapi_8dox" kind="file"><name>isbnapi.dox</name>
+  </compound>
   <compound refid="searchapi_8dox" kind="file"><name>searchapi.dox</name>
   </compound>
   <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
@@ -62,6 +67,8 @@
   <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="license" kind="page"><name>license</name>
+  </compound>
+  <compound refid="isbnapi" kind="page"><name>isbnapi</name>
   </compound>
   <compound refid="searchapi" kind="page"><name>searchapi</name>
   </compound>

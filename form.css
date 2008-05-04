@@ -16,3 +16,10 @@ fieldset
   padding:10px 10px 10px 10px;
   text-align:center;
 }
+
+.radiolabel
+{
+  font-weight:bold;
+  padding-left:5px;
+  padding-right:1px;
+}

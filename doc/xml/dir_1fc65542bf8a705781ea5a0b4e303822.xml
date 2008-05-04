@@ -7,6 +7,7 @@
     <innerfile refid="pear_8inc">pear.inc</innerfile>
     <innerfile refid="product_8inc">product.inc</innerfile>
     <innerfile refid="utils_8inc">utils.inc</innerfile>
+    <innerfile refid="xmlparse_8inc">xmlparse.inc</innerfile>
     <innerfile refid="xmlrpc_8inc">xmlrpc.inc</innerfile>
     <briefdescription>
     </briefdescription>

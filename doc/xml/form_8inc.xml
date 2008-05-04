@@ -15,7 +15,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/daniel/Coding/upc/include/form.inc" line="14" bodyfile="/home/daniel/Coding/upc/include/form.inc" bodystart="14" bodyend="28"/>
+        <location file="/home/daniel/Coding/upc/include/form.inc" line="14" bodyfile="/home/daniel/Coding/upc/include/form.inc" bodystart="14" bodyend="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -29,13 +29,15 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;form<sp/>action=</highlight><highlight class="stringliteral">&quot;index.php&quot;</highlight><highlight class="normal"><sp/>method=</highlight><highlight class="stringliteral">&quot;get&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;codeentry&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;fieldset&gt;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;UPC:&lt;/label&gt;&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;text&quot;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&quot;upc&quot;</highlight><highlight class="normal"><sp/>/&gt;&lt;br<sp/>/&gt;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;submit&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;Submit&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/fieldset&gt;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/form&gt;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">_HTML;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$form;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;radiolabel&quot;</highlight><highlight class="normal">&gt;UPC&lt;/label&gt;&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;radio&quot;</highlight><highlight class="normal"><sp/>checked=</highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;upc&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;radiolabel&quot;</highlight><highlight class="normal">&gt;ISBN&lt;/label&gt;&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;radio&quot;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;isbn&quot;</highlight><highlight class="normal"><sp/>/&gt;&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=</highlight><highlight class="stringliteral">&quot;submit&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;Submit&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/fieldset&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/form&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">_HTML;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$form;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/daniel/Coding/upc/include/form.inc"/>
   </compounddef>

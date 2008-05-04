@@ -56,19 +56,6 @@ define('APIKEY', 'ABQIAAAAEmJBx7wui2me6l65B9cbGxSgpExuB0qMRQJK1CqbTmGBEUmrHxTWS-
 
     <div id="menu">
       <div id="plug">Uses the <a href="http://www.upcdatabase.com/">UPC Database</a></div>
-<!--      <ul>
-        <li><a href="#" title="Home">Home</a></li>
-
-        <li><a href="#" title="News">News</a></li>
-
-        <li><a href="#" title="About">About</a></li>
-
-        <li><a href="#" title="Gallery">Gallery</a></li>
-
-        <li><a href="#" title="Links">Links</a></li>
-
-        <li><a href="#" title="Contact">Contact</a></li>
-      </ul>-->
     </div>
 
     <div id="bodytext">

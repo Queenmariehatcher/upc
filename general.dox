@@ -12,6 +12,8 @@
  *   - <b>Will probably not be done, as it can not be read by most barcode scanners and has no practical purpose</b>
  * - UPCA
  *   - @b Done!
+ * @todo
+ * Support ISBN lookups with isbndb.com
  *
  * @mainpage
  * @author Dan Keenan - http://dankeenan.org

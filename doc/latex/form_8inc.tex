@@ -37,13 +37,15 @@ Definition at line 14 of file form.inc.
 19               <form action="index.php" method="get" id="codeentry">
 20                 <fieldset>
 21                   <label>UPC:</label><input type="text" name="upc" /><br />
-22                   <input type="submit" value="Submit" />
-23                 </fieldset>
-24               </form>
-25 _HTML;
-26 
-27   return $form;
-28 }\end{verbatim}
+22                   <label class="radiolabel">UPC</label><input type="radio" checked="true" name="type" value="upc" />
+23                   <label class="radiolabel">ISBN</label><input type="radio" name="type" value="isbn" /><br />
+24                   <input type="submit" value="Submit" />
+25                 </fieldset>
+26               </form>
+27 _HTML;
+28 
+29   return $form;
+30 }\end{verbatim}
 \end{Code}
 
 
