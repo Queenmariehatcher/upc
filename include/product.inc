@@ -12,6 +12,7 @@ require_once 'utils.inc';
  * @param $product The product to get images for
  * @return HTML code to output product images
  * @todo Make images more accurate
+ * @todo Add left and right arrows to choose image to show
  */
 function getImages($product) {
   /**

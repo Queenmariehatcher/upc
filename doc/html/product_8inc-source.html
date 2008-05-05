@@ -19,25 +19,25 @@
 <a class="el" href="dir_1fc65542bf8a705781ea5a0b4e303822.html">include</a></div>
 <h1>product.inc</h1><a href="product_8inc.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 &lt;?php
 <a name="l00009"></a>00009 require_once 'utils.inc';
-<a name="l00016"></a><a class="code" href="product_8inc.html#9dbb778854cfe105058d7161ca8f058c">00016</a> function <a class="code" href="product_8inc.html#9dbb778854cfe105058d7161ca8f058c">getImages</a>($product) {
-<a name="l00020"></a>00020   $json = json_decode(<a class="code" href="utils_8inc.html#846199262ea0cd07e0531f38d26dd9b3">fget</a>('http:<span class="comment">//ajax.googleapis.com/ajax/services/search/images?v=1.0&amp;q=' . urlencode($product)));</span>
-<a name="l00024"></a>00024 <span class="comment"></span>  $imgpath = $json-&gt;responseData-&gt;results[0]-&gt;tbUrl;
-<a name="l00028"></a>00028   $imgsource = $json-&gt;responseData-&gt;results[0]-&gt;visibleUrl;
-<a name="l00032"></a>00032   $imgsourceurl = $json-&gt;responseData-&gt;results[0]-&gt;tbUrl;
-<a name="l00036"></a>00036   $imgcontext = $json-&gt;responseData-&gt;results[0]-&gt;originalContextUrl;
-<a name="l00040"></a>00040   $output = '';
-<a name="l00041"></a>00041   $output = &lt;&lt;&lt;_HTML
-<a name="l00042"></a>00042     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"prodimg"</span>&gt;
-<a name="l00043"></a>00043       &lt;a href=<span class="stringliteral">"$imgcontext"</span> target=<span class="stringliteral">"_blank"</span>&gt;
-<a name="l00044"></a>00044         &lt;img src=<span class="stringliteral">"$imgpath"</span> alt=<span class="stringliteral">"Image of $product From $imgsource"</span> title=<span class="stringliteral">"Image of $product From $imgsource"</span>&gt;
-<a name="l00045"></a>00045       &lt;/a&gt;&lt;br /&gt;
-<a name="l00046"></a>00046       &lt;a href=<span class="stringliteral">"aboutimages.html"</span> target=<span class="stringliteral">"_blank"</span> onclick=<span class="stringliteral">"popup(this.href, 200, 300); return false;"</span>&gt;About <span class="keyword">this</span> image&lt;/a&gt;
-<a name="l00047"></a>00047     &lt;/div&gt;
-<a name="l00048"></a>00048 _HTML;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050   <span class="keywordflow">return</span> $output;
-<a name="l00051"></a>00051 }
-</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Sun May 4 18:46:51 2008 for UPC Lookup by&nbsp;
+<a name="l00017"></a><a class="code" href="product_8inc.html#9dbb778854cfe105058d7161ca8f058c">00017</a> function <a class="code" href="product_8inc.html#9dbb778854cfe105058d7161ca8f058c">getImages</a>($product) {
+<a name="l00021"></a>00021   $json = json_decode(<a class="code" href="utils_8inc.html#846199262ea0cd07e0531f38d26dd9b3">fget</a>('http:<span class="comment">//ajax.googleapis.com/ajax/services/search/images?v=1.0&amp;q=' . urlencode($product)));</span>
+<a name="l00025"></a>00025 <span class="comment"></span>  $imgpath = $json-&gt;responseData-&gt;results[0]-&gt;tbUrl;
+<a name="l00029"></a>00029   $imgsource = $json-&gt;responseData-&gt;results[0]-&gt;visibleUrl;
+<a name="l00033"></a>00033   $imgsourceurl = $json-&gt;responseData-&gt;results[0]-&gt;tbUrl;
+<a name="l00037"></a>00037   $imgcontext = $json-&gt;responseData-&gt;results[0]-&gt;originalContextUrl;
+<a name="l00041"></a>00041   $output = '';
+<a name="l00042"></a>00042   $output = &lt;&lt;&lt;_HTML
+<a name="l00043"></a>00043     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"prodimg"</span>&gt;
+<a name="l00044"></a>00044       &lt;a href=<span class="stringliteral">"$imgcontext"</span> target=<span class="stringliteral">"_blank"</span>&gt;
+<a name="l00045"></a>00045         &lt;img src=<span class="stringliteral">"$imgpath"</span> alt=<span class="stringliteral">"Image of $product From $imgsource"</span> title=<span class="stringliteral">"Image of $product From $imgsource"</span>&gt;
+<a name="l00046"></a>00046       &lt;/a&gt;&lt;br /&gt;
+<a name="l00047"></a>00047       &lt;a href=<span class="stringliteral">"aboutimages.html"</span> target=<span class="stringliteral">"_blank"</span> onclick=<span class="stringliteral">"popup(this.href, 200, 300); return false;"</span>&gt;About <span class="keyword">this</span> image&lt;/a&gt;
+<a name="l00048"></a>00048     &lt;/div&gt;
+<a name="l00049"></a>00049 _HTML;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051   <span class="keywordflow">return</span> $output;
+<a name="l00052"></a>00052 }
+</pre></div><hr size="1"><address style="text-align: right;"><small>Generated on Mon May 5 08:05:34 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

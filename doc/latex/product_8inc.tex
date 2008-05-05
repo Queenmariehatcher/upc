@@ -34,33 +34,36 @@ Gets Appropriate Images from google Image Search \begin{Desc}
 \begin{Desc}
 \item[Returns:]HTML code to output product images \end{Desc}
 \begin{Desc}
-\item[\hyperlink{todo__todo000001}{Todo}]Make images more accurate \end{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]Make images more accurate 
+
+Add left and right arrows to choose image to show \end{Desc}
 
 
-Definition at line 16 of file product.inc.
+Definition at line 17 of file product.inc.
 
 References fget().
 
 Referenced by getBarcodeInfo().
 
-\begin{Code}\begin{verbatim}16                              {
-20   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
-24   $imgpath = $json->responseData->results[0]->tbUrl;
-28   $imgsource = $json->responseData->results[0]->visibleUrl;
-32   $imgsourceurl = $json->responseData->results[0]->tbUrl;
-36   $imgcontext = $json->responseData->results[0]->originalContextUrl;
-40   $output = '';
-41   $output = <<<_HTML
-42     <div id="prodimg">
-43       <a href="$imgcontext" target="_blank">
-44         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
-45       </a><br />
-46       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
-47     </div>
-48 _HTML;
-49 
-50   return $output;
-51 }\end{verbatim}
+\begin{Code}\begin{verbatim}17                              {
+21   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product)));
+25   $imgpath = $json->responseData->results[0]->tbUrl;
+29   $imgsource = $json->responseData->results[0]->visibleUrl;
+33   $imgsourceurl = $json->responseData->results[0]->tbUrl;
+37   $imgcontext = $json->responseData->results[0]->originalContextUrl;
+41   $output = '';
+42   $output = <<<_HTML
+43     <div id="prodimg">
+44       <a href="$imgcontext" target="_blank">
+45         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
+46       </a><br />
+47       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
+48     </div>
+49 _HTML;
+50 
+51   return $output;
+52 }
+\end{verbatim}
 \end{Code}
 
 
