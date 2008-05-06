@@ -65,13 +65,13 @@
   </compound>
   <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
   </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
   <compound refid="license" kind="page"><name>license</name>
   </compound>
   <compound refid="isbnapi" kind="page"><name>isbnapi</name>
   </compound>
   <compound refid="searchapi" kind="page"><name>searchapi</name>
-  </compound>
-  <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="bug" kind="page"><name>bug</name>
   </compound>

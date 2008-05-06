@@ -24,7 +24,7 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>HTML code to output product images </para></simplesect>
-<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Make images more accurate </para><para>Add left and right arrows to choose image to show </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>Make images more accurate </para><para>Add left and right arrows to choose image to show </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/product.inc" line="17" bodyfile="/home/daniel/Coding/upc/include/product.inc" bodystart="17" bodyend="52"/>

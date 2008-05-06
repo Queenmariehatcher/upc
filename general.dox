@@ -2,6 +2,9 @@
  * @note
  * This app requires a Google AJAX Search API Key.  You can get one at http://code.google.com/apis/ajaxsearch/signup.html.
  *
+ * @todo
+ * Make a Firefox/greasemonkey plugin to access site if the user types in an ISBN or UPC.
+ *
  * @mainpage
  * @author Dan Keenan - http://dankeenan.org
  * @section license License
