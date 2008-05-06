@@ -54,15 +54,21 @@ Referenced by getBarcodeInfo().
 41   $output = '';
 42   $output = <<<_HTML
 43     <div id="prodimg">
-44       <a href="$imgcontext" target="_blank">
-45         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
-46       </a><br />
-47       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
-48     </div>
-49 _HTML;
-50 
-51   return $output;
-52 }
+44       <a href="#">
+45         <img src="images/arrows/left.png" alt="Previous Image" title="Previous Image" />
+46       </a>
+47       <a href="$imgcontext" target="_blank">
+48         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
+49       </a>
+50       <a href="#">
+51         <img src="images/arrows/right.png" alt="Next Image" title="Next Image" />
+52       </a><br />
+53       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
+54     </div>
+55 _HTML;
+56 
+57   return $output;
+58 }
 \end{verbatim}
 \end{Code}
 

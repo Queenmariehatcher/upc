@@ -41,8 +41,14 @@ function getImages($product) {
   $output = '';
   $output = <<<_HTML
     <div id="prodimg">
+      <a href="#">
+        <img src="images/arrows/left.png" alt="Previous Image" title="Previous Image" />
+      </a>
       <a href="$imgcontext" target="_blank">
         <img src="$imgpath" alt="Image of $product From $imgsource" title="Image of $product From $imgsource">
+      </a>
+      <a href="#">
+        <img src="images/arrows/right.png" alt="Next Image" title="Next Image" />
       </a><br />
       <a href="aboutimages.html" target="_blank" onclick="popup(this.href, 200, 300); return false;">About this image</a>
     </div>

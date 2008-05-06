@@ -73,15 +73,21 @@ Add left and right arrows to choose image to show </dd></dl>
 <a name="l00041"></a>00041   $output = '';
 <a name="l00042"></a>00042   $output = &lt;&lt;&lt;_HTML
 <a name="l00043"></a>00043     &lt;div <span class="keywordtype">id</span>=<span class="stringliteral">"prodimg"</span>&gt;
-<a name="l00044"></a>00044       &lt;a href=<span class="stringliteral">"$imgcontext"</span> target=<span class="stringliteral">"_blank"</span>&gt;
-<a name="l00045"></a>00045         &lt;img src=<span class="stringliteral">"$imgpath"</span> alt=<span class="stringliteral">"Image of $product From $imgsource"</span> title=<span class="stringliteral">"Image of $product From $imgsource"</span>&gt;
-<a name="l00046"></a>00046       &lt;/a&gt;&lt;br /&gt;
-<a name="l00047"></a>00047       &lt;a href=<span class="stringliteral">"aboutimages.html"</span> target=<span class="stringliteral">"_blank"</span> onclick=<span class="stringliteral">"popup(this.href, 200, 300); return false;"</span>&gt;About <span class="keyword">this</span> image&lt;/a&gt;
-<a name="l00048"></a>00048     &lt;/div&gt;
-<a name="l00049"></a>00049 _HTML;
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051   <span class="keywordflow">return</span> $output;
-<a name="l00052"></a>00052 }
+<a name="l00044"></a>00044       &lt;a href=<span class="stringliteral">"#"</span>&gt;
+<a name="l00045"></a>00045         &lt;img src=<span class="stringliteral">"images/arrows/left.png"</span> alt=<span class="stringliteral">"Previous Image"</span> title=<span class="stringliteral">"Previous Image"</span> /&gt;
+<a name="l00046"></a>00046       &lt;/a&gt;
+<a name="l00047"></a>00047       &lt;a href=<span class="stringliteral">"$imgcontext"</span> target=<span class="stringliteral">"_blank"</span>&gt;
+<a name="l00048"></a>00048         &lt;img src=<span class="stringliteral">"$imgpath"</span> alt=<span class="stringliteral">"Image of $product From $imgsource"</span> title=<span class="stringliteral">"Image of $product From $imgsource"</span>&gt;
+<a name="l00049"></a>00049       &lt;/a&gt;
+<a name="l00050"></a>00050       &lt;a href=<span class="stringliteral">"#"</span>&gt;
+<a name="l00051"></a>00051         &lt;img src=<span class="stringliteral">"images/arrows/right.png"</span> alt=<span class="stringliteral">"Next Image"</span> title=<span class="stringliteral">"Next Image"</span> /&gt;
+<a name="l00052"></a>00052       &lt;/a&gt;&lt;br /&gt;
+<a name="l00053"></a>00053       &lt;a href=<span class="stringliteral">"aboutimages.html"</span> target=<span class="stringliteral">"_blank"</span> onclick=<span class="stringliteral">"popup(this.href, 200, 300); return false;"</span>&gt;About <span class="keyword">this</span> image&lt;/a&gt;
+<a name="l00054"></a>00054     &lt;/div&gt;
+<a name="l00055"></a>00055 _HTML;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057   <span class="keywordflow">return</span> $output;
+<a name="l00058"></a>00058 }
 </pre></div>
 <p>
 
@@ -105,7 +111,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon May 5 22:19:45 2008 for UPC Lookup by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Tue May 6 08:10:04 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

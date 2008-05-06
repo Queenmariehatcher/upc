@@ -28,7 +28,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/utils.inc" line="16" bodyfile="/home/daniel/Coding/upc/include/utils.inc" bodystart="16" bodyend="36"/>
-        <referencedby refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="17" endline="52">getImages</referencedby>
+        <referencedby refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="17" endline="58">getImages</referencedby>
         <referencedby refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" compoundref="xmlparse_8inc" startline="15" endline="26">parseXML</referencedby>
       </memberdef>
       </sectiondef>
