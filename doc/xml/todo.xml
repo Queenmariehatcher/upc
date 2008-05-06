@@ -6,11 +6,7 @@
     <detaileddescription>
 <para><anchor id="todo_1_todo000001"/> <variablelist>
 <varlistentry><term>page <ref refid="index" kindref="compound">Main Page</ref>  </term></varlistentry>
-<listitem><para>Make a Firefox/greasemonkey plugin to access site if the user types in an ISBN or UPC.</para><para></para></listitem>
-</variablelist>
-</para><para><anchor id="todo_1_todo000002"/> <variablelist>
-<varlistentry><term>Member <ref refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kindref="member">getImages</ref>  </term></varlistentry>
-<listitem><para>Make images more accurate </para><para>Add left and right arrows to choose image to show </para></listitem>
+<listitem><para>Make a Firefox/Greasemonkey plugin to access site if the user types in an ISBN or UPC. </para><para>Find bookcovers for ISBN numbers</para><para></para></listitem>
 </variablelist>
 </para>    </detaileddescription>
   </compounddef>

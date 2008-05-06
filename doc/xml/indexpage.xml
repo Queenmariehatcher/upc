@@ -4,8 +4,8 @@
     <compoundname>index</compoundname>
     <title></title>
     <detaileddescription>
-<para><simplesect kind="note"><para>This app requires a Google AJAX Search API Key. You can get one at <ulink url="http://code.google.com/apis/ajaxsearch/signup.html.">http://code.google.com/apis/ajaxsearch/signup.html.</ulink></para></simplesect>
-<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Make a Firefox/greasemonkey plugin to access site if the user types in an ISBN or UPC.</para></xrefdescription></xrefsect><simplesect kind="author"><para>Dan Keenan - <ulink url="http://dankeenan.org">http://dankeenan.org</ulink> </para></simplesect>
+<para><simplesect kind="note"><para>This app requires a Google AJAX Search API Key. You can get one at <ulink url="http://code.google.com/apis/ajaxsearch/signup.html">http://code.google.com/apis/ajaxsearch/signup.html</ulink></para></simplesect>
+<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Make a Firefox/Greasemonkey plugin to access site if the user types in an ISBN or UPC. </para><para>Find bookcovers for ISBN numbers</para></xrefdescription></xrefsect><simplesect kind="author"><para>Dan Keenan - <ulink url="http://dankeenan.org">http://dankeenan.org</ulink> </para></simplesect>
 </para><sect1 id="index_1license">
 <title>License</title>
 <para>Copyright <copy/> 2008 Dan Keenan</para><para>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<ulink url="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</ulink>&gt;.</para><para><image type="html" name="gplv3-88x31.png"></image>

@@ -50,7 +50,10 @@ define('ISBNKEY', '3PGA9PYK');
     function popup(url, h, w)
     {
       var newwindow=window.open(url,'name','height=' + h + ',width=' + w);
-      if (window.focus) {newwindow.focus()}
+      if (window.focus)
+      {
+        newwindow.focus();
+      }
     }
   </script>
 </head>

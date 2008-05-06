@@ -57,7 +57,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/barcode.inc" line="59" bodyfile="/home/daniel/Coding/upc/include/barcode.inc" bodystart="59" bodyend="185"/>
-        <references refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="17" endline="58">getImages</references>
+        <references refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="15" endline="63">getImages</references>
         <references refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" compoundref="xmlparse_8inc" startline="15" endline="26">parseXML</references>
         <references refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" compoundref="xmlrpc_8inc" startline="177" endline="235">XMLRPC_prepare</references>
         <references refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" compoundref="xmlrpc_8inc" startline="336" endline="408">XMLRPC_request</references>
