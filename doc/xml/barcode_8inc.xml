@@ -69,7 +69,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/daniel/Coding/upc/include/barcode.inc" line="66" bodyfile="/home/daniel/Coding/upc/include/barcode.inc" bodystart="66" bodyend="192"/>
-        <references refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" compoundref="product_8inc" startline="17" endline="65">getImages</references>
+        <references refid="product_8inc_1ac7b378120072ec50fd998c962a419a2" compoundref="product_8inc" startline="18" endline="79">getImages</references>
         <references refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" compoundref="xmlparse_8inc" startline="15" endline="26">parseXML</references>
         <references refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" compoundref="xmlrpc_8inc" startline="177" endline="235">XMLRPC_prepare</references>
         <references refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" compoundref="xmlrpc_8inc" startline="336" endline="408">XMLRPC_request</references>
@@ -131,57 +131,57 @@
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;/div&gt;&apos;;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="xmlrpc_8inc_13a98b6984b8ca01752d1aa9a267526a3" kindref="member">XMLRPC_request</ref>(&apos;dev.upcdatabase.com&apos;,<sp/>&apos;/rpc&apos;,<sp/>&apos;lookupUPC&apos;,<sp/>array(<ref refid="xmlrpc_8inc_1c13be54b26e0803d8745e4f019dcfd8a" kindref="member">XMLRPC_prepare</ref>($barcode)));</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>($debug)<sp/>var_dump($result);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kindref="member">getImages</ref>($result[1][&apos;description&apos;]);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($result[1][&apos;found&apos;])<sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extract($result[1],<sp/>EXTR_PREFIX_ALL,<sp/>&apos;barcode&apos;);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;table<sp/>align=</highlight><highlight class="stringliteral">&quot;center&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Country&lt;/td&gt;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;$barcode_issuerCountry&lt;/td&gt;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Description&lt;/td&gt;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;$barcode_description&lt;/td&gt;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Size&lt;/td&gt;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;$barcode_size&lt;/td&gt;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/table&gt;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.upcdatabase.com/editform.asp?upc=$barcode&quot;</highlight><highlight class="normal">&gt;Modify<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>entry&lt;/a&gt;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.upcdatabase.com/deleteform.asp?upc=$barcode&quot;</highlight><highlight class="normal">&gt;Delete<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>entry&lt;/a&gt;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">_HTML;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;Product<sp/>Not<sp/>Found!&lt;br<sp/>/&gt;&apos;;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.upcdatabase.com/addform.asp?upc=&apos;<sp/>.<sp/>$barcode<sp/>.<sp/>&apos;&quot;</highlight><highlight class="normal">&gt;Add<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>item<sp/>to<sp/>the<sp/>database&lt;/a&gt;&apos;;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>&apos;isbn&apos;:</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$xml<sp/>=<sp/><ref refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" kindref="member">parseXML</ref>(&apos;http:</highlight><highlight class="comment">//isbndb.com/api/books.xml?access_key=&apos;<sp/>.<sp/>ISBNKEY<sp/>.<sp/>&apos;&amp;index1=isbn&amp;results=texts&amp;value1=&apos;<sp/>.<sp/>$barcode);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>var_dump($xml);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sometimes,<sp/>the<sp/>long<sp/>title<sp/>is<sp/>non-existant,<sp/>so<sp/>fall<sp/>back<sp/>onto<sp/>the<sp/>short<sp/>title</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen($xml-&gt;BookList-&gt;BookData-&gt;TitleLong)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$title<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;TitleLong;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$title<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;Title;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$author<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;AuthorsText;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$publisher<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;PublisherText;</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$summary<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;Summary;</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$isbn<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData[&apos;isbn&apos;];</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;upc&quot;</highlight><highlight class="normal">&gt;&apos;;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;img<sp/>src=</highlight><highlight class="stringliteral">&quot;upcimg.php?upc=&apos;<sp/>.<sp/>$barcode<sp/>.<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>/&gt;&apos;;</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;/div&gt;&apos;;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/><ref refid="product_8inc_1ac7b378120072ec50fd998c962a419a2" kindref="member">getImages</ref>($result[1][&apos;description&apos;]);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($result[1][&apos;found&apos;])<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extract($result[1],<sp/>EXTR_PREFIX_ALL,<sp/>&apos;barcode&apos;);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;table<sp/>align=</highlight><highlight class="stringliteral">&quot;center&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Country&lt;/td&gt;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;$barcode_issuerCountry&lt;/td&gt;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Description&lt;/td&gt;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;$barcode_description&lt;/td&gt;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">&gt;Size&lt;/td&gt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;$barcode_size&lt;/td&gt;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/table&gt;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.upcdatabase.com/editform.asp?upc=$barcode&quot;</highlight><highlight class="normal">&gt;Modify<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>entry&lt;/a&gt;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.upcdatabase.com/deleteform.asp?upc=$barcode&quot;</highlight><highlight class="normal">&gt;Delete<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>entry&lt;/a&gt;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">_HTML;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;Product<sp/>Not<sp/>Found!&lt;br<sp/>/&gt;&apos;;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://www.upcdatabase.com/addform.asp?upc=&apos;<sp/>.<sp/>$barcode<sp/>.<sp/>&apos;&quot;</highlight><highlight class="normal">&gt;Add<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>item<sp/>to<sp/>the<sp/>database&lt;/a&gt;&apos;;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>&apos;isbn&apos;:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$xml<sp/>=<sp/><ref refid="xmlparse_8inc_12ee17c038e8fe8a1ddc86bb533863cb7" kindref="member">parseXML</ref>(&apos;http:</highlight><highlight class="comment">//isbndb.com/api/books.xml?access_key=&apos;<sp/>.<sp/>ISBNKEY<sp/>.<sp/>&apos;&amp;index1=isbn&amp;results=texts&amp;value1=&apos;<sp/>.<sp/>$barcode);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>var_dump($xml);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sometimes,<sp/>the<sp/>long<sp/>title<sp/>is<sp/>non-existant,<sp/>so<sp/>fall<sp/>back<sp/>onto<sp/>the<sp/>short<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen($xml-&gt;BookList-&gt;BookData-&gt;TitleLong)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$title<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;TitleLong;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$title<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;Title;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$author<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;AuthorsText;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$publisher<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;PublisherText;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$summary<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData-&gt;Summary;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$isbn<sp/>=<sp/>$xml-&gt;BookList-&gt;BookData[&apos;isbn&apos;];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;upc&quot;</highlight><highlight class="normal">&gt;&apos;;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;img<sp/>src=</highlight><highlight class="stringliteral">&quot;upcimg.php?upc=&apos;<sp/>.<sp/>$barcode<sp/>.<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>/&gt;&apos;;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&apos;&lt;/div&gt;&apos;;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/><ref refid="product_8inc_1ac7b378120072ec50fd998c962a419a2" kindref="member">getImages</ref>($title,<sp/>&apos;book&apos;);</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;table<sp/>align=</highlight><highlight class="stringliteral">&quot;center&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>

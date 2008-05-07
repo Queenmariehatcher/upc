@@ -27,7 +27,7 @@
     <member refid="pear_8inc_1d1f917c6039930c80bb1047ae2715e08" kind="enum"><name>HOME_PEAR_DIR</name></member>
   </compound>
   <compound refid="product_8inc" kind="file"><name>product.inc</name>
-    <member refid="product_8inc_19dbb778854cfe105058d7161ca8f058c" kind="function"><name>getImages</name></member>
+    <member refid="product_8inc_1ac7b378120072ec50fd998c962a419a2" kind="function"><name>getImages</name></member>
   </compound>
   <compound refid="utils_8inc" kind="file"><name>utils.inc</name>
     <member refid="utils_8inc_1846199262ea0cd07e0531f38d26dd9b3" kind="function"><name>fget</name></member>

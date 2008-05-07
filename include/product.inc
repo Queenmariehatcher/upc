@@ -10,15 +10,29 @@ require_once 'utils.inc';
 /**
  * Gets Appropriate Images from google Image Search
  * @param $product The product to get images for
+ * @param $type The Product type to search for, defaults to a generic product. If
+ * it is a book, "book" is appended to the search query to narrow the result to
+ * what should be book covers.
  * @return HTML code to output product images
- *
- * @todo Get Book Covers for books (Items with ISBN Numbers)
  */
-function getImages($product) {
+function getImages($product, $type = 'generic') {
+  /**
+   * Holds the Search Query
+   */
+  $q = '';
+  switch ($type) {
+    case 'generic':
+      $q = urlencode("\"$product\"");
+      break;
+    case 'book':
+      $q = urlencode("\"$product\" book");
+      break;
+  }
   /**
    * Object conatining the results of the search
    */
-  $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product) . '&rsz=large'));
+  $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . $q . '&rsz=large'));
+
   // Hack to get Indexes working
   if ($_GET['index']) {
     $currentIndex = (int) $_GET['index'];

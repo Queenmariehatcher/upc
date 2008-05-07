@@ -78,8 +78,7 @@ function getBarcodeInfo($barcode) {
       * Array containing info on the given UPC
       */
       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-//       if ($debug) var_dump($result);
-      echo getImages($result[1]['description']);
+      $output .= getImages($result[1]['description']);
       if ($result[1]['found']) {
         extract($result[1], EXTR_PREFIX_ALL, 'barcode');
         $output .= <<<_HTML
@@ -153,6 +152,7 @@ _HTML;
       $output .= '<div id="upc">';
       $output .= '<img src="upcimg.php?upc=' . $barcode . '" />';
       $output .= '</div>';
+      $output .= getImages($title, 'book');
       $output .= <<<_HTML
       <div id="info">
         <table align="center">
