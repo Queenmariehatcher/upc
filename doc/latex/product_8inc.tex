@@ -32,58 +32,60 @@ Gets Appropriate Images from google Image Search \begin{Desc}
 \item[{\em \$product}]The product to get images for \end{description}
 \end{Desc}
 \begin{Desc}
-\item[Returns:]HTML code to output product images \end{Desc}
+\item[Returns:]HTML code to output product images\end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000002}{Todo}]Get Book Covers for books (Items with ISBN Numbers) \end{Desc}
 
 
-Definition at line 15 of file product.inc.
+Definition at line 17 of file product.inc.
 
 References fget().
 
 Referenced by getBarcodeInfo().
 
-\begin{Code}\begin{verbatim}15                              {
-19   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product) . '&rsz=large'));
-20   // Hack to get Indexes working
-21   if ($_GET['index']) {
-22     $currentIndex = (int) $_GET['index'];
-23   }
-24   else {
-25     $currentIndex = 0;
-26   }
-27   $prevIndex = $currentIndex - 1;
-28   $nextIndex = $currentIndex + 1;
-29   $i = 0;
-30   $getText = '?';
-31   foreach ($_GET as $item) {
-32     if (key($_GET) != 'index') {
-33       if ($i == 0) {
-34         $getText .= key($_GET) . '=' . $item;
-35       }
-36       else {
-37         $getText .= '&' . key($_GET) . '=' . $item;
-38       }
-39     }
-40     next($_GET);
-41     $i++;
-42   }
-43 
-44   $originalContextUrl = $json->responseData->results[$currentIndex]->originalContextUrl;
-45   $imgSrc = $json->responseData->results[$currentIndex]->tbUrl;
-46   $visibleUrl = $json->responseData->results[$currentIndex]->visibleUrl;
-47 
-51   $output = "<div id=\"prodimg\">";
-52   // Only display previous button if there are previous values
-53   if ($currentIndex > 0) {
-54     $output .= "<a href=\"{$getText}&index={$prevIndex}\"><img src=\"images/arrows/left.png\" alt=\"Previous Image\" title=\"Previous Image\" /></a>";
-55   }
-56   $output .= "<a href=\"{$originalContextUrl}\" target=\"_blank\"><img src=\"{$imgSrc}\" alt=\"Image of $product From {$visibleUrl}\" title=\"Image of $product From {$visibleUrl}\" id=\"prodimg\"></a>";
-57   // Only display next button if there are more images
-58   if ($currentIndex < count($json->responseData->results) - 1) {
-59    $output .= "<a href=\"{$getText}&index={$nextIndex}\"> <img src=\"images/arrows/right.png\" alt=\"Next Image\" title=\"Next Image\" /></a><br /><a href=\"aboutimages.html\" target=\"_blank\" onclick=\"popup(this.href, 200, 300); return false;\">About this image</a></div>";
-60   }
-61 
-62   return $output;
-63 }
+\begin{Code}\begin{verbatim}17                              {
+21   $json = json_decode(fget('http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=' . urlencode($product) . '&rsz=large'));
+22   // Hack to get Indexes working
+23   if ($_GET['index']) {
+24     $currentIndex = (int) $_GET['index'];
+25   }
+26   else {
+27     $currentIndex = 0;
+28   }
+29   $prevIndex = $currentIndex - 1;
+30   $nextIndex = $currentIndex + 1;
+31   $i = 0;
+32   $getText = '?';
+33   foreach ($_GET as $item) {
+34     if (key($_GET) != 'index') {
+35       if ($i == 0) {
+36         $getText .= key($_GET) . '=' . $item;
+37       }
+38       else {
+39         $getText .= '&' . key($_GET) . '=' . $item;
+40       }
+41     }
+42     next($_GET);
+43     $i++;
+44   }
+45 
+46   $originalContextUrl = $json->responseData->results[$currentIndex]->originalContextUrl;
+47   $imgSrc = $json->responseData->results[$currentIndex]->tbUrl;
+48   $visibleUrl = $json->responseData->results[$currentIndex]->visibleUrl;
+49 
+53   $output = "<div id=\"prodimg\">";
+54   // Only display previous button if there are previous values
+55   if ($currentIndex > 0) {
+56     $output .= "<a href=\"{$getText}&index={$prevIndex}\"><img src=\"images/arrows/left.png\" alt=\"Previous Image\" title=\"Previous Image\" /></a>";
+57   }
+58   $output .= "<a href=\"{$originalContextUrl}\" target=\"_blank\"><img src=\"{$imgSrc}\" alt=\"Image of $product From {$visibleUrl}\" title=\"Image of $product From {$visibleUrl}\" id=\"prodimg\"></a>";
+59   // Only display next button if there are more images
+60   if ($currentIndex < count($json->responseData->results) - 1) {
+61    $output .= "<a href=\"{$getText}&index={$nextIndex}\"> <img src=\"images/arrows/right.png\" alt=\"Next Image\" title=\"Next Image\" /></a><br /><a href=\"aboutimages.html\" target=\"_blank\" onclick=\"popup(this.href, 200, 300); return false;\">About this image</a></div>";
+62   }
+63 
+64   return $output;
+65 }
 \end{verbatim}
 \end{Code}
 

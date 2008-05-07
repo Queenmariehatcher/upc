@@ -55,56 +55,57 @@ Gets Appropriate Images from google Image Search <dl compact><dt><b>Parameters:<
     <tr><td valign="top"></td><td valign="top"><em>$product</em>&nbsp;</td><td>The product to get images for </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>HTML code to output product images </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>HTML code to output product images</dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Get Book Covers for books (Items with ISBN Numbers) </dd></dl>
 
-<p>Definition at line <a class="el" href="product_8inc-source.html#l00015">15</a> of file <a class="el" href="product_8inc-source.html">product.inc</a>.</p>
+<p>Definition at line <a class="el" href="product_8inc-source.html#l00017">17</a> of file <a class="el" href="product_8inc-source.html">product.inc</a>.</p>
 
 <p>References <a class="el" href="utils_8inc-source.html#l00016">fget()</a>.</p>
 
 <p>Referenced by <a class="el" href="barcode_8inc-source.html#l00066">getBarcodeInfo()</a>.</p>
-<div class="fragment"><pre class="fragment"><a name="l00015"></a>00015                              {
-<a name="l00019"></a>00019   $json = json_decode(<a class="code" href="utils_8inc.html#846199262ea0cd07e0531f38d26dd9b3">fget</a>('http:<span class="comment">//ajax.googleapis.com/ajax/services/search/images?v=1.0&amp;q=' . urlencode($product) . '&amp;rsz=large'));</span>
-<a name="l00020"></a>00020   <span class="comment">// Hack to get Indexes working</span>
-<a name="l00021"></a>00021   <span class="keywordflow">if</span> ($_GET['index']) {
-<a name="l00022"></a>00022     $currentIndex = (int) $_GET['index'];
-<a name="l00023"></a>00023   }
-<a name="l00024"></a>00024   <span class="keywordflow">else</span> {
-<a name="l00025"></a>00025     $currentIndex = 0;
-<a name="l00026"></a>00026   }
-<a name="l00027"></a>00027   $prevIndex = $currentIndex - 1;
-<a name="l00028"></a>00028   $nextIndex = $currentIndex + 1;
-<a name="l00029"></a>00029   $i = 0;
-<a name="l00030"></a>00030   $getText = <span class="charliteral">'?'</span>;
-<a name="l00031"></a>00031   <span class="keywordflow">foreach</span> ($_GET as $item) {
-<a name="l00032"></a>00032     <span class="keywordflow">if</span> (key($_GET) != 'index') {
-<a name="l00033"></a>00033       <span class="keywordflow">if</span> ($i == 0) {
-<a name="l00034"></a>00034         $getText .= key($_GET) . <span class="charliteral">'='</span> . $item;
-<a name="l00035"></a>00035       }
-<a name="l00036"></a>00036       <span class="keywordflow">else</span> {
-<a name="l00037"></a>00037         $getText .= <span class="charliteral">'&amp;'</span> . key($_GET) . <span class="charliteral">'='</span> . $item;
-<a name="l00038"></a>00038       }
-<a name="l00039"></a>00039     }
-<a name="l00040"></a>00040     next($_GET);
-<a name="l00041"></a>00041     $i++;
-<a name="l00042"></a>00042   }
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044   $originalContextUrl = $json-&gt;responseData-&gt;results[$currentIndex]-&gt;originalContextUrl;
-<a name="l00045"></a>00045   $imgSrc = $json-&gt;responseData-&gt;results[$currentIndex]-&gt;tbUrl;
-<a name="l00046"></a>00046   $visibleUrl = $json-&gt;responseData-&gt;results[$currentIndex]-&gt;visibleUrl;
-<a name="l00047"></a>00047 
-<a name="l00051"></a>00051   $output = <span class="stringliteral">"&lt;div id=\"prodimg\"&gt;"</span>;
-<a name="l00052"></a>00052   <span class="comment">// Only display previous button if there are previous values</span>
-<a name="l00053"></a>00053   <span class="keywordflow">if</span> ($currentIndex &gt; 0) {
-<a name="l00054"></a>00054     $output .= <span class="stringliteral">"&lt;a href=\"{$getText}&amp;index={$prevIndex}\"&gt;&lt;img src=\"images/arrows/left.png\" alt=\"Previous Image\" title=\"Previous Image\" /&gt;&lt;/a&gt;"</span>;
-<a name="l00055"></a>00055   }
-<a name="l00056"></a>00056   $output .= <span class="stringliteral">"&lt;a href=\"{$originalContextUrl}\" target=\"_blank\"&gt;&lt;img src=\"{$imgSrc}\" alt=\"Image of $product From {$visibleUrl}\" title=\"Image of $product From {$visibleUrl}\" id=\"prodimg\"&gt;&lt;/a&gt;"</span>;
-<a name="l00057"></a>00057   <span class="comment">// Only display next button if there are more images</span>
-<a name="l00058"></a>00058   <span class="keywordflow">if</span> ($currentIndex &lt; count($json-&gt;responseData-&gt;results) - 1) {
-<a name="l00059"></a>00059    $output .= <span class="stringliteral">"&lt;a href=\"{$getText}&amp;index={$nextIndex}\"&gt; &lt;img src=\"images/arrows/right.png\" alt=\"Next Image\" title=\"Next Image\" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;a href=\"aboutimages.html\" target=\"_blank\" onclick=\"popup(this.href, 200, 300); return false;\"&gt;About this image&lt;/a&gt;&lt;/div&gt;"</span>;
-<a name="l00060"></a>00060   }
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062   <span class="keywordflow">return</span> $output;
-<a name="l00063"></a>00063 }
+<div class="fragment"><pre class="fragment"><a name="l00017"></a>00017                              {
+<a name="l00021"></a>00021   $json = json_decode(<a class="code" href="utils_8inc.html#846199262ea0cd07e0531f38d26dd9b3">fget</a>('http:<span class="comment">//ajax.googleapis.com/ajax/services/search/images?v=1.0&amp;q=' . urlencode($product) . '&amp;rsz=large'));</span>
+<a name="l00022"></a>00022   <span class="comment">// Hack to get Indexes working</span>
+<a name="l00023"></a>00023   <span class="keywordflow">if</span> ($_GET['index']) {
+<a name="l00024"></a>00024     $currentIndex = (int) $_GET['index'];
+<a name="l00025"></a>00025   }
+<a name="l00026"></a>00026   <span class="keywordflow">else</span> {
+<a name="l00027"></a>00027     $currentIndex = 0;
+<a name="l00028"></a>00028   }
+<a name="l00029"></a>00029   $prevIndex = $currentIndex - 1;
+<a name="l00030"></a>00030   $nextIndex = $currentIndex + 1;
+<a name="l00031"></a>00031   $i = 0;
+<a name="l00032"></a>00032   $getText = <span class="charliteral">'?'</span>;
+<a name="l00033"></a>00033   <span class="keywordflow">foreach</span> ($_GET as $item) {
+<a name="l00034"></a>00034     <span class="keywordflow">if</span> (key($_GET) != 'index') {
+<a name="l00035"></a>00035       <span class="keywordflow">if</span> ($i == 0) {
+<a name="l00036"></a>00036         $getText .= key($_GET) . <span class="charliteral">'='</span> . $item;
+<a name="l00037"></a>00037       }
+<a name="l00038"></a>00038       <span class="keywordflow">else</span> {
+<a name="l00039"></a>00039         $getText .= <span class="charliteral">'&amp;'</span> . key($_GET) . <span class="charliteral">'='</span> . $item;
+<a name="l00040"></a>00040       }
+<a name="l00041"></a>00041     }
+<a name="l00042"></a>00042     next($_GET);
+<a name="l00043"></a>00043     $i++;
+<a name="l00044"></a>00044   }
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046   $originalContextUrl = $json-&gt;responseData-&gt;results[$currentIndex]-&gt;originalContextUrl;
+<a name="l00047"></a>00047   $imgSrc = $json-&gt;responseData-&gt;results[$currentIndex]-&gt;tbUrl;
+<a name="l00048"></a>00048   $visibleUrl = $json-&gt;responseData-&gt;results[$currentIndex]-&gt;visibleUrl;
+<a name="l00049"></a>00049 
+<a name="l00053"></a>00053   $output = <span class="stringliteral">"&lt;div id=\"prodimg\"&gt;"</span>;
+<a name="l00054"></a>00054   <span class="comment">// Only display previous button if there are previous values</span>
+<a name="l00055"></a>00055   <span class="keywordflow">if</span> ($currentIndex &gt; 0) {
+<a name="l00056"></a>00056     $output .= <span class="stringliteral">"&lt;a href=\"{$getText}&amp;index={$prevIndex}\"&gt;&lt;img src=\"images/arrows/left.png\" alt=\"Previous Image\" title=\"Previous Image\" /&gt;&lt;/a&gt;"</span>;
+<a name="l00057"></a>00057   }
+<a name="l00058"></a>00058   $output .= <span class="stringliteral">"&lt;a href=\"{$originalContextUrl}\" target=\"_blank\"&gt;&lt;img src=\"{$imgSrc}\" alt=\"Image of $product From {$visibleUrl}\" title=\"Image of $product From {$visibleUrl}\" id=\"prodimg\"&gt;&lt;/a&gt;"</span>;
+<a name="l00059"></a>00059   <span class="comment">// Only display next button if there are more images</span>
+<a name="l00060"></a>00060   <span class="keywordflow">if</span> ($currentIndex &lt; count($json-&gt;responseData-&gt;results) - 1) {
+<a name="l00061"></a>00061    $output .= <span class="stringliteral">"&lt;a href=\"{$getText}&amp;index={$nextIndex}\"&gt; &lt;img src=\"images/arrows/right.png\" alt=\"Next Image\" title=\"Next Image\" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;a href=\"aboutimages.html\" target=\"_blank\" onclick=\"popup(this.href, 200, 300); return false;\"&gt;About this image&lt;/a&gt;&lt;/div&gt;"</span>;
+<a name="l00062"></a>00062   }
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064   <span class="keywordflow">return</span> $output;
+<a name="l00065"></a>00065 }
 </pre></div>
 <p>
 
@@ -128,7 +129,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div><p>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed May 7 16:32:08 2008 for UPC Lookup by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed May 7 19:11:30 2008 for UPC Lookup by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.3 </small></address>
 </body>

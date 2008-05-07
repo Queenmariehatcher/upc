@@ -11,6 +11,8 @@ require_once 'utils.inc';
  * Gets Appropriate Images from google Image Search
  * @param $product The product to get images for
  * @return HTML code to output product images
+ *
+ * @todo Get Book Covers for books (Items with ISBN Numbers)
  */
 function getImages($product) {
   /**

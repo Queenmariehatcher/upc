@@ -4,8 +4,6 @@
  *
  * @todo
  * Make a Firefox/Greasemonkey plugin to access site if the user types in an ISBN or UPC.
- * @todo
- * Find bookcovers for ISBN numbers
  *
  * @mainpage
  * @author Dan Keenan - http://dankeenan.org
