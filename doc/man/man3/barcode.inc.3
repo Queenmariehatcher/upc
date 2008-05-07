@@ -1,4 +1,4 @@
-.TH "include/barcode.inc" 3 "6 May 2008" "Version 0.2" "UPC Lookup" \" -*- nroff -*-
+.TH "include/barcode.inc" 3 "7 May 2008" "Version 0.2" "UPC Lookup" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ include/barcode.inc \- Functions for the handling of different barcodes.
 
 .in +1c
 .ti -1c
-.RI "\fBcheckBarcode\fP ($barcode)"
+.RI "\fBcheckBarcode\fP ($barcode, $type= 'upc')"
 .br
 .ti -1c
 .RI "\fBgetBarcodeInfo\fP ($barcode)"
@@ -25,13 +25,15 @@ This file currently deals with the handling of barcodes and getting the informat
 Definition in file \fBbarcode.inc\fP.
 .SH "Function Documentation"
 .PP 
-.SS "checkBarcode ($ barcode)"
+.SS "checkBarcode ($ barcode, $ type = \fC'upc'\fP)"
 .PP
 Checks to see if a valid, handalable, barcode was entered. 
 .PP
 \fBParameters:\fP
 .RS 4
 \fI$barcode\fP The Barcode to be checked 
+.br
+\fI$type\fP = The type of barcode, either 'upc' or 'isbn'. Defaults to what is passed in the HTTP GET information if available, otherwise assumes 'upc'. 
 .RE
 .PP
 \fBReturns:\fP
@@ -41,43 +43,47 @@ The type of barcode entered if valid, FALSE if it is not
 .PP
 
 .PP
-Definition at line 17 of file barcode.inc.
+Definition at line 20 of file barcode.inc.
 .PP
 References XMLRPC_prepare(), and XMLRPC_request().
 .PP
 .nf
-17                                 {
-18   switch ($_GET['type']) {
-19     case 'upc':
-23       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-24       if ($result[1] != 'Error: Invalid length') {
-25         if (strlen($barcode) == 12) {
-26           return 'upca';
-27         }
-28         else if (strlen($barcode) == 13) {
-29           return 'ean13';
-30         }
-31         else {
-32           return FALSE;
-33         }
-34       }
-35       else {
-36         return FALSE;
-37       }
-38       break;
-39     case 'isbn':
-40       if (strlen($barcode) == 10) {
-41         return 'isbn';
-42       }
-43       else if (strlen($barcode) == 13) {
-44         return 'bookland';
-45       }
-46       else {
-47         return FALSE;
-48       }
-49       break;
-50   }
-51 }
+20                                                {
+21   if (isset($_GET['type'])) {
+22     $type = $_GET['type'];
+23   }
+24 
+25   switch ($type) {
+26     case 'upc':
+30       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
+31       if ($result[1] != 'Error: Invalid length') {
+32         if (strlen($barcode) == 12) {
+33           return 'upca';
+34         }
+35         else if (strlen($barcode) == 13) {
+36           return 'ean13';
+37         }
+38         else {
+39           return FALSE;
+40         }
+41       }
+42       else {
+43         return FALSE;
+44       }
+45       break;
+46     case 'isbn':
+47       if (strlen($barcode) == 10) {
+48         return 'isbn';
+49       }
+50       else if (strlen($barcode) == 13) {
+51         return 'bookland';
+52       }
+53       else {
+54         return FALSE;
+55       }
+56       break;
+57   }
+58 }
 .fi
 .PP
 .SS "getBarcodeInfo ($ barcode)"
@@ -101,108 +107,108 @@ HTML code to create the info area
 .PP
 
 .PP
-Definition at line 59 of file barcode.inc.
+Definition at line 66 of file barcode.inc.
 .PP
 References getImages(), parseXML(), XMLRPC_prepare(), and XMLRPC_request().
 .PP
 .nf
-59                                   {
-60   switch ($_GET['type']) {
-61     case 'upc':
-65       $output = '';
-66       $output .= '<div id='upc'>';
-67       $output .= '<img src='upcimg.php?upc=' . $barcode . '' />';
-68       $output .= '</div>';
-69 
-73       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
-74 //       if ($debug) var_dump($result);
-75       echo getImages($result[1]['description']);
-76       if ($result[1]['found']) {
-77         extract($result[1], EXTR_PREFIX_ALL, 'barcode');
-78         $output .= <<<_HTML
-79         <div id='info'>
-80           <table align='center'>
-81             <tr>
-82               <td class='title'>Country</td>
-83               <td>$barcode_issuerCountry</td>
-84             </tr>
-85             <tr>
-86               <td class='title'>Description</td>
-87               <td>$barcode_description</td>
-88             </tr>
-89             <tr>
-90               <td class='title'>Size</td>
-91               <td>$barcode_size</td>
-92             </tr>
-93           </table>
-94           <a href='http://www.upcdatabase.com/editform.asp?upc=$barcode'>Modify this entry</a>
-95           <a href='http://www.upcdatabase.com/deleteform.asp?upc=$barcode'>Delete this entry</a>
-96         </div>
-97 _HTML;
-98       }
-99       else {
-100         $output .= 'Product Not Found!<br />';
-101         $output .= '<a href='http://www.upcdatabase.com/addform.asp?upc=' . $barcode . ''>Add this item to the database</a>';
-102       }
-103       break;
-104 
-105     case 'isbn':
-109       $xml = parseXML('http://isbndb.com/api/books.xml?access_key=' . ISBNKEY . '&index1=isbn&results=texts&value1=' . $barcode);
-110 //       var_dump($xml);
+66                                   {
+67   switch ($_GET['type']) {
+68     case 'upc':
+72       $output = '';
+73       $output .= '<div id='upc'>';
+74       $output .= '<img src='upcimg.php?upc=' . $barcode . '' />';
+75       $output .= '</div>';
+76 
+80       $result = XMLRPC_request('dev.upcdatabase.com', '/rpc', 'lookupUPC', array(XMLRPC_prepare($barcode)));
+81 //       if ($debug) var_dump($result);
+82       echo getImages($result[1]['description']);
+83       if ($result[1]['found']) {
+84         extract($result[1], EXTR_PREFIX_ALL, 'barcode');
+85         $output .= <<<_HTML
+86         <div id='info'>
+87           <table align='center'>
+88             <tr>
+89               <td class='title'>Country</td>
+90               <td>$barcode_issuerCountry</td>
+91             </tr>
+92             <tr>
+93               <td class='title'>Description</td>
+94               <td>$barcode_description</td>
+95             </tr>
+96             <tr>
+97               <td class='title'>Size</td>
+98               <td>$barcode_size</td>
+99             </tr>
+100           </table>
+101           <a href='http://www.upcdatabase.com/editform.asp?upc=$barcode'>Modify this entry</a>
+102           <a href='http://www.upcdatabase.com/deleteform.asp?upc=$barcode'>Delete this entry</a>
+103         </div>
+104 _HTML;
+105       }
+106       else {
+107         $output .= 'Product Not Found!<br />';
+108         $output .= '<a href='http://www.upcdatabase.com/addform.asp?upc=' . $barcode . ''>Add this item to the database</a>';
+109       }
+110       break;
 111 
-112       // Sometimes, the long title is non-existant, so fall back onto the short title
-113       if (strlen($xml->BookList->BookData->TitleLong) != 0) {
-117         $title = $xml->BookList->BookData->TitleLong;
-118       }
-119       else {
-123         $title = $xml->BookList->BookData->Title;
-124       }
-128       $author = $xml->BookList->BookData->AuthorsText;
-132       $publisher = $xml->BookList->BookData->PublisherText;
-136       $summary = $xml->BookList->BookData->Summary;
-140       $isbn = $xml->BookList->BookData['isbn'];
-141 
-145       $output = '';
-146       $output .= '<div id='upc'>';
-147       $output .= '<img src='upcimg.php?upc=' . $barcode . '' />';
-148       $output .= '</div>';
-149       $output .= <<<_HTML
-150       <div id='info'>
-151         <table align='center'>
-152           <tr>
-153             <td class='title'>Title</td>
-154             <td>$title</td>
-155           </tr>
-156           <tr>
-157             <td class='title'>Author</td>
-158             <td>$author</td>
-159           </tr>
-160           <tr>
-161             <td class='title'>Publisher</td>
-162             <td>$publisher</td>
-163           </tr>
-164           <tr>
-165             <td colspan='2'>$summary</td>
+112     case 'isbn':
+116       $xml = parseXML('http://isbndb.com/api/books.xml?access_key=' . ISBNKEY . '&index1=isbn&results=texts&value1=' . $barcode);
+117 //       var_dump($xml);
+118 
+119       // Sometimes, the long title is non-existant, so fall back onto the short title
+120       if (strlen($xml->BookList->BookData->TitleLong) != 0) {
+124         $title = $xml->BookList->BookData->TitleLong;
+125       }
+126       else {
+130         $title = $xml->BookList->BookData->Title;
+131       }
+135       $author = $xml->BookList->BookData->AuthorsText;
+139       $publisher = $xml->BookList->BookData->PublisherText;
+143       $summary = $xml->BookList->BookData->Summary;
+147       $isbn = $xml->BookList->BookData['isbn'];
+148 
+152       $output = '';
+153       $output .= '<div id='upc'>';
+154       $output .= '<img src='upcimg.php?upc=' . $barcode . '' />';
+155       $output .= '</div>';
+156       $output .= <<<_HTML
+157       <div id='info'>
+158         <table align='center'>
+159           <tr>
+160             <td class='title'>Title</td>
+161             <td>$title</td>
+162           </tr>
+163           <tr>
+164             <td class='title'>Author</td>
+165             <td>$author</td>
 166           </tr>
 167           <tr>
-168             <td class='title'>Buy</td>
-169             <td>
-170               <!-- Amazon.com uses the ISBN-10 code, so send it that -->
-171               <a href='http://www.amazon.com/exec/obidos/ASIN/$isbn/'>Amazon.com</a><br />
-172               <!-- Everyone else uses the ISBN-13 code, so send them that -->
-173               <a href='http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ean=$barcode'>Barnes & Noble</a><br />
-174               <a href='http://www.booksamillion.com/ncom/books?type=isbn&find=$barcode'>Books-A-Million</a><br />
-175               <a href='http://www.google.com/products?q=$barcode'>Google Product Search</a>
-176             </td>
-177           </tr>
-178         </table>
-179       </div>
-180 _HTML;
-181       break;
-182   }
-183 
-184   return $output;
-185 }
+168             <td class='title'>Publisher</td>
+169             <td>$publisher</td>
+170           </tr>
+171           <tr>
+172             <td colspan='2'>$summary</td>
+173           </tr>
+174           <tr>
+175             <td class='title'>Buy</td>
+176             <td>
+177               <!-- Amazon.com uses the ISBN-10 code, so send it that -->
+178               <a href='http://www.amazon.com/exec/obidos/ASIN/$isbn/'>Amazon.com</a><br />
+179               <!-- Everyone else uses the ISBN-13 code, so send them that -->
+180               <a href='http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ean=$barcode'>Barnes & Noble</a><br />
+181               <a href='http://www.booksamillion.com/ncom/books?type=isbn&find=$barcode'>Books-A-Million</a><br />
+182               <a href='http://www.google.com/products?q=$barcode'>Google Product Search</a>
+183             </td>
+184           </tr>
+185         </table>
+186       </div>
+187 _HTML;
+188       break;
+189   }
+190 
+191   return $output;
+192 }
 .fi
 .PP
 .SH "Author"

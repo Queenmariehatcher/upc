@@ -12,10 +12,17 @@ require_once 'xmlparse.inc';
 /**
  * Checks to see if a valid, handalable, barcode was entered.
  * @param $barcode The Barcode to be checked
+ * @param $type = The type of barcode, either "upc" or "isbn". Defaults to
+ * what is passed in the HTTP GET information if available, otherwise
+ * assumes "upc".
  * @return The type of barcode entered if valid, FALSE if it is not
  */
-function checkBarcode($barcode) {
-  switch ($_GET['type']) {
+function checkBarcode($barcode, $type = 'upc') {
+  if (isset($_GET['type'])) {
+    $type = $_GET['type'];
+  }
+
+  switch ($type) {
     case 'upc':
       /**
       * Array containing info on the given UPC

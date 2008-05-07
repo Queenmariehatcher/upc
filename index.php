@@ -68,12 +68,12 @@ define('ISBNKEY', '3PGA9PYK');
 
     <div id="bodytext">
       <?php
-        /**
-         * Holds the barcode entered
-         * @note Can hold any barcode, but named $upc for ease of entry
-         */
-        $upc = $_GET['upc'];
-        if ($upc) {
+        if (isset($_GET['upc'])) {
+          /**
+           * Holds the barcode entered
+           * @note Can hold any barcode, but named $upc for ease of entry
+           */
+          $upc = $_GET['upc'];
           if (checkBarcode($upc)) {
             echo getBarcodeInfo($upc);
           }
