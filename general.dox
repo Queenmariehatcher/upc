@@ -1,12 +1,16 @@
 /**
  * @note
- * This app requires a Google AJAX Search API Key.  You can get one at http://code.google.com/apis/ajaxsearch/signup.html
+ * This app requires the following:
+ * - <a href="http://pear.php.net/package/Image_Barcode/">Image/Barcode</a>
+ * - <a href="http://pear.php.net/package/Services_OpenSearch/">Services/OpenSearch</a>
+ * - <a href="http://code.google.com/apis/ajaxsearch/signup.html">Google AJAX Search API Key</a>
+ * - <a href="https://isbndb.com/account/dev/keys/">ISBNdb.com API Key</a>
  *
  * @todo
  * Make a Firefox/Greasemonkey plugin to access site if the user types in an ISBN or UPC.
  *
  * @mainpage
- * @author Dan Keenan - http://dankeenan.org
+ * @author <a href="http://dankeenan.org">Dan Keenan</a>
  * @section license License
  * Copyright &copy; 2008  Dan Keenan
  *
