@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearchdescription/1.0/">
-  <Url>http://upc.dankeenan.org/index.php?upc={searchTerms}&amp;type=isbn</Url>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearchdescription/1.1/">
+  <Url type="text/html" method="get" template="http://upc.dankeenan.org/index.php?upc={searchTerms}&amp;type=isbn" />
   <Format>http://a9.com/-/spec/opensearchrss/1.0/</Format>
   <ShortName>ISBN Lookup</ShortName>
-  <LongName>ISBN Lookup</LongName>
-  <Description>Lookup an ISBN Code</Description>
+  <Description>Lookup an ISBN CodeC</Description>
 
-  <Tags>isbn barcode lookup</Tags>
-  <Image>http://upc.dankeenan.org/favicon.ico</Image>
-  <SampleSearch>0066620732</SampleSearch>
+  <Tags>upc barcode lookup</Tags>
+  <Image height="16" width="16" type="image/x-icon">http://upc.dankeenan.org/favicon.ico</Image>
+  <SampleSearch>036000260809</SampleSearch>
   <Developer>Dan Keenan</Developer>
   <Contact>dk@dankeenan.org</Contact>
   <Attribution>&amp;copy; 2008, Dan Keenan.  Licensed under the GPL.</Attribution>

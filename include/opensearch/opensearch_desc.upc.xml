@@ -3,7 +3,7 @@
   <Url type="text/html" method="get" template="http://upc.dankeenan.org/index.php?upc={searchTerms}&amp;type=upc" />
   <Format>http://a9.com/-/spec/opensearchrss/1.0/</Format>
   <ShortName>UPC Lookup</ShortName>
-  <Description>Lookup a UPC</Description>
+  <Description>Lookup a UPC Code</Description>
 
   <Tags>upc barcode lookup</Tags>
   <Image height="16" width="16" type="image/x-icon">http://upc.dankeenan.org/favicon.ico</Image>
