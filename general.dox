@@ -6,9 +6,6 @@
  * - <a href="http://code.google.com/apis/ajaxsearch/signup.html">Google AJAX Search API Key</a>
  * - <a href="https://isbndb.com/account/dev/keys/">ISBNdb.com API Key</a>
  *
- * @todo
- * Make a Firefox/Greasemonkey plugin to access site if the user types in an ISBN or UPC.
- *
  * @mainpage
  * @author <a href="http://dankeenan.org">Dan Keenan</a>
  * @section license License

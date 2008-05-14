@@ -1,0 +1,70 @@
+.TH "include/opensearch/opensearch.inc" 3 "8 May 2008" "Version 0.2" "UPC Lookup" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/opensearch/opensearch.inc \- Implements OpenSearch Access. 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$desc_url\fP"
+.br
+.ti -1c
+.RI "\fB$url\fP = 'http://www.koders.com/search/KodersSourceCodeSearchDescription.xml'"
+.br
+.ti -1c
+.RI "\fB$word\fP = 'PHP'"
+.br
+.ti -1c
+.RI "\fB$url\fP = $os->getSearchURLfor($word)"
+.br
+.ti -1c
+.RI "\fB$result\fP = $os->search($word)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implements OpenSearch Access. 
+
+Implements OpenSearch Access Using \fCServices/OpenSearch\fP. 
+.PP
+Definition in file \fBopensearch.inc\fP.
+.SH "Variable Documentation"
+.PP 
+.SS "$desc_url"
+.PP
+\fBInitial value:\fP
+.PP
+.nf
+ array(
+//   // Koders Source Code Search / OpenSearch 1.0
+//   'koders'    => 'http://www.koders.com/search/KodersSourceCodeSearchDescription.xml',
+//   // Wikipedia (English)       / OpenSearch 1.1
+//   'wikipedia' => 'http://en.wikipedia.org/w/opensearch_desc.php',
+  'upclookup' => 'http://127.0.0.1/upc/include/opensearch/opensearch_desc.xml',
+)
+.fi
+.PP
+Definition at line 10 of file opensearch.inc.
+.SS "$result = $os->search($word)"
+.PP
+Definition at line 30 of file opensearch.inc.
+.PP
+Referenced by checkBarcode(), and getBarcodeInfo().
+.SS "$url = $os->getSearchURLfor($word)"
+.PP
+Definition at line 27 of file opensearch.inc.
+.SS "$url = 'http://www.koders.com/search/KodersSourceCodeSearchDescription.xml'"
+.PP
+Definition at line 18 of file opensearch.inc.
+.PP
+Referenced by fget(), and parseXML().
+.SS "$word = 'PHP'"
+.PP
+Definition at line 25 of file opensearch.inc.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for UPC Lookup from the source code.

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearchdescription/1.1/">
+  <Url type="text/html" method="get" template="http://upc.dankeenan.org/index.php?upc={searchTerms}&amp;type=upc" />
+  <Format>http://a9.com/-/spec/opensearchrss/1.0/</Format>
+  <ShortName>UPC Lookup</ShortName>
+  <Description>Lookup a UPC</Description>
+
+  <Tags>upc barcode lookup</Tags>
+  <Image height="16" width="16" type="image/x-icon">http://upc.dankeenan.org/favicon.ico</Image>
+  <SampleSearch>036000260809</SampleSearch>
+  <Developer>Dan Keenan</Developer>
+  <Contact>dk@dankeenan.org</Contact>
+  <Attribution>&amp;copy; 2008, Dan Keenan.  Licensed under the GPL.</Attribution>
+
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+</OpenSearchDescription>

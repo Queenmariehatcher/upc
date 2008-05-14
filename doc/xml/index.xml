@@ -64,8 +64,6 @@
   </compound>
   <compound refid="upcimg_8php" kind="file"><name>upcimg.php</name>
   </compound>
-  <compound refid="todo" kind="page"><name>todo</name>
-  </compound>
   <compound refid="license" kind="page"><name>license</name>
   </compound>
   <compound refid="isbnapi" kind="page"><name>isbnapi</name>

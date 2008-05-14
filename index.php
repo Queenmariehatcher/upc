@@ -44,6 +44,13 @@ define('ISBNKEY', '3PGA9PYK');
   <link type="text/css" rel="stylesheet" href="style.css" />
   <link type="text/css" rel="stylesheet" href="form.css" />
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Search Providers -->
+  <link rel="search" type="application/opensearchdescription+xml" title="UPC Lookup" href="http://upc.dankeenan.org/include/opensearch/opensearch_desc.upc.xml">
+  <link rel="search" type="application/opensearchdescription+xml" title="ISBN Lookup" href="http://upc.dankeenan.org/include/opensearch/opensearch_desc.isbn.xml">
+
   <title>UPC Lookup</title>
 
   <script type="text/javascript">
@@ -92,7 +99,9 @@ _HTML;
 
   <div class="footer">
     <div class="right">
-      By <a href="http://dankeenan.org">Dan Keenan</a> | <a href="http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&path=%2F&sc=0">Source Code</a>
+      By <a href="http://dankeenan.org">Dan Keenan</a> | <a href="http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&path=%2F&sc=0">Source Code</a> | 
+      <a href="javascript:window.external.AddSearchProvider('http://upc.dankeenan.org/include/opensearch/opensearch_desc.upc.xml');">Add UPC Search</a> | 
+      <a href="javascript:window.external.AddSearchProvider('http://upc.dankeenan.org/include/opensearch/opensearch_desc.isbn.xml');">Add ISBN Search</a>
     </div>
   </div>
 </body>

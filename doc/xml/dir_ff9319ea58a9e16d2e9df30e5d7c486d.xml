@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_ff9319ea58a9e16d2e9df30e5d7c486d" kind="dir">
+    <compoundname>include/opensearch/</compoundname>
+    <innerfile refid="opensearch_8inc">opensearch.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/daniel/Coding/upc/include/opensearch/"/>
+  </compounddef>
+</doxygen>

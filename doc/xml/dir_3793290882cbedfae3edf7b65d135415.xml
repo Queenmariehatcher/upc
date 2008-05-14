@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_3793290882cbedfae3edf7b65d135415" kind="dir">
+    <compoundname>examples/</compoundname>
+    <innerfile refid="opensearch_8php">opensearch.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/daniel/Coding/upc/examples/"/>
+  </compounddef>
+</doxygen>

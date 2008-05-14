@@ -1,0 +1,90 @@
+\hypertarget{opensearch_8inc}{
+\section{include/opensearch/opensearch.inc File Reference}
+\label{opensearch_8inc}\index{include/opensearch/opensearch.inc@{include/opensearch/opensearch.inc}}
+}
+Implements OpenSearch Access. 
+
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{opensearch_8inc_d8176300aa68008fef9a9ddfc3c1a2d5}{\$desc\_\-url}
+\item 
+\hyperlink{opensearch_8inc_cf215f34a917d014776ce684a9ee8909}{\$url} = 'http://www.koders.com/search/KodersSourceCodeSearchDescription.xml'
+\item 
+\hyperlink{opensearch_8inc_5d7b6a696c068811c70679ceb91ecc93}{\$word} = 'PHP'
+\item 
+\hyperlink{opensearch_8inc_cf215f34a917d014776ce684a9ee8909}{\$url} = \$os $\rightarrow$ getSearchURLfor(\$word)
+\item 
+\hyperlink{opensearch_8inc_112ef069ddc0454086e3d1e6d8d55d07}{\$result} = \$os $\rightarrow$ search(\$word)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Implements OpenSearch Access. 
+
+Implements OpenSearch Access Using \href{http://pear.php.net/package/Services_OpenSearch/}{\tt Services/OpenSearch}. 
+
+Definition in file \hyperlink{opensearch_8inc-source}{opensearch.inc}.
+
+\subsection{Variable Documentation}
+\hypertarget{opensearch_8inc_d8176300aa68008fef9a9ddfc3c1a2d5}{
+\index{opensearch.inc@{opensearch.inc}!$desc_url@{\$desc\_\-url}}
+\index{$desc_url@{\$desc\_\-url}!opensearch.inc@{opensearch.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\$desc\_\-url}}
+\label{opensearch_8inc_d8176300aa68008fef9a9ddfc3c1a2d5}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} array(
+//   // Koders Source Code Search / OpenSearch 1.0
+//   'koders'    => 'http://www.koders.com/search/KodersSourceCodeSearchDescription.xml',
+//   // Wikipedia (English)       / OpenSearch 1.1
+//   'wikipedia' => 'http://en.wikipedia.org/w/opensearch_desc.php',
+  'upclookup' => 'http://127.0.0.1/upc/include/opensearch/opensearch_desc.xml',
+)
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 10 of file opensearch.inc.\hypertarget{opensearch_8inc_112ef069ddc0454086e3d1e6d8d55d07}{
+\index{opensearch.inc@{opensearch.inc}!$result@{\$result}}
+\index{$result@{\$result}!opensearch.inc@{opensearch.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\$result = \$os $\rightarrow$ search(\$word)}}
+\label{opensearch_8inc_112ef069ddc0454086e3d1e6d8d55d07}
+
+
+
+
+Definition at line 30 of file opensearch.inc.
+
+Referenced by checkBarcode(), and getBarcodeInfo().\hypertarget{opensearch_8inc_cf215f34a917d014776ce684a9ee8909}{
+\index{opensearch.inc@{opensearch.inc}!$url@{\$url}}
+\index{$url@{\$url}!opensearch.inc@{opensearch.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\$url = \$os $\rightarrow$ getSearchURLfor(\$word)}}
+\label{opensearch_8inc_cf215f34a917d014776ce684a9ee8909}
+
+
+
+
+Definition at line 27 of file opensearch.inc.\hypertarget{opensearch_8inc_cf215f34a917d014776ce684a9ee8909}{
+\index{opensearch.inc@{opensearch.inc}!$url@{\$url}}
+\index{$url@{\$url}!opensearch.inc@{opensearch.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\$url = 'http://www.koders.com/search/KodersSourceCodeSearchDescription.xml'}}
+\label{opensearch_8inc_cf215f34a917d014776ce684a9ee8909}
+
+
+
+
+Definition at line 18 of file opensearch.inc.
+
+Referenced by fget(), and parseXML().\hypertarget{opensearch_8inc_5d7b6a696c068811c70679ceb91ecc93}{
+\index{opensearch.inc@{opensearch.inc}!$word@{\$word}}
+\index{$word@{\$word}!opensearch.inc@{opensearch.inc}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\$word = 'PHP'}}
+\label{opensearch_8inc_5d7b6a696c068811c70679ceb91ecc93}
+
+
+
+
+Definition at line 25 of file opensearch.inc.

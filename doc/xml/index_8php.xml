@@ -75,55 +75,64 @@
 <codeline lineno="44"><highlight class="normal"><sp/><sp/>&lt;link<sp/>type=</highlight><highlight class="stringliteral">&quot;text/css&quot;</highlight><highlight class="normal"><sp/>rel=</highlight><highlight class="stringliteral">&quot;stylesheet&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;style.css&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/>&lt;link<sp/>type=</highlight><highlight class="stringliteral">&quot;text/css&quot;</highlight><highlight class="normal"><sp/>rel=</highlight><highlight class="stringliteral">&quot;stylesheet&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;form.css&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/>&lt;title&gt;UPC<sp/>Lookup&lt;/title&gt;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/>&lt;script<sp/>type=</highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>function<sp/>popup(url,<sp/>h,<sp/>w)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>newwindow=window.open(url,&apos;name</highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">height=&apos;<sp/>+<sp/>h<sp/>+<sp/>&apos;,width=&apos;<sp/>+<sp/>w);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(window.focus)</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newwindow.focus();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/>&lt;/script&gt;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">&lt;/head&gt;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal">&lt;body&gt;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;index.php&quot;</highlight><highlight class="normal">&gt;&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;mainimage&quot;</highlight><highlight class="normal">&gt;&lt;/div&gt;&lt;/a&gt;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;menu&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;plug&quot;</highlight><highlight class="normal">&gt;&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;credits.html&quot;</highlight><highlight class="normal"><sp/>target=</highlight><highlight class="stringliteral">&quot;_blank&quot;</highlight><highlight class="normal"><sp/>onclick=</highlight><highlight class="stringliteral">&quot;popup(this.href,<sp/>200,<sp/>300);<sp/>return<sp/>false;&quot;</highlight><highlight class="normal">&gt;Credits&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;bodytext&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_GET[&apos;upc&apos;]))<sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$upc<sp/>=<sp/>$_GET[&apos;upc&apos;];</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_1b34ec866d27061573a5fa623bf314fc1" kindref="member">checkBarcode</ref>($upc))<sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" kindref="member">getBarcodeInfo</ref>($upc);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;error&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>barcode<sp/>with<sp/>the<sp/>value<sp/>$upc<sp/>is<sp/>not<sp/>valid.</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal">_HTML;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>&lt;!--<sp/>Favicon<sp/>--&gt;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>&lt;link<sp/>rel=</highlight><highlight class="stringliteral">&quot;shortcut<sp/>icon&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;favicon.ico&quot;</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;image/x-icon&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>&lt;!--<sp/>Search<sp/>Providers<sp/>--&gt;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>&lt;link<sp/>rel=</highlight><highlight class="stringliteral">&quot;search&quot;</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;application/opensearchdescription+xml&quot;</highlight><highlight class="normal"><sp/>title=</highlight><highlight class="stringliteral">&quot;UPC<sp/>Lookup&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;http://upc.dankeenan.org/include/opensearch/opensearch_desc.upc.xml&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>&lt;link<sp/>rel=</highlight><highlight class="stringliteral">&quot;search&quot;</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&quot;application/opensearchdescription+xml&quot;</highlight><highlight class="normal"><sp/>title=</highlight><highlight class="stringliteral">&quot;ISBN<sp/>Lookup&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;http://upc.dankeenan.org/include/opensearch/opensearch_desc.isbn.xml&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>&lt;title&gt;UPC<sp/>Lookup&lt;/title&gt;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>&lt;script<sp/>type=</highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>function<sp/>popup(url,<sp/>h,<sp/>w)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>newwindow=window.open(url,&apos;name</highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">height=&apos;<sp/>+<sp/>h<sp/>+<sp/>&apos;,width=&apos;<sp/>+<sp/>w);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(window.focus)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newwindow.focus();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>&lt;/script&gt;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">&lt;/head&gt;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">&lt;body&gt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;container&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;index.php&quot;</highlight><highlight class="normal">&gt;&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;mainimage&quot;</highlight><highlight class="normal">&gt;&lt;/div&gt;&lt;/a&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;menu&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;plug&quot;</highlight><highlight class="normal">&gt;&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;credits.html&quot;</highlight><highlight class="normal"><sp/>target=</highlight><highlight class="stringliteral">&quot;_blank&quot;</highlight><highlight class="normal"><sp/>onclick=</highlight><highlight class="stringliteral">&quot;popup(this.href,<sp/>200,<sp/>300);<sp/>return<sp/>false;&quot;</highlight><highlight class="normal">&gt;Credits&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;bodytext&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_GET[&apos;upc&apos;]))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$upc<sp/>=<sp/>$_GET[&apos;upc&apos;];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="barcode_8inc_1b34ec866d27061573a5fa623bf314fc1" kindref="member">checkBarcode</ref>($upc))<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="barcode_8inc_1e10c37e4f9f9b7c6617a388351a27c99" kindref="member">getBarcodeInfo</ref>($upc);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kindref="member">getEntryForm</ref>();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>?&gt;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;right&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>By<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://dankeenan.org&quot;</highlight><highlight class="normal">&gt;Dan<sp/>Keenan&lt;/a&gt;<sp/>|<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&amp;path=%2F&amp;sc=0&quot;</highlight><highlight class="normal">&gt;Source<sp/>Code&lt;/a&gt;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&lt;&lt;&lt;_HTML</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;error&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>barcode<sp/>with<sp/>the<sp/>value<sp/>$upc<sp/>is<sp/>not<sp/>valid.</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">_HTML;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><ref refid="form_8inc_1839e205cae656bea01ea99e2de94ef1e" kindref="member">getEntryForm</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>?&gt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;footer&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;right&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>By<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://dankeenan.org&quot;</highlight><highlight class="normal">&gt;Dan<sp/>Keenan&lt;/a&gt;<sp/>|<sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;http://websvn.dankeenan.org/listing.php?repname=UPC+Lookup&amp;path=%2F&amp;sc=0&quot;</highlight><highlight class="normal">&gt;Source<sp/>Code&lt;/a&gt;<sp/>|<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;javascript:window.external.AddSearchProvider(&apos;http://upc.dankeenan.org/include/opensearch/opensearch_desc.upc.xml&apos;);&quot;</highlight><highlight class="normal">&gt;Add<sp/>UPC<sp/>Search&lt;/a&gt;<sp/>|<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=</highlight><highlight class="stringliteral">&quot;javascript:window.external.AddSearchProvider(&apos;http://upc.dankeenan.org/include/opensearch/opensearch_desc.isbn.xml&apos;);&quot;</highlight><highlight class="normal">&gt;Add<sp/>ISBN<sp/>Search&lt;/a&gt;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
     </programlisting>
     <location file="/home/daniel/Coding/upc/index.php"/>
   </compounddef>
