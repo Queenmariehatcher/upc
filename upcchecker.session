@@ -2450,11 +2450,6 @@
         <uploadeditem upload_time="1208743001" url="xmlrpc.inc" />
       </profile>
     </uploadprofiles>
-    <treestatus>
-      <openfolder url="examples" />
-      <openfolder url="include" />
-      <openfolder url="include/opensearch" />
-    </treestatus>
   </session>
   <teamdata yourself="" />
 </webprojectsession>

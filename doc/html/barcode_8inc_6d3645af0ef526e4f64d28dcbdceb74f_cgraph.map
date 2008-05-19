@@ -1,8 +1,0 @@
-<area shape="rect" href="$xmlrpc_8inc.html#c13be54b26e0803d8745e4f019dcfd8a" title="XMLRPC_prepare" alt="" coords="165,31,301,57">
-<area shape="rect" href="$xmlrpc_8inc.html#3a98b6984b8ca01752d1aa9a267526a3" title="XMLRPC_request" alt="" coords="167,132,300,159">
-<area shape="rect" href="$xmlrpc_8inc.html#88839ba2c5c835c99f55578c65faa401" title="count_numeric_items" alt="" coords="351,5,508,32">
-<area shape="rect" href="$xmlrpc_8inc.html#a1e9b05a06f28fabb86c10129f5890ef" title="XML_serialize" alt="" coords="376,56,483,83">
-<area shape="rect" href="$xmlrpc_8inc.html#ef8f3de498a12b230d049cdee6a25145" title="XML_unserialize" alt="" coords="368,107,491,133">
-<area shape="rect" href="$xmlrpc_8inc.html#d936fe41ae9c3e0b90bd72ffe82a2969" title="XMLRPC_adjustValue" alt="" coords="351,157,508,184">
-<area shape="rect" href="$xmlrpc_8inc.html#e2d2e97a8c1c560f5e96d58d60a02874" title="XMLRPC_debug" alt="" coords="367,208,492,235">
-<area shape="rect" href="$xmlrpc_8inc.html#1f60d2672bcb35f5ff908f64931f8d48" title="XMLRPC_show" alt="" coords="371,259,488,285">

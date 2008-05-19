@@ -729,6 +729,6 @@
     <item modified_time="1210293504" url="doc/xml/dir_ff9319ea58a9e16d2e9df30e5d7c486d.xml" uploadstatus="1" />
     <item modified_time="1210797233" url="include/opensearch/opensearch_desc.upc.xml" uploadstatus="1" />
     <item modified_time="1210797228" url="include/opensearch/opensearch_desc.isbn.xml" uploadstatus="1" />
-    <item modified_time="1209325229" url="Doxyfile" />
+    <item modified_time="1209325229" url="Doxyfile" uploadstatus="1" />
   </project>
 </webproject>
